@@ -32,14 +32,14 @@
    ```
 3. 常用關鍵字參考：
    ```
-   name,小明
+   name,王小明
    姓名,王小明
    phone,0912345678
    手機,0912345678
-   電話,02-12345678
+   電話,0912345678
    mail,example@mail.com
    信箱,example@mail.com
-   生日,1999-08-06
+   生日,1989-06-04
    ```
 4. 執行「執行我-把QA更新到content」
 5. 等待更新完成訊息
@@ -127,7 +127,7 @@ This is a convenient tool that helps you automatically fill in Google Forms! Say
    phone,0912345678
    mobile,0912345678
    email,example@mail.com
-   birthday,1999-08-06
+   birthday,1989-06-04
    ```
 4. Run "Execute-UpdateQAToContent"
 5. Wait for the update completion message
