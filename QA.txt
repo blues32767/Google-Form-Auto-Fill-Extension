@@ -1,0 +1,17 @@
+name,blues
+姓名,測試者
+phone,0999999999
+手機,0999999999
+電話,
+line,
+身高/體重,180/80
+身高,180
+體重,80
+生日,1999/08/06
+mail,9999@example.com
+信箱,9999@example.com
+性別,
+ig,
+instagram,
+fb,
+facebook,
