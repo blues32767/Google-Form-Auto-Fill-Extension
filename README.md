@@ -20,6 +20,37 @@
 - 自訂你想要的預設答案
 - 節省重複填寫表單的時間
 
+### 使用步驟 📝
+
+#### 第一步：設定答案 ⚙️
+1. 用記事本打開 `QA.txt`
+2. 照以下格式填寫你的答案：
+   ```
+   問題關鍵字,答案
+   姓名,王小明
+   電話,0912345678
+   ```
+3. 常用關鍵字參考：
+   ```
+   name,小明
+   姓名,王小明
+   phone,0912345678
+   手機,0912345678
+   電話,02-12345678
+   mail,example@mail.com
+   信箱,example@mail.com
+   生日,1999-08-06
+   ```
+4. 執行「執行我-把QA更新到content」
+5. 等待更新完成訊息
+
+#### 第二步：安裝擴充功能 🔧
+1. 打開 Chrome 瀏覽器
+2. 在網址列輸入：`chrome://extensions/`
+3. 右上角開啟「開發人員模式」
+4. 點擊左上角「載入未封裝項目」
+5. 選擇剛才解壓縮的資料夾
+
 ### 適合使用對象 👥
 - 經常需要填寫各種表單的人
 - 常常要輸入相同資料的使用者
@@ -32,25 +63,6 @@
 - 活動主持人：經常報名活動、填寫演出資料
 - 自由工作者：常需填寫各種合作提案表單
 - 學生：頻繁填寫課程報名、活動登記表
-
-### 安裝步驟 📥
-1. 下載並解壓縮檔案
-2. 打開 Chrome 瀏覽器
-3. 在網址列輸入：`chrome://extensions/`
-4. 右上角開啟「開發人員模式」
-5. 點擊左上角「載入未封裝項目」
-6. 選擇剛才解壓縮的資料夾
-
-### 設定自己的答案 ⚙️
-1. 用記事本打開 `QA.txt`
-2. 照以下格式填寫你的答案：
-   ```
-   問題關鍵字,答案
-   姓名,王小明
-   電話,0912345678
-   ```
-3. 執行「執行我-把QA更新到content」
-4. 重新整理擴充功能頁面
 
 ### 使用須知 ⚠️
 - 目前只支援文字欄位的自動填寫
@@ -99,28 +111,9 @@ This is a convenient tool that helps you automatically fill in Google Forms! Say
 - Customizable default answers
 - Saves time on repetitive form filling
 
-### Perfect For 👥
-- Anyone who frequently fills out forms
-- Users who repeatedly enter the same information
-- Anyone looking to save time on form filling
-  
-### Suitable Professions 💼
-- Artists/Actors: Frequently filling out audition forms and booking sheets
-- Teachers/Tutors: Regular course reports and teaching records
-- Sales Representatives: Customer information and visit logs
-- Event Hosts/MCs: Event registrations and performance details
-- Freelancers: Various collaboration proposal forms
-- Students: Course registrations and activity sign-up forms
+### Setup Guide 📝
 
-### Installation Steps 📥
-1. Download and extract the files
-2. Open Chrome browser
-3. Enter in address bar: `chrome://extensions/`
-4. Enable "Developer mode" in top right
-5. Click "Load unpacked" in top left
-6. Select the extracted folder
-
-### Setting Up Your Answers ⚙️
+#### Step 1: Configure Your Answers ⚙️
 1. Open `QA.txt` with Notepad
 2. Enter your answers in this format:
    ```
@@ -128,8 +121,23 @@ This is a convenient tool that helps you automatically fill in Google Forms! Say
    name,John Doe
    phone,0912345678
    ```
-3. Run "Execute-UpdateQAToContent"
-4. Refresh the extension page
+3. Common keywords reference:
+   ```
+   name,John Doe
+   phone,0912345678
+   mobile,0912345678
+   email,example@mail.com
+   birthday,1999-08-06
+   ```
+4. Run "Execute-UpdateQAToContent"
+5. Wait for the update completion message
+
+#### Step 2: Install the Extension 🔧
+1. Open Chrome browser
+2. Enter in address bar: `chrome://extensions/`
+3. Enable "Developer mode" in top right
+4. Click "Load unpacked" in top left
+5. Select the extracted folder
 
 ### Important Notes ⚠️
 - Currently only supports text field auto-filling
