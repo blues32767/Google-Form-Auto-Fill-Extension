@@ -15,6 +15,8 @@
 ### 下載連結 / Download
 👉 [點我下載 / Click to Download](https://github.com/blues32767/Google-Form-Auto-Fill-Extension/releases/download/Google-Forms-auto-fill-Extension/Google-Forms-auto-fill-Extension.zip)
 
+說明網頁：https://blues32767.github.io/Google-Form-Auto-Fill-Extension/
+
 ### 功能特點 ✨
 - 自動填寫表單中的文字欄位
 - 自訂你想要的預設答案
