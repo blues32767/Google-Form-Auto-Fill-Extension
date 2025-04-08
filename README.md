@@ -4,6 +4,8 @@
 
 A smart Google Form auto-filling tool that automatically matches and fills in preset answers, freeing you from repetitive form filling!
 
+擴充功能下載（Download）：https://github.com/blues32767/Google-Form-Auto-Fill-Extension/releases/download/Google-Forms-auto-fill-Extension/Google-Forms-auto-fill-Extension.zip
+
 ## 主要特點 Key Features ✨
 - 智慧匹配：自動識別表單欄位關鍵字，並匹配相應答案
 - 支援多種欄位：文字、日期、單選、下拉選單等
@@ -30,7 +32,7 @@ A smart Google Form auto-filling tool that automatically matches and fills in pr
   Students: Course registration and activity sign-up forms
 
 ## 安裝方式 Installation
-1. 下載並解壓縮檔案
+1. 下載並解壓縮檔案[https://github.com/blues32767/Google-Form-Auto-Fill-Extension/releases/download/Google-Forms-auto-fill-Extension/Google-Forms-auto-fill-Extension.zip]
    Download and extract files
 2. 打開Chrome瀏覽器，進入擴充功能管理頁面
    Open Chrome browser, go to extension management
