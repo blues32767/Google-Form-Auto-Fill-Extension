@@ -143,6 +143,56 @@
         #lang-en:checked ~ .container .en {
             display: block;
         }
+   .qa-section {
+    margin-top: 20px;
+    }
+    
+    .qa-section h3 {
+        color: #1a73e8;
+        margin: 30px 0 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .qa-item {
+        margin-bottom: 30px;
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    
+    .question {
+        font-weight: bold;
+        color: #1a73e8;
+        margin-bottom: 10px;
+    }
+    
+    .answer {
+        padding-left: 20px;
+    }
+    
+    .answer ul, .answer ol {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+    
+    .answer li {
+        margin-bottom: 5px;
+    }
+    
+    .code-block {
+        background-color: #f1f3f4;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 10px 0;
+        font-family: monospace;
+        white-space: pre-wrap;
+    }
+    
+    .qa-item:hover {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease;
+    }
     </style>
 </head>
 <body>
@@ -244,6 +294,132 @@
                 <li class="zh">在 Chrome 擴充功能頁面重新載入</li>
                 <li class="en">Reload in Chrome extensions page</li>
             </ol>
+                    <div class="section">
+            <h2 class="emoji-title zh">❓ 常見問題</h2>
+            <h2 class="emoji-title en">❓ FAQ</h2>
+            
+            <div class="qa-section">
+                <h3 class="zh">基本操作問題</h3>
+                <h3 class="en">Basic Operations</h3>
+                
+                <div class="qa-item">
+                    <div class="question zh">Q: 如何確認擴充功能正常運作？</div>
+                    <div class="question en">Q: How do I know if the extension is working?</div>
+                    <div class="answer zh">A: 開啟 Google 表單時，文字欄位會自動填入你設定的答案。如果沒有自動填入，請檢查：
+                        <ul>
+                            <li>擴充功能是否已啟用</li>
+                            <li>QA.txt 是否有正確更新</li>
+                            <li>關鍵字是否符合表單題目</li>
+                        </ul>
+                    </div>
+                    <div class="answer en">A: Text fields will automatically fill when you open a Google Form. If not, please check:
+                        <ul>
+                            <li>If the extension is enabled</li>
+                            <li>If QA.txt has been properly updated</li>
+                            <li>If keywords match the form questions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="qa-item">
+                    <div class="question zh">Q: 填錯了怎麼辦？</div>
+                    <div class="question en">Q: What if I need to correct an auto-filled answer?</div>
+                    <div class="answer zh">A: 可以直接在表單上修改，自動填入的內容不會鎖定，送出前請記得檢查答案是否正確。</div>
+                    <div class="answer en">A: You can directly edit any field in the form. Auto-filled content is not locked, remember to verify answers before submitting.</div>
+                </div>
+
+                <h3 class="zh">QA.txt 設定問題</h3>
+                <h3 class="en">QA.txt Configuration Issues</h3>
+
+                <div class="qa-item">
+                    <div class="question zh">Q: 如何設定多個可能的問題對應同一個答案？</div>
+                    <div class="question en">Q: How to set multiple questions for the same answer?</div>
+                    <div class="answer zh">A: 可以使用多行設定，例如：
+                        <div class="code-block">姓名,王小明
+name,王小明
+名字,王小明</div>
+                    </div>
+                    <div class="answer en">A: You can use multiple lines, for example:
+                        <div class="code-block">name,John Doe
+fullname,John Doe
+username,John Doe</div>
+                    </div>
+                </div>
+
+                <div class="qa-item">
+                    <div class="question zh">Q: 特殊格式（如日期、電話）要怎麼填寫？</div>
+                    <div class="question en">Q: How to format special entries (like dates, phone numbers)?</div>
+                    <div class="answer zh">A: 建議參考以下格式：
+                        <div class="code-block">生日,1999-08-06
+出生日期,1999-08-06
+電話,02-12345678
+手機,0912-345-678
+信箱,example@mail.com
+email,example@mail.com</div>
+                    </div>
+                    <div class="answer en">A: Recommended formats:
+                        <div class="code-block">birthday,1999-08-06
+birth date,1999-08-06
+phone,02-12345678
+mobile,0912-345-678
+email,example@mail.com
+mail,example@mail.com</div>
+                    </div>
+                </div>
+
+                <h3 class="zh">技術相關問題</h3>
+                <h3 class="en">Technical Issues</h3>
+
+                <div class="qa-item">
+                    <div class="question zh">Q: MAC 系統如何更新 content.js？</div>
+                    <div class="question en">Q: How do MAC users update content.js?</div>
+                    <div class="answer zh">A: MAC 系統使用者可以按照以下步驟更新：
+                        <ol>
+                            <li>在 Finder 中找到擴充功能資料夾</li>
+                            <li>右鍵點擊 content.js，選擇「用文字編輯打開」</li>
+                            <li>修改完成後儲存</li>
+                            <li>到 Chrome 擴充功能頁面重新載入擴充功能</li>
+                        </ol>
+                    </div>
+                    <div class="answer en">A: MAC users can follow these steps:
+                        <ol>
+                            <li>Locate the extension folder in Finder</li>
+                            <li>Right-click on content.js and select "Open with TextEdit"</li>
+                            <li>Make changes and save</li>
+                            <li>Reload the extension in Chrome extensions page</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="qa-item">
+                    <div class="question zh">Q: 更新 QA.txt 後要如何重新載入擴充功能？</div>
+                    <div class="question en">Q: How to properly reload the extension after updating QA.txt?</div>
+                    <div class="answer zh">A: 請依序執行以下步驟：
+                        <ol>
+                            <li>儲存修改後的 QA.txt</li>
+                            <li>執行「執行我-把QA更新到content」</li>
+                            <li>前往 Chrome 擴充功能頁面（chrome://extensions/）</li>
+                            <li>找到「Google 表單自動填寫小幫手」</li>
+                            <li>點擊擴充功能卡片右下角的重新整理圖示 🔄</li>
+                            <li>或是直接關閉 Chrome 後重新開啟</li>
+                        </ol>
+                    </div>
+                    <div class="answer en">A: Follow these steps:
+                        <ol>
+                            <li>Save your modified QA.txt</li>
+                            <li>Run "Execute-UpdateQAToContent"</li>
+                            <li>Go to Chrome extensions page (chrome://extensions/)</li>
+                            <li>Find "Google Form Auto-Fill Assistant"</li>
+                            <li>Click the refresh icon 🔄 in the bottom right of the extension card</li>
+                            <li>Or simply close and reopen Chrome</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
         </div>
     </div>
 </body>
