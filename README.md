@@ -54,7 +54,7 @@ A smart Google Form auto-filling tool that automatically matches and fills in pr
    Open any Google Form, the extension will work automatically
 
 ## MAC用戶修改問題答案說明 For MAC Users 🍎
-使用內建文字編輯器修改 content.js
+使用內建文字編輯器修改 content.js。  
     Using Built-in Text Editor ，Edit content.js  
    
 
