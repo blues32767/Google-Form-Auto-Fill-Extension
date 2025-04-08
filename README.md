@@ -10,7 +10,7 @@
 ## 中文說明
 
 ### 這是什麼？
-這是一個方便的工具，可以幫你自動填寫 Google 表單！再也不用一直重複輸入相同的資料了。
+這是一個方便的工具，可以幫你自動填寫任何 Google 表單！再也不用一直重複輸入相同的資料了。
 
 ### 下載連結 / Download
 👉 [點我下載 / Click to Download](https://github.com/blues32767/Google-Form-Auto-Fill-Extension/releases/download/Google-Forms-auto-fill-Extension/Google-Forms-auto-fill-Extension.zip)
@@ -101,7 +101,7 @@ A: 請依序執行以下步驟：
 ## English Guide
 
 ### What is this?
-This is a convenient tool that helps you automatically fill in Google Forms! Say goodbye to repetitive form filling!
+This is a convenient tool that helps you automatically fill in any Google Forms! Say goodbye to repetitive form filling!
 
 ### Download
 👉 [Click to Download](https://github.com/blues32767/Google-Form-Auto-Fill-Extension/releases/download/Google-Forms-auto-fill-Extension/Google-Forms-auto-fill-Extension.zip)
