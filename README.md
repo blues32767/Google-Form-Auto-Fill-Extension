@@ -53,13 +53,12 @@ A smart Google Form auto-filling tool that automatically matches and fills in pr
 4. 開啟任何Google表單，擴充功能會自動運作
    Open any Google Form, the extension will work automatically
 
-## 注意事項 Notes
-- 請確保填寫的資料正確性
-  Please ensure the accuracy of filled information
-- 建議在送出前檢查填寫內容
-  Recommended to check content before submission
+## MAC用戶修改問題答案說明 For MAC Users 🍎
+使用內建文字編輯器修改 content.js
+    Using Built-in Text Editor ，Edit content.js  
+   
 
-## 預設答案修改方式 How to Modify Default Answers
+## ＂更新＂答案修改方式 How to Modify Default Answers
 Google表單自動填入答案，要修改預設回覆，請改QA.txt再執行「執行我-Execute-me-auto-update-QA-To-content(自動把QA更新到content).bat」，或直接修改content.js，可以用記事本修改，或修改
 Google Form Auto-fill Answers. To modify default values, please edit content.js using Notepad.
 
@@ -116,3 +115,10 @@ When the form question contains your set text, it will auto-fill with the corres
    - Run "執行我-Execute-me-auto-update-QA-To-content(自動把QA更新到content).bat" after editing QA.txt
    - Reload the extension in Chrome extensions page
    - Or remove and reload the extension
+  
+
+## 注意事項 Notes
+- 請確保填寫的資料正確性
+  Please ensure the accuracy of filled information
+- 建議在送出前檢查填寫內容
+  Recommended to check content before submission
