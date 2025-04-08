@@ -64,9 +64,21 @@ A: 開啟 Google 表單時，文字欄位會自動填入你設定的答案。
 **Q: 填錯了怎麼辦？**  
 A: 可以直接在表單上修改，送出前請記得檢查答案。
 
-**Q: MAC 使用者如何修改答案？**  
-A: 可以使用內建的文字編輯器開啟並修改 QA.txt。
+**Q: MAC不能用QA.txt更新問答，如何更新content.js？
+A: MAC 系統使用者可以按照以下步驟更新：
+   在 Finder 中找到擴充功能資料夾
+   右鍵點擊 content.js，選擇「用文字編輯打開」
+   修改完成後儲存
+   到 Chrome 擴充功能頁面重新載入擴充功能
 
+**Q: 更新 QA.txt 後要如何重新載入擴充功能？
+A: 請依序執行以下步驟：
+   儲存修改後的 QA.txt
+   執行「執行我-把QA更新到content」
+   前往 Chrome 擴充功能頁面（chrome://extensions/）
+   找到「Google 表單自動填寫小幫手」
+   點擊擴充功能卡片右下角的重新整理圖示 🔄
+   或是直接關閉 Chrome 後重新開啟
 ---
 
 <a name="english"></a>
@@ -87,6 +99,14 @@ This is a convenient tool that helps you automatically fill in Google Forms! Say
 - Anyone who frequently fills out forms
 - Users who repeatedly enter the same information
 - Anyone looking to save time on form filling
+  
+### Suitable Professions 👥
+Artists/Actors: Frequently filling out audition forms and booking sheets
+Teachers/Tutors: Regular course reports and teaching records
+Sales Representatives: Customer information and visit logs
+Event Hosts/MCs: Event registrations and performance details
+Freelancers: Various collaboration proposal forms
+Students: Course registrations and activity sign-up forms
 
 ### Installation Steps
 1. Download and extract the files
@@ -120,9 +140,21 @@ A: Text fields will automatically fill when you open a Google Form.
 **Q: What if I need to correct an auto-filled answer?**  
 A: You can directly edit any field in the form before submitting.
 
-**Q: How do MAC users modify answers?**  
-A: Use the built-in text editor to modify QA.txt.
+**Q: How do MAC users update content.js?
+   A: MAC users can follow these steps:
+      Locate the extension folder in Finder
+      Right-click on content.js and select "Open with TextEdit"
+      Make your changes and save
+      Reload the extension in Chrome extensions page
 
+**Q: How to properly reload the extension after updating QA.txt?
+   A: Follow these steps:
+      Save your modified QA.txt
+      Run "Execute-UpdateQAToContent"
+      Go to Chrome extensions page (chrome://extensions/)
+      Find "Google Form Auto-Fill Assistant"
+      Click the refresh icon 🔄 in the bottom right of the extension card
+      Alternatively, close and reopen Chrome
 ---
 
 <div align="center">
