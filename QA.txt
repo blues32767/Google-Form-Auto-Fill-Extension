@@ -1,17 +1,43 @@
-name,blues
+# 中文
 姓名,測試者
-phone,0999999999
 手機,0999999999
-電話,
-line,
-身高/體重,180/80
-身高,180
-體重,80
-生日,1999/08/06
+電話,0999999999
+身高/體重,200/99
+身高,200
+體重,99
+生日,1989/06/04
 mail,9999@example.com
 信箱,9999@example.com
-性別,
-ig,
-instagram,
-fb,
-facebook,
+性別,女
+語言能力,中文,chinese,英文,english,日文,japanese
+
+# English
+name,test name
+phone,0999999999
+high/weight,180/80
+high,180
+weight,80
+birthday,1989/06/04
+mail,9999@example.com
+sex,girl
+language,chinese,english,japanese
+
+#社群帳號-SocialID
+ig,https://www.instagram.com/
+instagram,https://www.instagram.com/
+fb,https://www.facebook.com/
+facebook,https://www.facebook.com/
+line,
+wechat,
+
+
+# 備註-不要的那行可以刪除
+# 複選格式：題目包含名稱,值1,值2,值3（多值用逗號分隔，單值直接寫）
+# 複選示例：熟悉語言,中文,英文,日文
+
+#Note-Unwanted line can be deleted
+#Multiple choice format: Question includes name,value1,value2,value3 (multiple values separated by commas, single value written directly)
+#Multiple choice example: Familiar languages,Chinese,English,Japanese
+
+
+

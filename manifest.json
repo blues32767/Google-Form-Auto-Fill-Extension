@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Google Form Auto-Fill Extension；Google表單自動填入",
+    "name": "0413-oogle Form Auto-Fill Extension；Google表單自動填入",
     "version": "1.0",
     "description": "Google表單自動填入答案,要修改預設值請改content.js,可以用記事本修改；Google Form Auto-fill Answers. To modify default values, please edit content.js using Notepad.",
     "permissions": [

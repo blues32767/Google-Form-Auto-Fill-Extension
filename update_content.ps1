@@ -1,7 +1,4 @@
-﻿# Google Form Auto-Fill Extension PowerShell Script
-
-```powershell
-#region 初始化設定 Initialization
+﻿#region 初始化設定 Initialization
 # ============================================================================
 #    Google Form Auto-Fill Extension - PowerShell Update Script
 #    Author/作者: blues32767
@@ -53,6 +50,9 @@ Write-Host "`n🔄 開始處理檔案 [Processing files]..." -ForegroundColor Cy
 $tempFile = "temp_content.js"
 "" | Out-File $tempFile -Encoding utf8
 
+# 用於記錄映射項目的陣列
+$mappedFields = @()
+
 # 第一步：複製前段內容
 Write-Host "  📝 步驟 1/3: 複製原始檔案前段 [Copying initial content]" -ForegroundColor Yellow
 $foundStart = $false
@@ -79,14 +79,45 @@ $mappingCount = 0
 $first = $true
 
 foreach ($line in $valueLines) {
-    $fields = $line -split ","
-    if ($fields.Length -eq 2) {
+    # 跳過空行、無效行或以 # 開頭的備註行
+    if ([string]::IsNullOrWhiteSpace($line) -or $line.Trim().StartsWith("#")) {
+        if ($line.Trim().StartsWith("#")) {
+            Write-Host "    ℹ 跳過備註行：$line" -ForegroundColor Cyan
+        }
+        continue
+    }
+
+    # 移除多餘空格並分割字段
+    $line = $line.Trim()
+    $fields = $line -split "," | ForEach-Object { $_.Trim() }
+
+    if ($fields.Length -ge 2) {
+        $fieldName = $fields[0]
+        $values = $fields[1..($fields.Length - 1)]
+
+        # 處理值部分
+        $valueString = ""
+        if ($values.Length -gt 1) {
+            # 多值字段，轉為 JavaScript 陣列
+            $formattedValues = $values | ForEach-Object { "`"$_`"" }
+            $valueString = "[" + ($formattedValues -join ", ") + "]"
+        } else {
+            # 單值字段
+            $valueString = "`"$($values[0])`""
+        }
+
+        # 記錄映射項目（用於後續輸出）
+        $mappedFields += "${fieldName}: $valueString"
+
+        # 寫入映射
         if (-not $first) {
             "    ," | Out-File $tempFile -Append -Encoding utf8
         }
-        "    { field: `"$($fields[0])`", value: `"$($fields[1])`" }" | Out-File $tempFile -Append -Encoding utf8
+        "    { field: `"$fieldName`", value: $valueString }" | Out-File $tempFile -Append -Encoding utf8
         $first = $false
         $mappingCount++
+    } else {
+        Write-Host "    ⚠ 警告：無效行格式 [$line]，已跳過" -ForegroundColor Yellow
     }
 }
 "  ];" | Out-File $tempFile -Append -Encoding utf8
@@ -118,11 +149,19 @@ if (Test-Path "content.js") {
 }
 Move-Item $tempFile "content.js"
 
+# 輸出已寫入的映射項目清單
+Write-Host "`n📋 已寫入的映射項目 [Mapped Fields]:" -ForegroundColor Cyan
+if ($mappedFields.Count -eq 0) {
+    Write-Host "  無映射項目寫入" -ForegroundColor Yellow
+} else {
+    foreach ($field in $mappedFields) {
+        Write-Host "  • $field" -ForegroundColor White
+    }
+}
+
 # 完成訊息
 Write-Host "`n✨ 更新完成！[Update completed!]" -ForegroundColor Green
 Write-Host "  • 檔案已更新：content.js" -ForegroundColor Cyan
 Write-Host "  • 備份位置：content.js.bak" -ForegroundColor Cyan
 Write-Host "  • 處理映射數：$mappingCount" -ForegroundColor Cyan
 #endregion
-```
-
