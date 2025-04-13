@@ -1,16 +1,16 @@
+# Google 表單自動填寫小幫手 / Google Form Auto-Fill Assistant 🚀
+
 <div align="right">
 
 [中文](#chinese) | [English](#english)
 
 </div>
 
-# Google 表單自動填寫小幫手 / Google Form Auto-Fill Assistant 🚀
-
 <a name="chinese"></a>
 ## 中文說明
 
 ### 這是什麼？
-這是一個方便的工具，可以幫你自動填寫任何 Google 表單！再也不用一直重複輸入相同的資料了。
+這是一個方便的工具，可以幫你偵測題目包含的文字，自動填寫任何 Google 表單！再也不用一直重複輸入相同的資料了。
 
 ### 下載連結 / Download
 👉 [點我下載 / Click to Download](https://github.com/blues32767/Google-Form-Auto-Fill-Extension/releases/download/Google-Forms-auto-fill-Extension/Google-Forms-auto-fill-Extension.zip)
@@ -18,7 +18,7 @@
 說明網頁：https://blues32767.github.io/Google-Form-Auto-Fill-Extension/
 
 ### 功能特點 ✨
-- 自動填寫表單中的文字欄位
+- 偵測題目包含的文字，自動填寫QA.txt設定的對照的答案
 - 自訂你想要的預設答案
 - 節省重複填寫表單的時間
 
@@ -33,7 +33,7 @@
    電話,0912345678
    複選題木,答案1,答案2,答案3
    ```
-3. 常用關鍵字參考：
+3. QA.txt參考，請自行修改：
    ```
    # 中文
    姓名,測試者
@@ -48,17 +48,6 @@
    性別,女
    語言能力,中文,chinese,英文,english,日文,japanese
    
-   # English
-   name,test name
-   phone,0999999999
-   high/weight,180/80
-   high,180
-   weight,80
-   birthday,1989/06/04
-   mail,9999@example.com
-   sex,girl
-   language,chinese,english,japanese
-   
    #社群帳號-SocialID
    ig,https://www.instagram.com/
    instagram,https://www.instagram.com/
@@ -71,9 +60,6 @@
    # 複選格式：題目包含名稱,值1,值2,值3（多值用逗號分隔，單值直接寫）
    # 複選示例：熟悉語言,中文,英文,日文
    
-   #Note-Unwanted line can be deleted
-   #Multiple choice format: Question includes name,value1,value2,value3 (multiple values separated by commas, single value written directly)
-   #Multiple choice example: Familiar languages,Chinese,English,Japanese
    ```
 4. 執行「執行我-把QA更新到content.bat」
 5. 等待更新完成訊息
@@ -100,7 +86,7 @@
 
 ### 使用須知 ⚠️
 - 目前只支援文字欄位的自動填寫
-- 不支援單選題、多選題和下拉選單
+- 不支援下拉選單
 - 修改答案後需要更新設定並重新載入擴充功能
 
 ### 常見問題 ❓
@@ -129,20 +115,23 @@ A: 請依序執行以下步驟：
 5. 點擊擴充功能卡片右下角的重新整理圖示 🔄
 6. 或是直接關閉 Chrome 後重新開啟
 
+**更新日期20250413-新增自動選擇單選題、複選框。
 ---
 
 <a name="english"></a>
 ## English Guide
 
 ### What is this?
-This is a convenient tool that helps you automatically fill in any Google Forms! Say goodbye to repetitive form filling!
+This is a convenient tool that helps you automatically fill in any Google Forms by detecting question text and filling in your predefined answers. Say goodbye to repetitive form filling!
 
 ### Download
 👉 [Click to Download](https://github.com/blues32767/Google-Form-Auto-Fill-Extension/releases/download/Google-Forms-auto-fill-Extension/Google-Forms-auto-fill-Extension.zip)
 
+Documentation: https://blues32767.github.io/Google-Form-Auto-Fill-Extension/
+
 ### Features ✨
-- Automatically fills in text fields in forms
-- Customizable default answers
+- Detects question text and automatically fills in answers based on your QA.txt settings
+- Customizable default answers for all your forms
 - Saves time on repetitive form filling
 
 ### Setup Guide 📝
@@ -154,16 +143,37 @@ This is a convenient tool that helps you automatically fill in any Google Forms!
    question keyword,answer
    name,John Doe
    phone,0912345678
+   multiple choice,answer1,answer2,answer3
    ```
-3. Common keywords reference:
+3. QA.txt reference (modify as needed):
    ```
-   name,John Doe
-   phone,0912345678
-   mobile,0912345678
-   email,example@mail.com
-   birthday,1989-06-04
+   # English
+   name,Test User
+   mobile,0999999999
+   phone,0999999999
+   height/weight,200/99
+   height,200
+   weight,99
+   birthday,1989/06/04
+   mail,9999@example.com
+   email,9999@example.com
+   gender,female
+   sex,girl
+   language skills,Chinese,English,Japanese
+   
+   # Social Media IDs
+   ig,https://www.instagram.com/
+   instagram,https://www.instagram.com/
+   fb,https://www.facebook.com/
+   facebook,https://www.facebook.com/
+   line,
+   wechat,
+   
+   # Notes - Delete lines you don't need
+   # Multiple choice format: question keyword,value1,value2,value3 (multiple values separated by commas)
+   # Multiple choice example: languages,Chinese,English,Japanese
    ```
-4. Run "Execute-UpdateQAToContent"
+4. Run "Execute-UpdateQAToContent.bat"
 5. Wait for the update completion message
 
 #### Step 2: Install the Extension 🔧
@@ -173,10 +183,23 @@ This is a convenient tool that helps you automatically fill in any Google Forms!
 4. Click "Load unpacked" in top left
 5. Select the extracted folder
 
+### Ideal For 👥
+- People who frequently fill out various forms
+- Users who repeatedly enter the same information
+- Anyone looking to save time on form filling
+
+### Perfect For These Professions 💼
+- Artists/Actors: Frequently filling out audition and booking forms
+- Teachers: Regularly completing course reports and teaching records
+- Sales Representatives: Needing to fill customer data and visit records
+- Event Hosts: Often registering for events and providing performance details
+- Freelancers: Constantly filling out various collaboration proposal forms
+- Students: Frequently completing course registrations and event sign-up forms
+
 ### Important Notes ⚠️
-- Currently only supports text field auto-filling
-- Does not support radio buttons, checkboxes, or dropdown menus
-- Settings must be updated and extension reloaded after modifying answers
+- Currently supports automatic filling of text fields
+- Supports radio buttons and checkboxes
+- After modifying answers, you need to update settings and reload the extension
 
 ### FAQ ❓
 
@@ -198,11 +221,13 @@ A: MAC users can follow these steps:
 **Q: How to properly reload the extension after updating QA.txt?**  
 A: Follow these steps:
 1. Save your modified QA.txt
-2. Run "Execute-UpdateQAToContent"
+2. Run "Execute-UpdateQAToContent.bat"
 3. Go to Chrome extensions page (chrome://extensions/)
 4. Find "Google Form Auto-Fill Assistant"
 5. Click the refresh icon 🔄 in the bottom right of the extension card
 6. Alternatively, close and reopen Chrome
+
+**Update 04/13/2025 - Added support for automatically selecting radio buttons and checkboxes.**
 
 ---
 
