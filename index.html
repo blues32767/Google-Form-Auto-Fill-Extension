@@ -219,14 +219,14 @@
             <h2 class="zh">功能特點</h2>
             <h2 class="en">Features</h2>
             <ul class="feature-list">
-                <li class="zh">智慧匹配表單欄位 - 根據關鍵字自動識別欄位並填入答案</li>
-                <li class="en">Smart form field matching - Automatically identifies fields based on keywords and fills answers</li>
-                <li class="zh">支援文字輸入框 - 適用於常見的文字輸入需求</li>
-                <li class="en">Support text input fields - Suitable for common text input needs</li>
-                <li class="zh">可自訂預設答案 - 隨時調整以符合個人需求</li>
-                <li class="en">Customizable default answers - Adjust anytime to fit your needs</li>
-                <li class="zh">安裝即可使用 - 無需複雜設定，簡單上手</li>
-                <li class="en">Ready to use upon installation - No complex setup, easy to start</li>
+                <li class="zh">偵測題目包含的文字，自動填寫QA.txt設定的對照答案</li>
+                <li class="en">Detects question text and automatically fills in answers based on your QA.txt settings</li>
+                <li class="zh">自訂你想要的預設答案</li>
+                <li class="en">Customizable default answers for all your forms</li>
+                <li class="zh">節省重複填寫表單的時間</li>
+                <li class="en">Saves time on repetitive form filling</li>
+                <li class="zh">支援自動選擇單選題和複選框</li>
+                <li class="en">Supports automatic selection of radio buttons and checkboxes</li>
             </ul>
         </div>
 
@@ -252,23 +252,32 @@
             <h2 class="en">Setting Guide</h2>
             <div class="note">
                 <strong class="zh">格式:</strong><br class="zh">
-                <span class="zh">題目，答案</span><br class="zh">
-                <span class="zh">簡單易懂，每行一組配對</span>
+                <span class="zh">問題關鍵字,答案</span><br class="zh">
+                <span class="zh">複選題格式：題目包含名稱,值1,值2,值3（多值用逗號分隔，單值直接寫）</span>
                 <strong class="en">Format:</strong><br class="en">
-                <span class="en">Question text, Answer</span><br class="en">
-                <span class="en">Simple and clear, one pair per line</span>
+                <span class="en">Question keyword, Answer</span><br class="en">
+                <span class="en">Multiple choice format: question keyword,value1,value2,value3 (multiple values separated by commas)</span>
             </div>
             <p class="zh">範例:</p>
             <p class="en">Example:</p>
             <code>
-                name,blues<br>
-                姓名,王小明<br>
-                電話,0912345678
+                # 中文<br>
+                姓名,測試者<br>
+                手機,0999999999<br>
+                電話,0999999999<br>
+                身高/體重,200/99<br>
+                身高,200<br>
+                體重,99<br>
+                生日,1989/06/04<br>
+                mail,9999@example.com<br>
+                信箱,9999@example.com<br>
+                性別,女<br>
+                語言能力,中文,chinese,英文,english,日文,japanese
             </code>
             <p class="note">
-                <span class="zh">當表單題目包含「姓名」時，會自動填入「王小明」</span><br class="zh">
+                <span class="zh">當表單題目包含「姓名」時，會自動填入「測試者」</span><br class="zh">
                 <span class="zh">支援部分關鍵字匹配，靈活應用</span>
-                <span class="en">When the form question contains "姓名", it will auto-fill "王小明"</span><br class="en">
+                <span class="en">When the form question contains "name", it will auto-fill "Test User"</span><br class="en">
                 <span class="en">Supports partial keyword matching for flexible use</span>
             </p>
         </div>
@@ -277,8 +286,10 @@
             <h2 class="zh">注意事項</h2>
             <h2 class="en">Notes</h2>
             <ul class="feature-list">
-                <li class="zh">目前僅支援文字輸入框 - 未來可能新增更多功能</li>
-                <li class="en">Currently only supports text input fields - More features may be added in the future</li>
+                <li class="zh">支援文字欄位的自動填寫</li>
+                <li class="en">Supports automatic filling of text fields</li>
+                <li class="zh">支援單選題和複選框</li>
+                <li class="en">Supports radio buttons and checkboxes</li>
                 <li class="zh">修改QA.txt後需重新執行更新批次檔 - 確保答案即時更新</li>
                 <li class="en">After editing QA.txt, run the update batch file - Ensure answers are updated instantly</li>
                 <li class="zh">送出前請檢查填寫內容 - 以避免意外錯誤</li>
@@ -289,12 +300,14 @@
             <ol class="steps">
                 <li class="zh">修改 QA.txt 檔案</li>
                 <li class="en">Edit the QA.txt file</li>
-                <li class="zh">執行 "執行我-Execute-me-auto-update-QA-To-content.bat"</li>
-                <li class="en">Run "Execute-me-auto-update-QA-To-content.bat"</li>
+                <li class="zh">執行 "執行我-把QA更新到content.bat"</li>
+                <li class="en">Run "Execute-UpdateQAToContent.bat"</li>
                 <li class="zh">在 Chrome 擴充功能頁面重新載入</li>
                 <li class="en">Reload in Chrome extensions page</li>
             </ol>
-                    <div class="section">
+        </div>
+        
+        <div class="section">
             <h2 class="emoji-title zh">❓ 常見問題</h2>
             <h2 class="emoji-title en">❓ FAQ</h2>
             
@@ -397,7 +410,7 @@ mail,example@mail.com</div>
                     <div class="answer zh">A: 請依序執行以下步驟：
                         <ol>
                             <li>儲存修改後的 QA.txt</li>
-                            <li>執行「執行我-把QA更新到content」</li>
+                            <li>執行「執行我-把QA更新到content.bat」</li>
                             <li>前往 Chrome 擴充功能頁面（chrome://extensions/）</li>
                             <li>找到「Google 表單自動填寫小幫手」</li>
                             <li>點擊擴充功能卡片右下角的重新整理圖示 🔄</li>
@@ -407,7 +420,7 @@ mail,example@mail.com</div>
                     <div class="answer en">A: Follow these steps:
                         <ol>
                             <li>Save your modified QA.txt</li>
-                            <li>Run "Execute-UpdateQAToContent"</li>
+                            <li>Run "Execute-UpdateQAToContent.bat"</li>
                             <li>Go to Chrome extensions page (chrome://extensions/)</li>
                             <li>Find "Google Form Auto-Fill Assistant"</li>
                             <li>Click the refresh icon 🔄 in the bottom right of the extension card</li>
@@ -417,43 +430,39 @@ mail,example@mail.com</div>
                 </div>
             </div>
         </div>
-    </div>
+
         <footer style="background-color: #f8f9fa; padding: 2rem 0; margin-top: 3rem; font-family: 'Segoe UI', Arial, sans-serif;">
-  <div style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
-    <div style="border-bottom: 1px solid #dee2e6; padding-bottom: 1rem; margin-bottom: 1rem;">
-      <h3 style="color: #212529; margin-bottom: 1rem;">專案資訊</h3>
-      <p style="margin-bottom: 0.5rem;">
-        <a href="https://github.com/blues32767/Google-Form-Auto-Fill-Extension/" 
-           style="color: #0366d6; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-          <svg height="20" width="20" viewBox="0 0 16 16" style="fill: currentColor;">
-            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-          </svg>
-          Google Form Auto-Fill Extension
-        </a>
-      </p>
-    </div>
-    
-    <div style="font-family: 'Courier New', monospace; color: #6c757d; font-size: 0.9rem;">
-      <pre style="background-color: #f1f3f5; padding: 1rem; border-radius: 4px; overflow-x: auto;">
+            <div style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+                <div style="border-bottom: 1px solid #dee2e6; padding-bottom: 1rem; margin-bottom: 1rem;">
+                    <h3 style="color: #212529; margin-bottom: 1rem;">專案資訊</h3>
+                    <p style="margin-bottom: 0.5rem;">
+                        <a href="https://github.com/blues32767/Google-Form-Auto-Fill-Extension/" 
+                           style="color: #0366d6; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                          <svg height="20" width="20" viewBox="0 0 16 16" style="fill: currentColor;">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                          </svg>
+                          Google Form Auto-Fill Extension
+                        </a>
+                    </p>
+                </div>
+                
+                <div style="font-family: 'Courier New', monospace; color: #6c757d; font-size: 0.9rem;">
+                    <pre style="background-color: #f1f3f5; padding: 1rem; border-radius: 4px; overflow-x: auto;">
 /*
 # ============================================================================
 #    Google Form Auto-Fill Extension - PowerShell Update Script
 #    Author/作者: blues32767
-#    Version/版本: v1.20250408
+#    Version/版本: v1.20250413
 #    https://github.com/blues32767
 # ============================================================================
 */</pre>
-    </div>
-    
-    <p style="text-align: center; margin-top: 1rem; color: #6c757d; font-size: 0.9rem;">
-      © 2025 Google Form Auto-Fill Extension. All rights reserved.
-    </p>
-  </div>
-</footer>
-
-</body>
-</html>
-        </div>
+                </div>
+                
+                <p style="text-align: center; margin-top: 1rem; color: #6c757d; font-size: 0.9rem;">
+                    © 2025 Google Form Auto-Fill Extension. All rights reserved.
+                </p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
