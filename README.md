@@ -31,17 +31,49 @@
    問題關鍵字,答案
    姓名,王小明
    電話,0912345678
+   複選題木,答案1,答案2,答案3
    ```
 3. 常用關鍵字參考：
    ```
-   name,王小明
-   姓名,王小明
-   phone,0912345678
-   手機,0912345678
-   電話,0912345678
-   mail,example@mail.com
-   信箱,example@mail.com
-   生日,1989-06-04
+   # 中文
+   姓名,測試者
+   手機,0999999999
+   電話,0999999999
+   身高/體重,200/99
+   身高,200
+   體重,99
+   生日,1989/06/04
+   mail,9999@example.com
+   信箱,9999@example.com
+   性別,女
+   語言能力,中文,chinese,英文,english,日文,japanese
+   
+   # English
+   name,test name
+   phone,0999999999
+   high/weight,180/80
+   high,180
+   weight,80
+   birthday,1989/06/04
+   mail,9999@example.com
+   sex,girl
+   language,chinese,english,japanese
+   
+   #社群帳號-SocialID
+   ig,https://www.instagram.com/
+   instagram,https://www.instagram.com/
+   fb,https://www.facebook.com/
+   facebook,https://www.facebook.com/
+   line,
+   wechat,
+      
+   # 備註-不要的那行可以刪除
+   # 複選格式：題目包含名稱,值1,值2,值3（多值用逗號分隔，單值直接寫）
+   # 複選示例：熟悉語言,中文,英文,日文
+   
+   #Note-Unwanted line can be deleted
+   #Multiple choice format: Question includes name,value1,value2,value3 (multiple values separated by commas, single value written directly)
+   #Multiple choice example: Familiar languages,Chinese,English,Japanese
    ```
 4. 執行「執行我-把QA更新到content.bat」
 5. 等待更新完成訊息
