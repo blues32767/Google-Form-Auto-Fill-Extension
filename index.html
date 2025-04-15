@@ -566,5 +566,18 @@ mail,example@mail.com</div>
             </div>
         </footer>
     </div>
+    <script>
+    // 頁面載入時執行
+    document.addEventListener('DOMContentLoaded', function() {
+      // 獲取URL參數
+      const urlParams = new URLSearchParams(window.location.search);
+      const lang = urlParams.get('lang');
+      
+      // 如果有lang參數且為'en'，則自動選擇英文
+      if (lang === 'en') {
+        document.getElementById('lang-en').checked = true;
+      }
+    });
+    </script>
 </body>
 </html>
