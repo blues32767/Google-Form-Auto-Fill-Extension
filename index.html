@@ -5,287 +5,389 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google表單自動填寫擴充套件 | Google Form Auto-Fill Extension</title>
     <style>
-        * {   <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Microsoft JhengHei', sans-serif;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Google Sans', 'Roboto', 'Arial', sans-serif;
+}
 
-        body {
-            line-height: 1.6;
-            color: #f0f0f0;
-            background-color: #20949d;
-            background-image: linear-gradient(135deg, #20949d 0%, #1a7b82 100%);
-            background-attachment: fixed;
-        }
+body {
+    line-height: 1.6;
+    color: #202124;
+    background-color: #f8f9fa;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        .lang-tabs {
-            text-align: center;
-            margin: 20px 0;
-        }
+.lang-tabs {
+    text-align: center;
+    margin: 20px 0;
+}
 
-        .lang-tabs label {
-            display: inline-block;
-            padding: 10px 20px;
-            cursor: pointer;
-            background-color: #177379;
-            border-radius: 5px 5px 0 0;
-            margin: 0 5px;
-            color: #e0e0e0;
-            transition: all 0.3s ease;
-        }
+.lang-tabs label {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 24px;
+    margin: 0 5px;
+    color: #5f6368;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    border: 1px solid #dadce0;
+}
 
-        .lang-tabs label:hover {
-            background-color: #1a858c;
-        }
+.lang-tabs label:hover {
+    background-color: #f1f3f4;
+}
 
-        .lang-tabs input[type="radio"] {
-            display: none;
-        }
+.lang-tabs input[type="radio"] {
+    display: none;
+}
 
-        .lang-tabs input[type="radio"]:checked + label {
-            background-color: #26b6c1;
-            color: white;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-        }
+.lang-tabs input[type="radio"]:checked + label {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    border-color: #1a73e8;
+}
 
-        .header {
-            text-align: center;
-            padding: 40px 0;
-            background-color: #18777e;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-        }
+.header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #fff;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
 
-        .header h1 {
-            color: #ffffff;
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-        }
+.header h1 {
+    color: #1a73e8;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 32px;
+}
 
-        .download-btn {
-            display: inline-block;
-            background-color: #26b6c1;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin: 20px 0;
-            transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            font-weight: bold;
-        }
+.download-btn {
+    display: inline-block;
+    background-color: #1a73e8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 24px;
+    text-decoration: none;
+    margin: 20px 0;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px rgba(60,64,67,0.3);
+    font-weight: 500;
+    font-size: 16px;
+}
 
-        .download-btn:hover {
-            background-color: #2dcbd7;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
-        }
+.download-btn:hover {
+    background-color: #1765cc;
+    box-shadow: 0 1px 3px rgba(60,64,67,0.3);
+}
 
-        .section {
-            background-color: #18777e;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-        }
+.section {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
 
-        .section h2 {
-            color: #ffffff;
-            border-bottom: 2px solid #26b6c1;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
+.section h2 {
+    color: #202124;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 24px;
+    border-bottom: 1px solid #f1f3f4;
+}
 
-        .feature-list, .steps {
-            list-style: none;
-            padding-left: 20px;
-        }
+.feature-list, .steps {
+    list-style: none;
+    padding-left: 10px;
+}
 
-        .feature-list li, .steps li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 25px;
-        }
+.feature-list li, .steps li {
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 28px;
+    color: #3c4043;
+}
 
-        .feature-list li:before {
-            content: "✓";
-            color: #2dcbd7;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
+.feature-list li:before {
+    content: "✓";
+    color: #1a73e8;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
 
-        .steps {
-            counter-reset: step-counter;
-        }
+.steps {
+    counter-reset: step-counter;
+}
 
-        .steps li:before {
-            content: counter(step-counter);
-            counter-increment: step-counter;
-            background-color: #26b6c1;
-            color: white;
-            border-radius: 50%;
-            width: 25px;
-            height: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
+.steps li:before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
 
-        .note {
-            background-color: #156369;
-            border-left: 4px solid #2dcbd7;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 5px 5px 0;
-        }
+.note {
+    background-color: #f8f9fa;
+    border-left: 4px solid #1a73e8;
+    padding: 16px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    color: #3c4043;
+}
 
-        code {
-            background-color: #156369;
-            padding: 12px;
-            border-radius: 5px;
-            font-family: monospace;
-            display: block;
-            margin: 15px 0;
-            color: #e0e0e0;
-            border-left: 3px solid #2dcbd7;
-        }
+code {
+    background-color: #f1f3f4;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: 'Roboto Mono', monospace;
+    display: block;
+    margin: 16px 0;
+    color: #3c4043;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
+}
 
-        .zh, .en {
-            display: none;
-        }
+.zh, .en {
+    display: none;
+}
 
-        #lang-zh:checked ~ .container .zh,
-        #lang-en:checked ~ .container .en {
-            display: block;
-        }
+#lang-zh:checked ~ .container .zh,
+#lang-en:checked ~ .container .en {
+    display: block;
+}
 
-        .qa-section {
-            margin-top: 20px;
-        }
-        
-        .qa-section h3 {
-            color: #ffffff;
-            margin: 30px 0 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #26b6c1;
-        }
-        
-        .qa-item {
-            margin-bottom: 30px;
-            background-color: #156369;
-            padding: 20px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .qa-item:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transform: translateY(-2px);
-        }
-        
-        .question {
-            font-weight: bold;
-            color: #2dcbd7;
-            margin-bottom: 10px;
-        }
-        
-        .answer {
-            padding-left: 20px;
-        }
-        
-        .answer ul, .answer ol {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        
-        .answer li {
-            margin-bottom: 5px;
-        }
-        
-        .code-block {
-            background-color: #125257;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 10px 0;
-            font-family: monospace;
-            white-space: pre-wrap;
-            color: #e0e0e0;
-            border-left: 3px solid #2dcbd7;
-        }
+.qa-section {
+    margin-top: 24px;
+}
 
-        footer {
-            background-color: #18777e !important;
-            padding: 2rem 0;
-            margin-top: 3rem;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            border-radius: 10px;
-            box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
-        }
+.qa-section h3 {
+    color: #202124;
+    margin: 32px 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f1f3f4;
+    font-weight: 500;
+    font-size: 20px;
+}
 
-        footer h3 {
-            color: #ffffff !important;
-            border-bottom: 1px solid #26b6c1;
-            padding-bottom: 10px;
-        }
+.qa-item {
+    margin-bottom: 24px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    border: 1px solid #dadce0;
+}
 
-        footer a {
-            color: #2dcbd7 !important;
-            transition: color 0.3s;
-        }
+.qa-item:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-color: #1a73e8;
+}
 
-        footer a:hover {
-            color: #ffffff !important;
-        }
+.question {
+    font-weight: 500;
+    color: #1a73e8;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
 
-        footer pre {
-            background-color: #156369 !important;
-            color: #e0e0e0 !important;
-            border-radius: 5px;
-            border-left: 3px solid #2dcbd7;
-        }
+.answer {
+    padding-left: 16px;
+    color: #3c4043;
+}
 
-        footer p {
-            color: #e0e0e0 !important;
-        }
+.answer ul, .answer ol {
+    margin: 12px 0;
+    padding-left: 24px;
+}
 
-        /* 增加一些動畫效果 */
-        .header, .section, .qa-item {
-            animation: fadeIn 0.8s ease-in-out;
-        }
+.answer li {
+    margin-bottom: 8px;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+.code-block {
+    background-color: #f1f3f4;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 12px 0;
+    font-family: 'Roboto Mono', monospace;
+    white-space: pre-wrap;
+    color: #3c4043;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 1px solid #dadce0;
+}
 
-        /* 響應式設計調整 */
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            .header {
-                padding: 30px 15px;
-            }
-            
-            .section {
-                padding: 20px 15px;
-            }
-        }
+footer {
+    background-color: #fff !important;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+footer h3 {
+    color: #202124 !important;
+    border-bottom: 1px solid #f1f3f4;
+    padding-bottom: 12px;
+    font-weight: 500;
+}
+
+footer a {
+    color: #1a73e8 !important;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #1765cc !important;
+    text-decoration: underline;
+}
+
+footer pre {
+    background-color: #f1f3f4 !important;
+    color: #3c4043 !important;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+footer p {
+    color: #5f6368 !important;
+}
+
+/* 增加一些微妙的動畫效果 */
+.header, .section {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 響應式設計調整 */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+    
+    .header {
+        padding: 32px 16px;
+    }
+    
+    .section {
+        padding: 24px 16px;
+    }
+    
+    .download-btn {
+        width: 80%;
+    }
+}
+
+/* 為按鈕添加波紋效果 */
+.download-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.download-btn:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+/* 為卡片添加微妙的懸停效果 */
+.section:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+/* 添加 Google 風格的聚焦效果 */
+a:focus, button:focus {
+    outline: 2px solid #1a73e8;
+    outline-offset: 2px;
+}
+
+/* 添加 Material Design 風格的陰影層次 */
+.header {
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+}
+
+.section {
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.05);
+}
+
+/* 添加 Google 風格的滾動條 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dadce0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5f6368;
+}
+
     </style>
 </head>
 <body>
