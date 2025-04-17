@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google表單自動填寫擴充套件 | Google Form Auto-Fill Extension</title>
     <style>
-        * {
+     * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +15,8 @@
 body {
     line-height: 1.6;
     color: #202124;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
+    background-attachment: fixed;
 }
 
 .container {
@@ -31,19 +32,34 @@ body {
 
 .lang-tabs label {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 24px;
     cursor: pointer;
     background-color: transparent;
     border-radius: 24px;
     margin: 0 5px;
     color: #5f6368;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     font-weight: 500;
     border: 1px solid #dadce0;
+    position: relative;
+    overflow: hidden;
 }
 
-.lang-tabs label:hover {
-    background-color: #f1f3f4;
+.lang-tabs label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #4285f4, #0f9d58, #f4b400, #db4437);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+}
+
+.lang-tabs label:hover:before {
+    opacity: 0.1;
 }
 
 .lang-tabs input[type="radio"] {
@@ -54,49 +70,85 @@ body {
     background-color: #e8f0fe;
     color: #1a73e8;
     border-color: #1a73e8;
+    box-shadow: 0 2px 6px rgba(26, 115, 232, 0.2);
 }
 
 .header {
     text-align: center;
     padding: 40px 0;
-    background-color: #fff;
-    border-radius: 16px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 24px;
     margin-bottom: 30px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
 }
 
 .header h1 {
     color: #1a73e8;
     margin-bottom: 15px;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 36px;
+    background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 .download-btn {
     display: inline-block;
-    background-color: #1a73e8;
+    background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
     color: white;
-    padding: 12px 24px;
-    border-radius: 24px;
+    padding: 14px 28px;
+    border-radius: 28px;
     text-decoration: none;
     margin: 20px 0;
-    transition: all 0.2s;
-    box-shadow: 0 1px 2px rgba(60,64,67,0.3);
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
     font-weight: 500;
     font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    border: none;
 }
 
 .download-btn:hover {
-    background-color: #1765cc;
-    box-shadow: 0 1px 3px rgba(60,64,67,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(26, 115, 232, 0.4);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(26, 115, 232, 0.3);
 }
 
 .section {
-    background-color: #fff;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 24px;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.12);
 }
 
 .section h2 {
@@ -104,8 +156,20 @@ body {
     padding-bottom: 16px;
     margin-bottom: 20px;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 28px;
     border-bottom: 1px solid #f1f3f4;
+    position: relative;
+}
+
+.section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #4285f4, #0f9d58);
+    border-radius: 3px;
 }
 
 .feature-list, .steps {
@@ -114,18 +178,25 @@ body {
 }
 
 .feature-list li, .steps li {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     position: relative;
-    padding-left: 28px;
+    padding-left: 32px;
     color: #3c4043;
 }
 
 .feature-list li:before {
     content: "✓";
-    color: #1a73e8;
+    color: #0f9d58;
     position: absolute;
     left: 0;
     font-weight: bold;
+    background: #e6f4ea;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .steps {
@@ -135,11 +206,11 @@ body {
 .steps li:before {
     content: counter(step-counter);
     counter-increment: step-counter;
-    background-color: #1a73e8;
+    background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
     color: white;
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,28 +218,32 @@ body {
     left: 0;
     font-size: 14px;
     font-weight: 500;
+    box-shadow: 0 2px 6px rgba(26, 115, 232, 0.3);
 }
 
 .note {
     background-color: #f8f9fa;
-    border-left: 4px solid #1a73e8;
-    padding: 16px;
-    margin: 20px 0;
-    border-radius: 0 8px 8px 0;
+    border-left: 4px solid #f4b400;
+    padding: 18px;
+    margin: 24px 0;
+    border-radius: 0 12px 12px 0;
     color: #3c4043;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 code {
     background-color: #f1f3f4;
-    padding: 16px;
-    border-radius: 8px;
+    padding: 18px;
+    border-radius: 12px;
     font-family: 'Roboto Mono', monospace;
     display: block;
-    margin: 16px 0;
+    margin: 18px 0;
     color: #3c4043;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.6;
     overflow-x: auto;
+    border: 1px solid #dadce0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .zh, .en {
@@ -181,99 +256,213 @@ code {
 }
 
 .qa-section {
-    margin-top: 24px;
+    margin-top: 28px;
 }
 
 .qa-section h3 {
     color: #202124;
-    margin: 32px 0 20px;
-    padding-bottom: 8px;
+    margin: 36px 0 24px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #f1f3f4;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 22px;
+    position: relative;
+}
+
+.qa-section h3:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #f4b400, #db4437);
+    border-radius: 3px;
 }
 
 .qa-item {
-    margin-bottom: 24px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 12px;
-    transition: all 0.2s ease;
+    margin-bottom: 28px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 24px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
     border: 1px solid #dadce0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .qa-item:hover {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    border-color: #1a73e8;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    border-color: #4285f4;
+    transform: translateY(-2px);
 }
 
 .question {
     font-weight: 500;
-    color: #1a73e8;
-    margin-bottom: 12px;
-    font-size: 16px;
+    color: #4285f4;
+    margin-bottom: 14px;
+    font-size: 18px;
+    position: relative;
+    padding-left: 28px;
+}
+
+.question:before {
+    content: "Q";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #4285f4;
 }
 
 .answer {
-    padding-left: 16px;
+    padding-left: 28px;
     color: #3c4043;
+    position: relative;
+}
+
+.answer:before {
+    content: "A";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #0f9d58;
 }
 
 .answer ul, .answer ol {
-    margin: 12px 0;
+    margin: 14px 0;
     padding-left: 24px;
 }
 
 .answer li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.answer ul li:before {
+    content: "•";
+    color: #4285f4;
+    position: absolute;
+    left: -18px;
+    font-weight: bold;
 }
 
 .code-block {
     background-color: #f1f3f4;
-    padding: 16px;
-    border-radius: 8px;
-    margin: 12px 0;
+    padding: 18px;
+    border-radius: 12px;
+    margin: 14px 0;
     font-family: 'Roboto Mono', monospace;
     white-space: pre-wrap;
     color: #3c4043;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.6;
+    border: 1px solid #dadce0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.code-block:before {
+    content: 'Code';
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    background: #f8f9fa;
+    padding: 0 8px;
+    font-size: 12px;
+    color: #5f6368;
+    border-radius: 4px;
     border: 1px solid #dadce0;
 }
 
 footer {
-    background-color: #fff !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
     padding: 2rem 0;
     margin-top: 3rem;
     font-family: 'Google Sans', 'Roboto', sans-serif;
-    border-radius: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+footer:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
 }
 
 footer h3 {
     color: #202124 !important;
     border-bottom: 1px solid #f1f3f4;
-    padding-bottom: 12px;
+    padding-bottom: 14px;
     font-weight: 500;
+    position: relative;
+}
+
+footer h3:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
+    border-radius: 3px;
 }
 
 footer a {
     color: #1a73e8 !important;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: all 0.3s;
+    position: relative;
 }
 
 footer a:hover {
-    color: #1765cc !important;
-    text-decoration: underline;
+    color: #4285f4 !important;
+}
+
+footer a:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4285f4, #0f9d58);
+    transition: width 0.3s;
+}
+
+footer a:hover:after {
+    width: 100%;
 }
 
 footer pre {
     background-color: #f1f3f4 !important;
     color: #3c4043 !important;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid #dadce0;
     font-family: 'Roboto Mono', monospace;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+footer pre:before {
+    content: 'Script';
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    background: #f8f9fa;
+    padding: 0 8px;
+    font-size: 12px;
+    color: #5f6368;
+    border-radius: 4px;
+    border: 1px solid #dadce0;
 }
 
 footer p {
@@ -281,13 +470,78 @@ footer p {
 }
 
 /* 增加一些微妙的動畫效果 */
-.header, .section {
-    animation: fadeIn 0.3s ease-in-out;
+.header, .section, .qa-item {
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
+    from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* 為按鈕添加波紋效果 */
+.download-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.download-btn:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.7;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+/* 添加 Google 風格的聚焦效果 */
+a:focus, button:focus {
+    outline: 2px solid #4285f4;
+    outline-offset: 2px;
+}
+
+/* 添加 Google 風格的滾動條 */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #4285f4, #0f9d58);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #3367d6, #0c8043);
 }
 
 /* 響應式設計調整 */
@@ -307,85 +561,39 @@ footer p {
     .download-btn {
         width: 80%;
     }
+    
+    .header h1 {
+        font-size: 28px;
+    }
 }
 
-/* 為按鈕添加波紋效果 */
-.download-btn {
+/* 添加彩色邊框效果 */
+.emoji-title {
     position: relative;
-    overflow: hidden;
+    display: inline-block;
+    padding: 0 0 8px 0;
 }
 
-.download-btn:after {
+.emoji-title:after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.5);
-    opacity: 0;
-    border-radius: 100%;
-    transform: scale(1, 1) translate(-50%);
-    transform-origin: 50% 50%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
+    border-radius: 3px;
 }
 
-.download-btn:focus:not(:active)::after {
-    animation: ripple 1s ease-out;
+/* 添加浮動效果 */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
 }
 
-@keyframes ripple {
-    0% {
-        transform: scale(0, 0);
-        opacity: 0.5;
-    }
-    20% {
-        transform: scale(25, 25);
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 0;
-        transform: scale(40, 40);
-    }
-}
-
-/* 為卡片添加微妙的懸停效果 */
-.section:hover {
-    transform: translateY(-2px);
-    transition: transform 0.2s ease;
-}
-
-/* 添加 Google 風格的聚焦效果 */
-a:focus, button:focus {
-    outline: 2px solid #1a73e8;
-    outline-offset: 2px;
-}
-
-/* 添加 Material Design 風格的陰影層次 */
-.header {
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
-}
-
-.section {
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.05);
-}
-
-/* 添加 Google 風格的滾動條 */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #dadce0;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #5f6368;
+.download-btn {
+    animation: float 3s ease-in-out infinite;
 }
 
     </style>
