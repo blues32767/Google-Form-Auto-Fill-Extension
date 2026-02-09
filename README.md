@@ -17,6 +17,16 @@
 
 說明網頁：https://blues32767.github.io/Google-Form-Auto-Fill-Extension/
 
+## ☕ 支持開發者 (Support Me)
+
+如果您覺得這個工具幫您省下了寶貴的時間，歡迎請我喝杯咖啡，這將支持我繼續維護與開發更多好用的工具！
+
+If this tool saved you time, consider buying me a coffee! Your support helps me maintain this project and build more open-source tools.
+
+<a href="https://www.buymeacoffee.com/blues32767" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >
+</a>
+
 ### 功能特點 ✨
 - 偵測題目包含的文字，自動填寫QA.txt設定的對照的答案
 - 自訂你想要的預設答案
@@ -128,6 +138,16 @@ This is a convenient tool that helps you automatically fill in any Google Forms 
 👉 [Click to Download](https://github.com/blues32767/Google-Form-Auto-Fill-Extension/releases/download/Google-Forms-auto-fill-Extension/Google-Forms-auto-fill-Extension.zip)
 
 Documentation: https://blues32767.github.io/Google-Form-Auto-Fill-Extension/
+
+## ☕ 支持開發者 (Support Me)
+
+如果您覺得這個工具幫您省下了寶貴的時間，歡迎請我喝杯咖啡，這將支持我繼續維護與開發更多好用的工具！
+
+If this tool saved you time, consider buying me a coffee! Your support helps me maintain this project and build more open-source tools.
+
+<a href="https://www.buymeacoffee.com/blues32767" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >
+</a>
 
 ### Features ✨
 - Detects question text and automatically fills in answers based on your QA.txt settings
