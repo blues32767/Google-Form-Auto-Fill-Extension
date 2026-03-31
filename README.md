@@ -88,12 +88,12 @@
 
 A magical tool that fills out forms for you with just one click! No technical skills required. Set up your content in advance, and when you open a Google Form, the system will instantly auto-fill all the fields for you so you're always one step ahead!
 **Highly recommended for:**
-👉 **Assistive tool for users with disabilities:** Reduces typing effort and easily bridges the digital divide!
-🎤 **Snagging tickets, limited editions, or fast registrations:** Auto-fill and submit everything super fast!
-🎭 **Artists/Actors:** Audition and casting applications.
-💼 **Sales/Business:** Quick data entry for customer details or visit reports.
-💻 **Freelancers:** Collaboration proposals and applications.
-📝 **Students:** Registering for popular classes and event forms.
+- 👉 **Assistive tool for users with disabilities:** Reduces typing effort and easily bridges the digital divide!
+- 🎤 **Snagging tickets, limited editions, or fast registrations:** Auto-fill and submit everything super fast!
+- 🎭 **Artists/Actors:** Audition and casting applications.
+- 💼 **Sales/Business:** Quick data entry for customer details or visit reports.
+- 💻 **Freelancers:** Collaboration proposals and applications.
+- 📝 **Students:** Registering for popular classes and event forms.
 
 #### 💡 Configuration Examples
 The extension uses "**Keywords**" to find questions. If a form question **contains** your keyword, the system will automatically fill in or select your "**Fill-in content**".
@@ -140,11 +140,12 @@ The extension uses "**Keywords**" to find questions. If a form question **contai
 
 事前に入力内容を設定しておくことで、Google フォームを開いた瞬間にすべての項目を自動的に入力する魔法のようなツールです。パソコンの難しい知識は不要です！
 **こんな方におすすめ：**
-🎤 **チケットや限定グッズの申し込み、先着順の予約：** 超高速で自動入力・送信し、誰よりも早く申し込みを完了！
-🎭 **アーティスト：** オーディションや出演の応募など。
-💼 **営業・ビジネス：** 顧客データや訪問記録の迅速な入力。
-💻 **フリーランサー：** 案件への応募や提案。
-📝 **学生：** 人気の授業登録やイベント申し込み。
+- 👉 **アクセシビリティ支援ツール：** 入力の手間を軽減し、デジタルデバイド（情報格差）をスムーズに解消します！
+- 🎤 **チケットや限定グッズの申し込み、先着順の予約：** 超高速で自動入力・送信し、誰よりも早く申し込みを完了！
+- 🎭 **アーティスト：** オーディションや出演の応募など。
+- 💼 **営業・ビジネス：** 顧客データや訪問記録の迅速な入力。
+- 💻 **フリーランサー：** 案件への応募や提案。
+- 📝 **学生：** 人気の授業登録やイベント申し込み。
 
 #### 💡 詳細設定テンプレートと活用例 (Configuration Examples)
 拡張機能は「**キーワード**」を使用して質問を探します。フォームの質問にキーワードが**含まれていれば**、システムが対応する「**入力内容**」を自動的に入力またはチェックします。
@@ -191,11 +192,12 @@ The extension uses "**Keywords**" to find questions. If a form question **contai
 
 컴퓨터를 잘 몰라도 괜찮습니다! 미리 입력할 내용을 설정해두면 Google 설문지를 열 때 모든 항목이 1초 만에 자동으로 채워지는 마법 같은 도구입니다.
 **강력 추천 대상：**
-🎤 **수강신청, 티켓팅, 한정판 굿즈 구매：** 초고속으로 자동 입력하고 제출하여 누구보다 빠르게!
-🎭 **연예인/지망생：** 오디션 및 캐스팅 지원.
-💼 **영업 사원：** 고객 데이터 및 방문 일지 빠른 작성.
-💻 **프리랜서：** 협업 제안 및 신청.
-📝 **학생：** 인기 강의 수강신청 및 이벤트 참여.
+- 👉 **장애인 사용자를 위한 보조 도구:** 타이핑의 번거로움을 줄이고 디지털 격차를 손쉽게 해소해 줍니다!
+- 🎤 **수강신청, 티켓팅, 한정판 굿즈 구매：** 초고속으로 자동 입력하고 제출하여 누구보다 빠르게!
+- 🎭 **연예인/지망생：** 오디션 및 캐스팅 지원.
+- 💼 **영업 사원：** 고객 데이터 및 방문 일지 빠른 작성.
+- 💻 **프리랜서：** 협업 제안 및 신청.
+- 📝 **학생：** 인기 강의 수강신청 및 이벤트 참여.
 
 #### 💡 상세 설정 템플릿 및 활용 예시 (Configuration Examples)
 확장 프로그램은 "**키워드**"를 사용하여 질문을 찾습니다. 설문지 질문에 설정한 키워드가 **포함되어** 있으면 시스템이 해당하는 "**입력 내용**"을 자동으로 입력하거나 선택합니다.
@@ -242,11 +244,12 @@ The extension uses "**Keywords**" to find questions. If a form question **contai
 
 เครื่องมือวิเศษที่จะช่วยคุณกรอกฟอร์มได้ในพริบตา! ไม่จำเป็นต้องเก่งคอมพิวเตอร์ เพียงตั้งค่าข้อมูลไว้ล่วงหน้า เมื่อเปิด Google Form ระบบจะกรอกข้อมูลทั้งหมดให้คุณทันที มั่นใจได้ว่าคุณจะไวกว่าคนอื่นเสมอ!
 **เหมาะอย่างยิ่งสำหรับ：**
-🎤 **แย่งคิวบัตรคอนเสิร์ต สินค้าลิมิเต็ด หรือลงทะเบียนตามคิว：** กรอกข้อมูลอย่างรวดเร็วและส่งได้ทันที!
-🎭 **ศิลปิน/นักแสดง：** สมัครออดิชั่นหรืองานแสดง.
-💼 **พนักงานขาย：** กรอกข้อมูลลูกค้าหรือรายงานการเยี่ยมชมอย่างรวดเร็ว.
-💻 **ฟรีแลนซ์：** ยื่นข้อเสนอความร่วมมือต่างๆ.
-📝 **นักเรียน/นักศึกษา：** ลงทะเบียนเรียนวิชาฮิต หรือฟอร์มกิจกรรม.
+- 👉 **เครื่องมือช่วยอำนวยความสะดวก:** ลดภาระในการพิมพ์และช่วยขจัดความเหลื่อมล้ำทางดิจิทัลได้อย่างง่ายดาย!
+- 🎤 **แย่งคิวบัตรคอนเสิร์ต สินค้าลิมิเต็ด หรือลงทะเบียนตามคิว：** กรอกข้อมูลอย่างรวดเร็วและส่งได้ทันที!
+- 🎭 **ศิลปิน/นักแสดง：** สมัครออดิชั่นหรืองานแสดง.
+- 💼 **พนักงานขาย：** กรอกข้อมูลลูกค้าหรือรายงานการเยี่ยมชมอย่างรวดเร็ว.
+- 💻 **ฟรีแลนซ์：** ยื่นข้อเสนอความร่วมมือต่างๆ.
+- 📝 **นักเรียน/นักศึกษา：** ลงทะเบียนเรียนวิชาฮิต หรือฟอร์มกิจกรรม.
 
 #### 💡 ตัวอย่างการตั้งค่าแบบละเอียด (Configuration Examples)
 ส่วนขยายนี้ใช้ "**คำค้นหา (Keyword)**" เพื่อค้นหาคำถาม หากคำถามในฟอร์ม**มี**คำค้นหาที่คุณตั้งไว้ ระบบจะกรอกหรือเลือก "**เนื้อหาที่ต้องการกรอก**" ให้โดยอัตโนมัติ
@@ -293,11 +296,12 @@ The extension uses "**Keywords**" to find questions. If a form question **contai
 
 ¡Una herramienta mágica que rellena los formularios por ti en un solo clic! No se requieren conocimientos técnicos. Configura tus datos con antelación y, cuando abras un Formulario de Google, todo se completará de forma automática al instante. ¡Serás el más rápido!
 **Súper recomendado para：**
-🎤 **Conseguir entradas, productos limitados o registrarse rápido：** ¡Completa todo en un segundo y envíalo automáticamente antes que los demás!
-🎭 **Artistas：** Solicitudes de audiciones o casting.
-💼 **Comerciales：** Entrada rápida de datos de clientes o informes de visitas.
-💻 **Autónomos y Freelancers：** Propuestas de colaboración.
-📝 **Estudiantes：** Inscripción a cursos muy demandados o eventos.
+- 👉 **Herramienta de accesibilidad:** ¡Reduce el esfuerzo de escritura y cierra fácilmente la brecha digital!
+- 🎤 **Conseguir entradas, productos limitados o registrarse rápido：** ¡Completa todo en un segundo y envíalo automáticamente antes que los demás!
+- 🎭 **Artistas：** Solicitudes de audiciones o casting.
+- 💼 **Comerciales：** Entrada rápida de datos de clientes o informes de visitas.
+- 💻 **Autónomos y Freelancers：** Propuestas de colaboración.
+- 📝 **Estudiantes：** Inscripción a cursos muy demandados o eventos.
 
 #### 💡 Ejemplos de Configuración Detallada (Configuration Examples)
 La extensión usa "**Palabras clave (Keywords)**" para buscar preguntas. Si el texto de la pregunta **contiene** tu palabra clave, el sistema ingresará o seleccionará automáticamente el "**Contenido a rellenar**".
@@ -344,11 +348,12 @@ La extensión usa "**Palabras clave (Keywords)**" para buscar preguntas. Si el t
 
 Uma ferramenta mágica para preencher formulários para você em apenas um clique! Sem necessidade de conhecimentos em informática. Configure seu conteúdo com antecedência e, ao abrir um Google Form, o sistema preencherá tudo instantaneamente para você estar sempre um passo à frente.
 **Altamente recomendado para：**
-🎤 **Disputar ingressos, produtos limitados ou inscrições concorridas：** Preencha tudo super rápido de uma vez e envie automaticamente!
-🎭 **Artistas：** Inscrições para testes ou casting.
-💼 **Vendedores/Comerciais：** Lançamento rápido de dados de clientes ou relatórios de visitas.
-💻 **Freelancers：** Propostas de colaboração e inscrições.
-📝 **Estudantes：** Inscrições em disciplinas concorridas e formulários de eventos.
+- 👉 **Ferramenta de acessibilidade:** Reduz o esforço de digitação e supera facilmente a exclusão digital!
+- 🎤 **Disputar ingressos, produtos limitados ou inscrições concorridas：** Preencha tudo super rápido de uma vez e envie automaticamente!
+- 🎭 **Artistas：** Inscrições para testes ou casting.
+- 💼 **Vendedores/Comerciais：** Lançamento rápido de dados de clientes ou relatórios de visitas.
+- 💻 **Freelancers：** Propostas de colaboração e inscrições.
+- 📝 **Estudantes：** Inscrições em disciplinas concorridas e formulários de eventos.
 
 #### 💡 Exemplos de Configuração (Configuration Examples)
 A extensão utiliza "**Palavras-chave (Keywords)**" para buscar perguntas. Se a pergunta **contiver** a senha/palavra-chave que você configurou, o sistema detectará automaticamente e escolherá/digitará o "**Conteúdo de preenchimento**".
