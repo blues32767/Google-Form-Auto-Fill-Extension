@@ -1,7 +1,18 @@
-# Google Form Auto-Fill (Google 表單自動填)
+<a id="zh"></a>
+# 🚀 Google Form Auto-Fill (Google 表單自動填)
 
-[👉 點此前往 Chrome 線上應用程式商店安裝（免費使用）](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
-[☕ 支持開發者持續維護開發 (Buy me a coffee)](https://buymeacoffee.com/blues32767)
+🌍 **Language:** [繁體中文](#zh) | [English](#en) | [日本語](#ja) | [한국어](#ko) | [ภาษาไทย](#th) | [Español](#es) | [Português](#pt)
+
+---
+
+<div align="center">
+
+### 🔥 [👉 點此前往 Chrome 線上應用程式商店安裝（完全免費）](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+**💖 支持開發者持續維護開發：**<br>
+<a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
+
+</div>
 
 ---
 
@@ -61,9 +72,18 @@
 
 ## 🌍 多國語言介紹 (Multilingual Description)
 
+<a id="en"></a>
 ### 🇺🇸 English
 **Google Form Auto-Fill**
-[👉 Install for free from Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+<div align="center">
+
+### 🔥 [👉 Install for free from Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+**💖 Support the developer's continuous maintenance:**<br>
+<a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
+
+</div>
 
 A magical tool that fills out forms for you with just one click! No technical skills required. Set up your content in advance, and when you open a Google Form, the system will instantly auto-fill all the fields for you so you're always one step ahead!
 **Highly recommended for:**
@@ -103,9 +123,18 @@ The extension uses "**Keywords**" to find questions. If a form question **contai
 
 ---
 
+<a id="ja"></a>
 ### 🇯🇵 日本語 (Japanese)
 **Google フォーム自動入力 (Google Form Auto-Fill)**
-[👉 Chrome ウェブストアから無料でインストール](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+<div align="center">
+
+### 🔥 [👉 Chrome ウェブストアから無料でインストール](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+**💖 開発者の継続的な開発を支援する:**<br>
+<a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
+
+</div>
 
 事前に入力内容を設定しておくことで、Google フォームを開いた瞬間にすべての項目を自動的に入力する魔法のようなツールです。パソコンの難しい知識は不要です！
 **こんな方におすすめ：**
@@ -145,9 +174,18 @@ The extension uses "**Keywords**" to find questions. If a form question **contai
 
 ---
 
+<a id="ko"></a>
 ### 🇰🇷 한국어 (Korean)
 **Google 설문지 자동 채우기 (Google Form Auto-Fill)**
-[👉 Chrome 웹 스토어에서 무료 설치](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+<div align="center">
+
+### 🔥 [👉 Chrome 웹 스토어에서 무료 설치](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+**💖 개발자의 지속적인 업데이트 후원하기:**<br>
+<a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
+
+</div>
 
 컴퓨터를 잘 몰라도 괜찮습니다! 미리 입력할 내용을 설정해두면 Google 설문지를 열 때 모든 항목이 1초 만에 자동으로 채워지는 마법 같은 도구입니다.
 **강력 추천 대상：**
@@ -180,16 +218,25 @@ The extension uses "**Keywords**" to find questions. If a form question **contai
 - **"입력 내용" 설정**: `홍길동`
 - 🎯 **실제 효과**: "신청자 이름", "본명"과 같은 질문 텍스트 상자에 자동으로 "홍길동"을 입력합니다.
 
-**5️⃣ 전화번호 (Phone number)**
+**5️⃣ 전화번호 (Phone 번호)**
 - **"키워드" 설정**: `전화`
 - **"입력 내용" 설정**: `01012345678`
 - 🎯 **실제 효과**: "연락처", "휴대전화 번호" 등의 필드에 자동으로 번호를 입력합니다.
 
 ---
 
+<a id="th"></a>
 ### 🇹🇭 ภาษาไทย (Thai)
 **กรอก Google Form อัตโนมัติ (Google Form Auto-Fill)**
-[👉 ติดตั้งฟรีจาก Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+<div align="center">
+
+### 🔥 [👉 ติดตั้งฟรีจาก Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+**💖 สนับสนุนนักพัฒนาเพื่อการอัปเดตอย่างต่อเนื่อง:**<br>
+<a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
+
+</div>
 
 เครื่องมือวิเศษที่จะช่วยคุณกรอกฟอร์มได้ในพริบตา! ไม่จำเป็นต้องเก่งคอมพิวเตอร์ เพียงตั้งค่าข้อมูลไว้ล่วงหน้า เมื่อเปิด Google Form ระบบจะกรอกข้อมูลทั้งหมดให้คุณทันที มั่นใจได้ว่าคุณจะไวกว่าคนอื่นเสมอ!
 **เหมาะอย่างยิ่งสำหรับ：**
@@ -229,9 +276,18 @@ The extension uses "**Keywords**" to find questions. If a form question **contai
 
 ---
 
+<a id="es"></a>
 ### 🇪🇸 Español (Spanish)
 **Autocompletado de Formularios de Google (Google Form Auto-Fill)**
-[👉 Instalar gratis desde Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+<div align="center">
+
+### 🔥 [👉 Instalar gratis desde Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+**💖 Apoya al desarrollador para futuras actualizaciones:**<br>
+<a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
+
+</div>
 
 ¡Una herramienta mágica que rellena los formularios por ti en un solo clic! No se requieren conocimientos técnicos. Configura tus datos con antelación y, cuando abras un Formulario de Google, todo se completará de forma automática al instante. ¡Serás el más rápido!
 **Súper recomendado para：**
@@ -271,9 +327,18 @@ La extensión usa "**Palabras clave (Keywords)**" para buscar preguntas. Si el t
 
 ---
 
+<a id="pt"></a>
 ### 🇵🇹 Português (Portuguese)
 **Preenchimento Automático do Google Forms (Google Form Auto-Fill)**
-[👉 Instale gratuitamente na Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+<div align="center">
+
+### 🔥 [👉 Instale gratuitamente na Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+**💖 Apoie o desenvolvedor para atualizações contínuas:**<br>
+<a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
+
+</div>
 
 Uma ferramenta mágica para preencher formulários para você em apenas um clique! Sem necessidade de conhecimentos em informática. Configure seu conteúdo com antecedência e, ao abrir um Google Form, o sistema preencherá tudo instantaneamente para você estar sempre um passo à frente.
 **Altamente recomendado para：**
