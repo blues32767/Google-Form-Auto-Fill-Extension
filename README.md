@@ -3,6 +3,19 @@
 
 🌍 **Language:** [繁體中文](#zh) | [English](#en) | [日本語](#ja) | [한국어](#ko) | [ภาษาไทย](#th) | [Español](#es) | [Português](#pt)
 
+> ### 📖 多國語言操作說明 | User Manuals
+>
+> | Language | Link |
+> | :--- | :--- |
+> | 🇹🇼 **繁體中文** | [操作說明網頁](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
+> | 🇺🇸 **English** | [Instruction Manual](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
+> | 🇯🇵 **日本語** | [操作マニュアル](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
+> | 🇰🇷 **한국어** | [사용 설명서](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
+> | 🇹🇭 **ภาษาไทย** | [คู่มือการใช้งาน](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
+> | 🇪🇸 **Español** | [Guía de usuario](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
+> | 🇵🇹 **Português** | [Guia do usuário](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
+
+---
 ---
 
 <div align="center">
