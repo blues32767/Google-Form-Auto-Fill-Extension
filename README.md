@@ -22,6 +22,7 @@
 不需要懂複雜的電腦設定，只要提早輸入好你要填寫的內容，時間一到或打開表單時，系統就會瞬間幫你把所有格子填滿，讓你永遠比別人快一步！
 
 **超適合：**
+👉 **身心障礙朋友的得力助手：** 減少打字負擔，輕鬆跨越數位落差！
 🎤 **搶報名、搶票、搶限量周邊：** 超快速一次填寫完設定的內容自動送出！
 🎭 **藝人：** 申請試鏡、通告
 💼 **業務：** 客戶資料填報、拜訪表
@@ -87,6 +88,7 @@
 
 A magical tool that fills out forms for you with just one click! No technical skills required. Set up your content in advance, and when you open a Google Form, the system will instantly auto-fill all the fields for you so you're always one step ahead!
 **Highly recommended for:**
+👉 **Assistive tool for users with disabilities:** Reduces typing effort and easily bridges the digital divide!
 🎤 **Snagging tickets, limited editions, or fast registrations:** Auto-fill and submit everything super fast!
 🎭 **Artists/Actors:** Audition and casting applications.
 💼 **Sales/Business:** Quick data entry for customer details or visit reports.
