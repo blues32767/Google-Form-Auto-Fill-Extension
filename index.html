@@ -1,911 +1,810 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google表單自動填寫擴充套件 | Google Form Auto-Fill Extension</title>
+    <title>Google表單自動填寫 | Google Form Auto-Fill</title>
     <style>
-     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Google Sans', 'Roboto', 'Arial', sans-serif;
-}
-
-:root {
-    --bmc-color: #FF5F5F; /* Buy Me a Coffee 紅色 */
-    --bmc-hover: #E65555;
-    --primary: #4285f4;
-}
-
-body {
-    line-height: 1.6;
-    color: #202124;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
-    background-attachment: fixed;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.lang-tabs {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.lang-tabs label {
-    display: inline-block;
-    padding: 10px 24px;
-    cursor: pointer;
-    background-color: transparent;
-    border-radius: 24px;
-    margin: 0 5px;
-    color: #5f6368;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    border: 1px solid #dadce0;
-    position: relative;
-    overflow: hidden;
-}
-
-.lang-tabs label:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #4285f4, #0f9d58, #f4b400, #db4437);
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: -1;
-}
-
-.lang-tabs label:hover:before {
-    opacity: 0.1;
-}
-
-.lang-tabs input[type="radio"] {
-    display: none;
-}
-
-.lang-tabs input[type="radio"]:checked + label {
-    background-color: #e8f0fe;
-    color: #1a73e8;
-    border-color: #1a73e8;
-    box-shadow: 0 2px 6px rgba(26, 115, 232, 0.2);
-}
-
-.header {
-    text-align: center;
-    padding: 40px 0;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border-radius: 24px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,0,0,0.05);
-    position: relative;
-    overflow: hidden;
-}
-
-.header:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
-}
-
-.header h1 {
-    color: #1a73e8;
-    margin-bottom: 15px;
-    font-weight: 500;
-    font-size: 36px;
-    background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-}
-
-.download-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
-    color: white;
-    padding: 14px 28px;
-    border-radius: 28px;
-    text-decoration: none;
-    margin: 20px 0;
-    transition: all 0.3s;
-    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
-    font-weight: 500;
-    font-size: 16px;
-    position: relative;
-    overflow: hidden;
-    border: none;
-}
-
-.download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(26, 115, 232, 0.4);
-}
-
-.download-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(26, 115, 232, 0.3);
-}
-
-/* Buy Me a Coffee 按鈕樣式 (新增) */
-.bmc-button {
-    background-color: var(--bmc-color) !important;
-    color: white !important;
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 10px 24px;
-    border: none;
-    border-radius: 8px; /* 稍微方一點，區別於圓形的下載按鈕 */
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-decoration: none !important;
-    margin-top: 15px;
-}
-
-.bmc-button:hover {
-    background-color: var(--bmc-hover) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.bmc-button:active {
-    transform: translateY(0);
-}
-
-.section {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    padding: 30px;
-    margin-bottom: 24px;
-    border-radius: 24px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,0,0,0.05);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.section:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 28px rgba(0,0,0,0.12);
-}
-
-.section h2 {
-    color: #202124;
-    padding-bottom: 16px;
-    margin-bottom: 20px;
-    font-weight: 500;
-    font-size: 28px;
-    border-bottom: 1px solid #f1f3f4;
-    position: relative;
-}
-
-.section h2:after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, #4285f4, #0f9d58);
-    border-radius: 3px;
-}
-
-.feature-list, .steps {
-    list-style: none;
-    padding-left: 10px;
-}
-
-.feature-list li, .steps li {
-    margin-bottom: 18px;
-    position: relative;
-    padding-left: 32px;
-    color: #3c4043;
-}
-
-.feature-list li:before {
-    content: "✓";
-    color: #0f9d58;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-    background: #e6f4ea;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.steps {
-    counter-reset: step-counter;
-}
-
-.steps li:before {
-    content: counter(step-counter);
-    counter-increment: step-counter;
-    background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
-    color: white;
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    font-size: 14px;
-    font-weight: 500;
-    box-shadow: 0 2px 6px rgba(26, 115, 232, 0.3);
-}
-
-.note {
-    background-color: #f8f9fa;
-    border-left: 4px solid #f4b400;
-    padding: 18px;
-    margin: 24px 0;
-    border-radius: 0 12px 12px 0;
-    color: #3c4043;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-code {
-    background-color: #f1f3f4;
-    padding: 18px;
-    border-radius: 12px;
-    font-family: 'Roboto Mono', monospace;
-    display: block;
-    margin: 18px 0;
-    color: #3c4043;
-    font-size: 14px;
-    line-height: 1.6;
-    overflow-x: auto;
-    border: 1px solid #dadce0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.zh, .en {
-    display: none;
-}
-
-#lang-zh:checked ~ .container .zh,
-#lang-en:checked ~ .container .en {
-    display: block;
-}
-
-.qa-section {
-    margin-top: 28px;
-}
-
-.qa-section h3 {
-    color: #202124;
-    margin: 36px 0 24px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #f1f3f4;
-    font-weight: 500;
-    font-size: 22px;
-    position: relative;
-}
-
-.qa-section h3:after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, #f4b400, #db4437);
-    border-radius: 3px;
-}
-
-.qa-item {
-    margin-bottom: 28px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    padding: 24px;
-    border-radius: 16px;
-    transition: all 0.3s ease;
-    border: 1px solid #dadce0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.qa-item:hover {
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    border-color: #4285f4;
-    transform: translateY(-2px);
-}
-
-.question {
-    font-weight: 500;
-    color: #4285f4;
-    margin-bottom: 14px;
-    font-size: 18px;
-    position: relative;
-    padding-left: 28px;
-}
-
-.question:before {
-    content: "Q";
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-weight: bold;
-    color: #4285f4;
-}
-
-.answer {
-    padding-left: 28px;
-    color: #3c4043;
-    position: relative;
-}
-
-.answer:before {
-    content: "A";
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-weight: bold;
-    color: #0f9d58;
-}
-
-.answer ul, .answer ol {
-    margin: 14px 0;
-    padding-left: 24px;
-}
-
-.answer li {
-    margin-bottom: 10px;
-    position: relative;
-}
-
-.answer ul li:before {
-    content: "•";
-    color: #4285f4;
-    position: absolute;
-    left: -18px;
-    font-weight: bold;
-}
-
-.code-block {
-    background-color: #f1f3f4;
-    padding: 18px;
-    border-radius: 12px;
-    margin: 14px 0;
-    font-family: 'Roboto Mono', monospace;
-    white-space: pre-wrap;
-    color: #3c4043;
-    font-size: 14px;
-    line-height: 1.6;
-    border: 1px solid #dadce0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    position: relative;
-}
-
-.code-block:before {
-    content: 'Code';
-    position: absolute;
-    top: -10px;
-    left: 12px;
-    background: #f8f9fa;
-    padding: 0 8px;
-    font-size: 12px;
-    color: #5f6368;
-    border-radius: 4px;
-    border: 1px solid #dadce0;
-}
-
-footer {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
-    padding: 2rem 0;
-    margin-top: 3rem;
-    font-family: 'Google Sans', 'Roboto', sans-serif;
-    border-radius: 24px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,0,0,0.05);
-    position: relative;
-    overflow: hidden;
-    text-align: center; /* Footer 內容置中 */
-}
-
-footer:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
-}
-
-footer h3 {
-    color: #202124 !important;
-    border-bottom: 1px solid #f1f3f4;
-    padding-bottom: 14px;
-    font-weight: 500;
-    position: relative;
-    display: inline-block; /* 讓底線跟隨文字長度 */
-    margin-bottom: 20px;
-}
-
-footer a {
-    color: #1a73e8 !important;
-    text-decoration: none;
-    transition: all 0.3s;
-    position: relative;
-}
-
-footer a:hover {
-    color: #4285f4 !important;
-}
-
-footer pre {
-    background-color: #f1f3f4 !important;
-    color: #3c4043 !important;
-    border-radius: 12px;
-    border: 1px solid #dadce0;
-    font-family: 'Roboto Mono', monospace;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    position: relative;
-    text-align: left; /* 程式碼靠左對齊 */
-    margin: 20px auto; /* 置中容器 */
-    max-width: 90%;
-}
-
-footer pre:before {
-    content: 'Script';
-    position: absolute;
-    top: -10px;
-    left: 12px;
-    background: #f8f9fa;
-    padding: 0 8px;
-    font-size: 12px;
-    color: #5f6368;
-    border-radius: 4px;
-    border: 1px solid #dadce0;
-}
-
-footer p {
-    color: #5f6368 !important;
-}
-
-/* 增加一些微妙的動畫效果 */
-.header, .section, .qa-item {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* 為按鈕添加波紋效果 */
-.download-btn {
-    position: relative;
-    overflow: hidden;
-}
-
-.download-btn:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.7);
-    opacity: 0;
-    border-radius: 100%;
-    transform: scale(1, 1) translate(-50%);
-    transform-origin: 50% 50%;
-}
-
-.download-btn:focus:not(:active)::after {
-    animation: ripple 1s ease-out;
-}
-
-@keyframes ripple {
-    0% {
-        transform: scale(0, 0);
-        opacity: 0.7;
-    }
-    20% {
-        transform: scale(25, 25);
-        opacity: 0.7;
-    }
-    100% {
-        opacity: 0;
-        transform: scale(40, 40);
-    }
-}
-
-/* 添加 Google 風格的聚焦效果 */
-a:focus, button:focus {
-    outline: 2px solid #4285f4;
-    outline-offset: 2px;
-}
-
-/* 添加 Google 風格的滾動條 */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #4285f4, #0f9d58);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #3367d6, #0c8043);
-}
-
-/* 響應式設計調整 */
-@media (max-width: 768px) {
-    .container {
-        padding: 16px;
-    }
-    
-    .header {
-        padding: 32px 16px;
-    }
-    
-    .section {
-        padding: 24px 16px;
-    }
-    
-    .download-btn {
-        width: 80%;
-    }
-    
-    .header h1 {
-        font-size: 28px;
-    }
-}
-
-/* 添加彩色邊框效果 */
-.emoji-title {
-    position: relative;
-    display: inline-block;
-    padding: 0 0 8px 0;
-}
-
-.emoji-title:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
-    border-radius: 3px;
-}
-
-/* 添加浮動效果 */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
-    100% { transform: translateY(0px); }
-}
-
-.download-btn {
-    animation: float 3s ease-in-out infinite;
-}
-
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Google Sans', 'Roboto', 'Arial', sans-serif;
+        }
+
+        :root {
+            --bmc-color: #FF5F5F;
+            --bmc-hover: #E65555;
+            --primary: #4285f4;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #202124;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 0;
+        }
+
+        .lang-tabs {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 1000px;
+            padding: 10px 20px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .lang-tabs label {
+            display: inline-block;
+            padding: 10px 24px;
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: 24px;
+            margin: 0 5px 10px 5px;
+            color: #5f6368;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: 1px solid #dadce0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lang-tabs label:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #4285f4, #0f9d58, #f4b400, #db4437);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+
+        .lang-tabs label:hover:before {
+            opacity: 0.1;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        #lang-zh:checked~.lang-tabs label[for="lang-zh"],
+        #lang-en:checked~.lang-tabs label[for="lang-en"],
+        #lang-ja:checked~.lang-tabs label[for="lang-ja"],
+        #lang-ko:checked~.lang-tabs label[for="lang-ko"],
+        #lang-th:checked~.lang-tabs label[for="lang-th"],
+        #lang-es:checked~.lang-tabs label[for="lang-es"],
+        #lang-pt:checked~.lang-tabs label[for="lang-pt"] {
+            background-color: #e8f0fe;
+            color: #1a73e8;
+            border-color: #1a73e8;
+            box-shadow: 0 2px 6px rgba(26, 115, 232, 0.2);
+        }
+
+        .lang-section {
+            display: none;
+        }
+
+        #lang-zh:checked~.container .lang-section.zh,
+        #lang-en:checked~.container .lang-section.en,
+        #lang-ja:checked~.container .lang-section.ja,
+        #lang-ko:checked~.container .lang-section.ko,
+        #lang-th:checked~.container .lang-section.th,
+        #lang-es:checked~.container .lang-section.es,
+        #lang-pt:checked~.container .lang-section.pt {
+            display: block;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
+        }
+
+        .header h1 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+            font-weight: 500;
+            font-size: 32px;
+            background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 28px;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+            font-weight: 500;
+            font-size: 16px;
+            position: relative;
+            overflow: hidden;
+            border: none;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(26, 115, 232, 0.4);
+            color: white;
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(26, 115, 232, 0.3);
+        }
+
+        .bmc-button {
+            background-color: var(--bmc-color) !important;
+            color: white !important;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none !important;
+            margin-top: 15px;
+        }
+
+        .bmc-button:hover {
+            background-color: var(--bmc-hover) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: white !important;
+        }
+
+        .bmc-button:active {
+            transform: translateY(0);
+        }
+
+        .section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 30px;
+            margin-bottom: 24px;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+        }
+
+        .section h2 {
+            color: #202124;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 24px;
+            border-bottom: 1px solid #f1f3f4;
+            position: relative;
+        }
+
+        .section h2:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #4285f4, #0f9d58);
+            border-radius: 3px;
+        }
+
+        .feature-list,
+        .steps {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        .feature-list li,
+        .steps li {
+            margin-bottom: 18px;
+            position: relative;
+            padding-left: 32px;
+            color: #3c4043;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            color: #0f9d58;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            background: #e6f4ea;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .steps {
+            counter-reset: step-counter;
+        }
+
+        .steps li:before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
+            color: white;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 2px 6px rgba(26, 115, 232, 0.3);
+        }
+
+        .note {
+            background-color: #f8f9fa;
+            border-left: 4px solid #f4b400;
+            padding: 18px;
+            margin: 24px 0;
+            border-radius: 0 12px 12px 0;
+            color: #3c4043;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        code {
+            background-color: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Roboto Mono', monospace;
+            color: #db4437;
+            font-size: 14px;
+        }
+
+        .qa-section {
+            margin-top: 28px;
+        }
+
+        .qa-item {
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid #dadce0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .qa-item:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            border-color: #4285f4;
+            transform: translateY(-2px);
+        }
+
+        .question {
+            font-weight: 500;
+            color: #4285f4;
+            margin-bottom: 10px;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .answer {
+            color: #3c4043;
+            position: relative;
+        }
+
+        .answer ul {
+            margin: 10px 0;
+            padding-left: 24px;
+            list-style-type: none;
+        }
+
+        .answer ul li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .answer ul li:before {
+            content: "•";
+            color: #4285f4;
+            position: absolute;
+            left: -16px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4285f4, #0f9d58, #f4b400, #db4437);
+        }
+
+        /* 微妙動畫 */
+        .header, .section, .qa-item {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .download-btn {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        ::-webkit-scrollbar { width: 10px; height: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(45deg, #4285f4, #0f9d58); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: linear-gradient(45deg, #3367d6, #0c8043); }
+
+        @media (max-width: 768px) {
+            .container { padding: 16px; }
+            .header { padding: 32px 16px; }
+            .section { padding: 24px 16px; }
+            .download-btn { width: 90%; }
+            .header h1 { font-size: 26px; }
+        }
     </style>
 </head>
+
 <body>
+    <!-- Radio Buttons for Tab Switching -->
     <input type="radio" id="lang-zh" name="language" checked>
     <input type="radio" id="lang-en" name="language">
+    <input type="radio" id="lang-ja" name="language">
+    <input type="radio" id="lang-ko" name="language">
+    <input type="radio" id="lang-th" name="language">
+    <input type="radio" id="lang-es" name="language">
+    <input type="radio" id="lang-pt" name="language">
+
     <div class="lang-tabs">
-        <label for="lang-zh">中文</label>
+        <label for="lang-zh">繁體中文</label>
         <label for="lang-en">English</label>
+        <label for="lang-ja">日本語</label>
+        <label for="lang-ko">한국어</label>
+        <label for="lang-th">ภาษาไทย</label>
+        <label for="lang-es">Español</label>
+        <label for="lang-pt">Português</label>
     </div>
 
     <div class="container">
-        <div class="header">
-            <h1 class="zh">Google表單自動填寫擴充套件</h1>
-            <h1 class="en">Google Form Auto-Fill Extension</h1>
-            <p class="zh">輕鬆填寫表單，節省時間，提升效率！</p>
-            <p class="en">Fill forms effortlessly, save time, and boost efficiency!</p>
-            <a href="https://github.com/blues32767/Google-Form-Auto-Fill-Extension/releases/download/Google-Forms-auto-fill-Extension/Google-Forms-auto-fill-Extension.zip" class="download-btn">
-                <span class="zh">立即下載</span>
-                <span class="en">Download Now</span>
-            </a>
-        </div>
 
-        <div class="section">
-            <h2 class="zh">功能特點</h2>
-            <h2 class="en">Features</h2>
-            <ul class="feature-list">
-                <li class="zh">偵測題目包含的文字，自動填寫QA.txt設定的對照答案</li>
-                <li class="en">Detects question text and automatically fills in answers based on your QA.txt settings</li>
-                <li class="zh">自訂你想要的預設答案</li>
-                <li class="en">Customizable default answers for all your forms</li>
-                <li class="zh">節省重複填寫表單的時間</li>
-                <li class="en">Saves time on repetitive form filling</li>
-                <li class="zh">支援自動選擇單選題和複選框</li>
-                <li class="en">Supports automatic selection of radio buttons and checkboxes</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2 class="zh">安裝步驟</h2>
-            <h2 class="en">Installation Steps</h2>
-            <ol class="steps">
-                <li class="zh">下載並解壓縮檔案 - 點擊「立即下載」按鈕獲取檔案</li>
-                <li class="en">Download and extract files - Click "Download Now" to get the file</li>
-                <li class="zh">修改【QA.txt】檔案中的題目與對應答案 - 依照您的需求自訂</li>
-                <li class="en">Edit the QA.txt file with your questions and answers - Customize according to your needs</li>
-                <li class="zh">執行【執行我-Execute-me-auto-update-QA-To-content(自動把QA更新到content).bat】來更新程式碼</li>
-                <li class="en">Run "Execute-me-auto-update-QA-To-content.bat" to update the code</li>
-                <li class="zh">開啟Chrome瀏覽器，進入擴充功能管理頁面 - 輸入 chrome://extensions/ 即可進入</li>
-                <li class="en">Open Chrome browser, go to extension management - Enter chrome://extensions/ to access</li>
-                <li class="zh">開啟開發人員模式 - 位於頁面右上角的開關</li>
-                <li class="en">Enable Developer mode - Switch located at the top-right corner</li>
-                <li class="zh">點選「載入未封裝項目」 - 選擇您解壓後的資料夾</li>
-                <li class="en">Click "Load unpacked" - Select your extracted folder</li>
-                <li class="zh">選擇解壓縮後的資料夾 - 確認後即可完成安裝</li>
-                <li class="en">Select the extracted folder - Confirm to complete installation</li>
-            </ol>
-        </div>
-
-        <div class="section">
-            <h2 class="zh">QA.txt 設定說明</h2>
-            <h2 class="en">Setting Guide</h2>
-            <div class="note">
-                <strong class="zh">格式:</strong><br class="zh">
-                <span class="zh">問題關鍵字,答案</span><br class="zh">
-                <span class="zh">複選題格式：題目包含名稱,值1,值2,值3（多值用逗號分隔，單值直接寫）</span>
-                <strong class="en">Format:</strong><br class="en">
-                <span class="en">Question keyword, Answer</span><br class="en">
-                <span class="en">Multiple choice format: question keyword,value1,value2,value3 (multiple values separated by commas)</span>
+        <!-- ==================== ZH-TW ==================== -->
+        <div class="lang-section zh">
+            <div class="header">
+                <h1>🚀 Google表單自動填寫擴充套件</h1>
+                <p>輕鬆一鍵填寫表單，節省時間，提升效率！</p>
+                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                    target="_blank" class="download-btn">
+                    <span>🔥 點此前往 Chrome 商城安裝（完全免費）</span>
+                </a>
             </div>
-            <p class="zh">範例:</p>
-            <p class="en">Example:</p>
-            <code class="zh">
-                # 中文<br>
-                姓名,測試者<br>
-                手機,0999999999<br>
-                電話,0999999999<br>
-                身高/體重,200/99<br>
-                身高,200<br>
-                體重,99<br>
-                生日,1989/06/04<br>
-                mail,9999@example.com<br>
-                信箱,9999@example.com<br>
-                性別,女<br>
-                語言能力,中文,chinese,英文,english,日文,japanese
-            </code>
-            <code class="en">
-                # English<br>
-                name,Test User<br>
-                mobile,0999999999<br>
-                phone,0999999999<br>
-                height/weight,200/99<br>
-                height,200<br>
-                weight,99<br>
-                birthday,1989/06/04<br>
-                mail,9999@example.com<br>
-                email,9999@example.com<br>
-                gender,Female<br>
-                language skills,Chinese,chinese,English,english,Japanese,japanese
-            </code>
-            <p class="note">
-                <span class="zh">當表單題目包含「姓名」時，會自動填入「測試者」</span><br class="zh">
-                <span class="zh">支援部分關鍵字匹配，靈活應用</span>
-                <span class="en">When the form question contains "name", it will auto-fill "Test User"</span><br class="en">
-                <span class="en">Supports partial keyword matching for flexible use</span>
-            </p>
+
+            <div class="section">
+                <h2>🌟 為什麼你需要這個擴充功能？</h2>
+                <div class="note">
+                    <strong>這是一個能讓你「一鍵自動填好表單」的神奇工具！</strong><br>
+                    不需要懂複雜的電腦設定，只要提早輸入好你要填寫的內容，時間一到或打開表單時，系統就會瞬間幫你把所有格子填滿，讓你永遠比別人快一步！
+                </div>
+                <p style="margin-bottom: 15px; font-weight: 500;">超適合以下情境：</p>
+                <ul class="feature-list">
+                    <li><strong>搶報名、搶票、限量周邊：</strong> 超快速一次填寫完設定的內容，自動送出！</li>
+                    <li><strong>藝人/模特兒：</strong> 申請試鏡、通告。</li>
+                    <li><strong>業務：</strong> 客戶資料填報、拜訪表。</li>
+                    <li><strong>自由工作者：</strong> 合作提案報名。</li>
+                    <li><strong>學生：</strong> 課程報名、活動表單。</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>📖 如何使用 (安裝步驟)</h2>
+                <ol class="steps">
+                    <li>點擊上方的 <strong>Chrome 商城連結</strong>，進入擴充功能安裝頁面。</li>
+                    <li>點擊「加到 Chrome」將它安裝到您的瀏覽器。</li>
+                    <li>開啟你要填寫的 Google 表單。</li>
+                    <li>點擊瀏覽器右上角的擴充功能圖示，把你想預先準備好的資料（關鍵字與答案）填入並存檔。</li>
+                    <li>下次再次打開同一個表單時，資料就會<strong>自動填寫完畢</strong>！</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>💡 詳細設定範本與精選範例</h2>
+                <p style="margin-bottom: 15px;">擴充功能會使用「<strong>關鍵字</strong>」來尋找題目，只要表單題目字眼<strong>包含</strong>您設定的關鍵字，系統就會自動將對應的「<strong>填寫內容</strong>」填入或勾選。</p>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">1️⃣ 電子郵件 (Email)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>設定「關鍵字」</strong>：<code>mail</code></li>
+                                <li><strong>設定「填寫內容」</strong>：<code>user@gmail.com</code></li>
+                                <li>🎯 <strong>實際效果</strong>：不論表單上的題目是「Email」或「電子郵件」，只要包含 mail（不分大小寫），就會自動幫您填入信箱。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">2️⃣ 複選題的多個答案 (多重勾選 Checkboxes)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>設定「關鍵字」</strong>：<code>語言</code></li>
+                                <li><strong>設定「填寫內容」</strong>：<code>中文,英文,日文</code> (請用英文半形逗號隔開多個選項)</li>
+                                <li>🎯 <strong>實際效果</strong>：當遇到多選題核取方塊時，會自動幫你<strong>同時勾選</strong>「中文」、「英文」及「日文」。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">3️⃣ 單選題或下拉式選單 (Radio / Dropdown)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>設定「關鍵字」</strong>：<code>性別</code></li>
+                                <li><strong>設定「填寫內容」</strong>：<code>男</code></li>
+                                <li>🎯 <strong>實際效果</strong>：只要該選項裡有標示「男」，系統就會自動點擊或選中該選項。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">4️⃣ 一般短答輸入 (文字 Text / Name)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>設定「關鍵字」</strong>：<code>姓名</code></li>
+                                <li><strong>設定「填寫內容」</strong>：<code>王小明</code></li>
+                                <li>🎯 <strong>實際效果</strong>：題目如「報名者姓名」、「您的真實姓名」，會自動填入王小明。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">5️⃣ 電話號碼 (Phone number)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>設定「關鍵字」</strong>：<code>電話</code></li>
+                                <li><strong>設定「填寫內容」</strong>：<code>0912345678</code></li>
+                                <li>🎯 <strong>實際效果</strong>：遇到「聯絡電話」、「手機號碼」等欄位，都會自動帶入號碼。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>❓ 常見問題 (FAQ)</h2>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">Q: 如何確認擴充功能正常運作？</div>
+                        <div class="answer">A: 開啟 Google 表單時，文字欄位會自動填入你儲存在擴充功能內的答案。如果沒有，請檢查：
+                            <ul>
+                                <li>擴充功能是否已在瀏覽器開啟</li>
+                                <li>設定面板中的關鍵字是否已正確儲存</li>
+                                <li>關鍵字是否對應表單上的題目文字</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">Q: 想更改自動填入的內容怎麼辦？</div>
+                        <div class="answer">A: 自動填入只會幫你節省打字時間，不會強制鎖定！你隨時可以直接在表單欄位上手動修改，送出前請記得再次確認即可。</div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">Q: 還需要下載 QA.txt 或執行 .bat 檔案嗎？</div>
+                        <div class="answer">A: 絕對不用！此版本已進化為「線上正式版」，所有的關鍵字設定都會直接儲存在您的 Chrome 瀏覽器中，安全又快速，不需要再處理任何程式碼檔案。</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="section">
-            <h2 class="zh">注意事項</h2>
-            <h2 class="en">Notes</h2>
-            <ul class="feature-list">
-                <li class="zh">支援文字欄位的自動填寫</li>
-                <li class="en">Supports automatic filling of text fields</li>
-                <li class="zh">支援單選題和複選框</li>
-                <li class="en">Supports radio buttons and checkboxes</li>
-                <li class="zh">修改QA.txt後需重新執行更新批次檔 - 確保答案即時更新</li>
-                <li class="en">After editing QA.txt, run the update batch file - Ensure answers are updated instantly</li>
-                <li class="zh">送出前請檢查填寫內容 - 以避免意外錯誤</li>
-                <li class="en">Please check the content before submission - To avoid unintended errors</li>
-            </ul>
-            <p class="zh">如需更新答案，請按照以下步驟操作：</p>
-            <p class="en">To update answers, follow these steps:</p>
-            <ol class="steps">
-                <li class="zh">修改 QA.txt 檔案</li>
-                <li class="en">Edit the QA.txt file</li>
-                <li class="zh">執行 "執行我-Execute-me-auto-update-QA-To-content(自動把QA更新到content).bat"</li>
-                <li class="en">Run "Execute-me-auto-update-QA-To-content.bat"</li>
-                <li class="zh">在 Chrome 擴充功能頁面重新載入</li>
-                <li class="en">Reload in Chrome extensions page</li>
-            </ol>
-        </div>
-        
-        <div class="section">
-            <h2 class="emoji-title zh">❓ 常見問題</h2>
-            <h2 class="emoji-title en">❓ FAQ</h2>
+        <!-- ==================== ENGLISH ==================== -->
+        <div class="lang-section en">
+            <div class="header">
+                <h1>🚀 Google Form Auto-Fill Extension</h1>
+                <p>Fill forms effortlessly with just one click, save time, and be one step ahead!</p>
+                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                    target="_blank" class="download-btn">
+                    <span>🔥 Install for free from Chrome Web Store</span>
+                </a>
+            </div>
+
+            <div class="section">
+                <h2>🌟 Why do you need this?</h2>
+                <div class="note">
+                    <strong>A magical tool that fills out forms for you!</strong><br>
+                    No technical skills required. Set your content in advance, and when you open a Google Form, everything will automatically fill instantly so you're always one step ahead.
+                </div>
+                <p style="margin-bottom: 15px; font-weight: 500;">Highly recommended for:</p>
+                <ul class="feature-list">
+                    <li><strong>Snagging tickets & limited items:</strong> Auto-fill everything super fast!</li>
+                    <li><strong>Artists/Actors:</strong> Audition and casting applications.</li>
+                    <li><strong>Sales/Business:</strong> Quick data entry for customer details.</li>
+                    <li><strong>Freelancers:</strong> Proposals and applications.</li>
+                    <li><strong>Students:</strong> Registering for popular classes or events.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>📖 How to use (Installation)</h2>
+                <ol class="steps">
+                    <li>Click the <strong>Chrome Web Store</strong> link above.</li>
+                    <li>Click "Add to Chrome" to install it.</li>
+                    <li>Open any Google Form you want to fill.</li>
+                    <li>Click the extension icon in the upper right corner to input your keywords and answers, then save.</li>
+                    <li>Next time you open the form, the data will be <strong>automatically filled</strong>!</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>💡 Configuration Examples</h2>
+                <p style="margin-bottom: 15px;">The extension uses "<strong>Keywords</strong>". If a form question <strong>contains</strong> your keyword, it automatically interacts with the corresponding field!</p>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">1️⃣ Email</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Set Keyword</strong>: <code>mail</code></li>
+                                <li><strong>Set Fill-in content</strong>: <code>user@example.com</code></li>
+                                <li>🎯 <strong>Effect</strong>: Matches "Email", "Your e-mail", filling it instantly!</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">2️⃣ Checkboxes (Multiple Answers)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Set Keyword</strong>: <code>Language</code></li>
+                                <li><strong>Set Fill-in content</strong>: <code>English,Spanish,French</code> (Use a comma to separate)</li>
+                                <li>🎯 <strong>Effect</strong>: Checks all three options matching these words simultaneously.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <div class="qa-section">
-                <h3 class="zh">基本操作問題</h3>
-                <h3 class="en">Basic Operations</h3>
-                
-                <div class="qa-item">
-                    <div class="question zh">Q: 如何確認擴充功能正常運作？</div>
-                    <div class="question en">Q: How do I know if the extension is working?</div>
-                    <div class="answer zh">A: 開啟 Google 表單時，文字欄位會自動填入你設定的答案。如果沒有自動填入，請檢查：
-                        <ul>
-                            <li>擴充功能是否已啟用</li>
-                            <li>QA.txt 是否有正確更新</li>
-                            <li>關鍵字是否符合表單題目</li>
-                        </ul>
-                    </div>
-                    <div class="answer en">A: Text fields will automatically fill when you open a Google Form. If not, please check:
-                        <ul>
-                            <li>If the extension is enabled</li>
-                            <li>If QA.txt has been properly updated</li>
-                            <li>If keywords match the form questions</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="qa-item">
-                    <div class="question zh">Q: 填錯了怎麼辦？</div>
-                    <div class="question en">Q: What if I need to correct an auto-filled answer?</div>
-                    <div class="answer zh">A: 可以直接在表單上修改，自動填入的內容不會鎖定，送出前請記得檢查答案是否正確。</div>
-                    <div class="answer en">A: You can directly edit any field in the form. Auto-filled content is not locked, remember to verify answers before submitting.</div>
-                </div>
-
-                <h3 class="zh">QA.txt 設定問題</h3>
-                <h3 class="en">QA.txt Configuration Issues</h3>
-
-                <div class="qa-item">
-                    <div class="question zh">Q: 如何設定多個可能的問題對應同一個答案？</div>
-                    <div class="question en">Q: How to set multiple questions for the same answer?</div>
-                    <div class="answer zh">A: 可以使用多行設定，例如：
-                        <div class="code-block">姓名,王小明
-name,王小明
-名字,王小明</div>
-                    </div>
-                    <div class="answer en">A: You can use multiple lines, for example:
-                        <div class="code-block">name,John Doe
-fullname,John Doe
-username,John Doe</div>
-                    </div>
-                </div>
-
-                <div class="qa-item">
-                    <div class="question zh">Q: 特殊格式（如日期、電話）要怎麼填寫？</div>
-                    <div class="question en">Q: How to format special entries (like dates, phone numbers)?</div>
-                    <div class="answer zh">A: 建議參考以下格式：
-                        <div class="code-block">生日,1999-08-06
-出生日期,1999-08-06
-電話,02-12345678
-手機,0912-345-678
-信箱,example@mail.com
-email,example@mail.com</div>
-                    </div>
-                    <div class="answer en">A: Recommended formats:
-                        <div class="code-block">birthday,1999-08-06
-birth date,1999-08-06
-phone,02-12345678
-mobile,0912-345-678
-email,example@mail.com
-mail,example@mail.com</div>
-                    </div>
-                </div>
-
-                <h3 class="zh">技術相關問題</h3>
-                <h3 class="en">Technical Issues</h3>
-
-                <div class="qa-item">
-                    <div class="question zh">Q: MAC 系統如何更新 content.js？</div>
-                    <div class="question en">Q: How do MAC users update content.js?</div>
-                    <div class="answer zh">A: MAC 系統使用者可以按照以下步驟更新：
-                        <ol>
-                            <li>在 Finder 中找到擴充功能資料夾</li>
-                            <li>右鍵點擊 content.js，選擇「用文字編輯打開」</li>
-                            <li>修改完成後儲存</li>
-                            <li>到 Chrome 擴充功能頁面重新載入擴充功能</li>
-                        </ol>
-                    </div>
-                    <div class="answer en">A: MAC users can follow these steps:
-                        <ol>
-                            <li>Locate the extension folder in Finder</li>
-                            <li>Right-click on content.js and select "Open with TextEdit"</li>
-                            <li>Make changes and save</li>
-                            <li>Reload the extension in Chrome extensions page</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <div class="qa-item">
-                    <div class="question zh">Q: 更新 QA.txt 後要如何重新載入擴充功能？</div>
-                    <div class="question en">Q: How to properly reload the extension after updating QA.txt?</div>
-                    <div class="answer zh">A: 請依序執行以下步驟：
-                        <ol>
-                            <li>儲存修改後的 QA.txt</li>
-                            <li>執行「執行我-Execute-me-auto-update-QA-To-content(自動把QA更新到content).bat」</li>
-                            <li>前往 Chrome 擴充功能頁面（chrome://extensions/）</li>
-                            <li>找到「Google 表單自動填寫小幫手」</li>
-                            <li>點擊擴充功能卡片右下角的重新整理圖示 🔄</li>
-                            <li>或是直接關閉 Chrome 後重新開啟</li>
-                        </ol>
-                    </div>
-                    <div class="answer en">A: Follow these steps:
-                        <ol>
-                            <li>Save your modified QA.txt</li>
-                            <li>Run "Execute-me-auto-update-QA-To-content.bat"</li>
-                            <li>Go to Chrome extensions page (chrome://extensions/)</li>
-                            <li>Find "Google Form Auto-Fill Assistant"</li>
-                            <li>Click the refresh icon 🔄 in the bottom right of the extension card</li>
-                            <li>Or simply close and reopen Chrome</li>
-                        </ol>
+            <div class="section">
+                <h2>❓ FAQ</h2>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">Q: Do I need to download QA.txt code?</div>
+                        <div class="answer">A: No! This is the official version which runs completely in the browser. You configure everything straight from the Chrome extension popup seamlessly!</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <footer style="background-color: #f8f9fa; padding: 2rem 0; margin-top: 3rem; font-family: 'Segoe UI', Arial, sans-serif;">
+        <!-- ==================== JAPANESE (JA) ==================== -->
+        <div class="lang-section ja">
+            <div class="header">
+                <h1>🚀 Google フォーム自動入力</h1>
+                <p>魔法のようにフォームを自動入力、時間を節約し効率アップ！</p>
+                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                    target="_blank" class="download-btn">
+                    <span>🔥 Chrome ウェブストアから無料でインストール</span>
+                </a>
+            </div>
+            
+            <div class="section">
+                <h2>🌟 こんな方におすすめ</h2>
+                <div class="note">
+                    事前に入力内容を設定しておくことで、Google フォームを開いた瞬間にすべての項目を自動的に入力する魔法のようなツールです。
+                </div>
+                <ul class="feature-list">
+                    <li><strong>チケット予約、限定グッズ:</strong> 超高速で自動入力・送信し、誰よりも早く完了！</li>
+                    <li><strong>アーティスト:</strong> オーディションや出演の応募など。</li>
+                    <li><strong>営業・ビジネス:</strong> 顧客データや訪問記録の迅速な入力。</li>
+                    <li><strong>学生:</strong> 人気の授業登録やイベント申し込み。</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>📖 使い方</h2>
+                <ol class="steps">
+                    <li>上記のストアリンクをクリックし、<strong>Chrome に追加</strong> します。</li>
+                    <li>拡張機能アイコンをクリックし、キーワードと入力内容を保存します。</li>
+                    <li>これでGoogle フォームを開くと自動的に入力されます！</li>
+                </ol>
+            </div>
+            
+            <div class="section">
+                <h2>💡 設定例 (Configuration Examples)</h2>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">メールアドレス (Email)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>キーワード</strong>: <code>mail</code></li>
+                                <li><strong>入力内容</strong>: <code>user@example.com</code></li>
+                                <li>🎯 <strong>効果</strong>: 質問に「mail」が含まれていれば自動入力されます。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== KOREAN (KO) ==================== -->
+        <div class="lang-section ko">
+            <div class="header">
+                <h1>🚀 Google 설문지 자동 채우기</h1>
+                <p>클릭 한 번으로 폼을 채우고, 시간을 절약하세요!</p>
+                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                    target="_blank" class="download-btn">
+                    <span>🔥 Chrome 웹 스토어에서 무료 설치</span>
+                </a>
+            </div>
+
+            <div class="section">
+                <h2>🌟 강력 추천 대상</h2>
+                <ul class="feature-list">
+                    <li><strong>수강신청, 티켓팅, 굿즈 구매:</strong> 초고속으로 자동 입력하고 제출!</li>
+                    <li><strong>연예인/지망생:</strong> 오디션 및 캐스팅 지원.</li>
+                    <li><strong>영업 사원:</strong> 고객 데이터 빠른 작성.</li>
+                    <li><strong>프리랜서 및 학생:</strong> 각종 제안 및 수강신청.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>📖 사용 방법</h2>
+                <ol class="steps">
+                    <li>Chrome 웹스토어에서 무료 설치합니다.</li>
+                    <li>확장 프로그램 아이콘을 클릭하여 키워드와 내용을 입력하고 저장합니다.</li>
+                    <li>설문지를 열면 마법처럼 자동 완성됩니다!</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- ==================== THAI (TH) ==================== -->
+        <div class="lang-section th">
+            <div class="header">
+                <h1>🚀 กรอก Google Form อัตโนมัติ</h1>
+                <p>เปิดปุ๊บ กรอกปั๊บ รวดเร็วทันใจกว่าที่เคย!</p>
+                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                    target="_blank" class="download-btn">
+                    <span>🔥 ติดตั้งฟรีจาก Chrome Web Store</span>
+                </a>
+            </div>
+
+            <div class="section">
+                <h2>🌟 เหมาะอย่างยิ่งสำหรับ</h2>
+                <ul class="feature-list">
+                    <li><strong>แย่งคิวบัตรคอนเสิร์ต สินค้าลิมิเต็ด:</strong> กรอกข้อมูลอย่างรวดเร็วและส่งได้ทันที!</li>
+                    <li><strong>ศิลปิน/นักแสดง:</strong> สมัครออดิชั่นหรืองานแสดง.</li>
+                    <li><strong>พนักงานขาย:</strong> กรอกข้อมูลลูกค้าอย่างรวดเร็ว.</li>
+                    <li><strong>ฟรีแลนซ์/นศ.:</strong> ลงทะเบียนและยื่นเอกสารต่างๆ</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ==================== SPANISH (ES) ==================== -->
+        <div class="lang-section es">
+            <div class="header">
+                <h1>🚀 Autocompletado de Formularios de Google</h1>
+                <p>¡Rellena formularios mágicamente con un solo clic!</p>
+                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                    target="_blank" class="download-btn">
+                    <span>🔥 Instalar gratis desde Chrome Web Store</span>
+                </a>
+            </div>
+
+            <div class="section">
+                <h2>🌟 Súper recomendado para</h2>
+                <ul class="feature-list">
+                    <li><strong>Conseguir entradas o registrarse rápido:</strong> ¡Completa todo en un segundo y sé el primero!</li>
+                    <li><strong>Artistas:</strong> Solicitudes de audiciones o casting.</li>
+                    <li><strong>Comerciales:</strong> Entrada rápida de datos de clientes.</li>
+                    <li><strong>Estudiantes:</strong> Inscripción a cursos muy demandados.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ==================== PORTUGUESE (PT) ==================== -->
+        <div class="lang-section pt">
+            <div class="header">
+                <h1>🚀 Preenchimento Automático do Google Forms</h1>
+                <p>Uma ferramenta mágica para preencher formulários para você em apenas um clique!</p>
+                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                    target="_blank" class="download-btn">
+                    <span>🔥 Instale gratuitamente na Chrome Web Store</span>
+                </a>
+            </div>
+
+            <div class="section">
+                <h2>🌟 Altamente recomendado para</h2>
+                <ul class="feature-list">
+                    <li><strong>Disputar ingressos ou inscrições concorridas:</strong> Preencha tudo super rápido de uma vez!</li>
+                    <li><strong>Artistas:</strong> Inscrições para testes ou casting.</li>
+                    <li><strong>Vendedores:</strong> Lançamento rápido de dados.</li>
+                    <li><strong>Estudantes:</strong> Inscrições em eventos e disciplinas.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- ==================== UNIVERSAL FOOTER ==================== -->
+        <footer>
             <div style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
                 <div style="border-bottom: 1px solid #dee2e6; padding-bottom: 1rem; margin-bottom: 1rem;">
-                    <h3 style="color: #212529; margin-bottom: 1rem;">專案資訊/Project Information</h3>
+                    <h3>📖 Project Information / 專案資訊</h3>
                     <p style="margin-bottom: 0.5rem;">
-                        <a href="https://github.com/blues32767/Google-Form-Auto-Fill-Extension/" 
-                           style="color: #0366d6; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                          <svg height="20" width="20" viewBox="0 0 16 16" style="fill: currentColor;">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                          </svg>
-                          Google Form Auto-Fill Extension
+                        <a href="https://github.com/blues32767/Google-Form-Auto-Fill-Extension/">
+                            GitHub Repository: Google Form Auto-Fill Extension
                         </a>
                     </p>
                 </div>
-                
-                <div style="font-family: 'Courier New', monospace; color: #6c757d; font-size: 0.9rem;">
-                    <pre style="background-color: #f1f3f5; padding: 1rem; border-radius: 4px; overflow-x: auto; text-align: left;">
-/*
-# ============================================================================
-#    Google Form Auto-Fill Extension - PowerShell Update Script
-#    Author/作者: blues32767
-#    Version/版本: v1.20250413
-#    https://github.com/blues32767
-# ============================================================================
-*/</pre>
-                </div>
 
-                <div style="text-align: center; margin-top: 32px; border-top: 1px solid #dee2e6; padding-top: 24px;">
-                    <p style="margin-bottom: 15px; color: #5f6368; font-size: 14px;">覺得好用嗎？請作者喝杯咖啡 ☕</p>
-                    <a href="https://www.buymeacoffee.com/blues32767" target="_blank" class="bmc-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                            <line x1="6" y1="1" x2="6" y2="4"></line>
-                            <line x1="10" y1="1" x2="10" y2="4"></line>
-                            <line x1="14" y1="1" x2="14" y2="4"></line>
-                        </svg>
-                        <span>Buy me a coffee - 幫作者補血</span>
+                <div style="text-align: center; margin-top: 32px; padding-top: 24px;">
+                    <p style="margin-bottom: 15px; color: #5f6368; font-size: 14px;">
+                        <span class="lang-section zh" style="display: block;">覺得好用嗎？請作者喝杯咖啡 ☕ 支持持續開發</span>
+                        <span class="lang-section en" style="display: block;">Love the extension? Support continuous maintenance ☕</span>
+                        <span class="lang-section ja" style="display: block;">役立ちましたか？開発者を継続的に支援する ☕</span>
+                        <span class="lang-section ko" style="display: block;">유용하셨나요? 개발자의 지속적인 업데이트 후원하기 ☕</span>
+                        <span class="lang-section th" style="display: block;">ชอบส่วนขยายนี้ไหม? สนับสนุนนักพัฒนา ☕</span>
+                        <span class="lang-section es" style="display: block;">¿Útil? Apoya al desarrollador para futuras actualizaciones ☕</span>
+                        <span class="lang-section pt" style="display: block;">Útil? Apoie o desenvolvedor para atualizações contínuas ☕</span>
+                    </p>
+                    <a href="https://www.buymeacoffee.com/blues32767" target="_blank">
+                        <!-- Standard BuyMeACoffee Button (User's Exact Template but centered/clean) -->
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60">
                     </a>
                 </div>
 
@@ -915,18 +814,30 @@ mail,example@mail.com</div>
             </div>
         </footer>
     </div>
+
     <script>
-    // 頁面載入時執行
-    document.addEventListener('DOMContentLoaded', function() {
-      // 獲取URL參數
-      const urlParams = new URLSearchParams(window.location.search);
-      const lang = urlParams.get('lang');
-      
-      // 如果有lang參數且為'en'，則自動選擇英文
-      if (lang === 'en') {
-        document.getElementById('lang-en').checked = true;
-      }
-    });
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check navigator.language if URL param doesn't exist
+            const urlParams = new URLSearchParams(window.location.search);
+            let lang = urlParams.get('lang');
+            
+            if (!lang) {
+                // simple auto-detect
+                const userLang = navigator.language || navigator.userLanguage;
+                if (userLang.startsWith('en')) lang = 'en';
+                else if (userLang.startsWith('ja')) lang = 'ja';
+                else if (userLang.startsWith('ko')) lang = 'ko';
+                else if (userLang.startsWith('th')) lang = 'th';
+                else if (userLang.startsWith('es')) lang = 'es';
+                else if (userLang.startsWith('pt')) lang = 'pt';
+                else lang = 'zh'; // default
+            }
+
+            const targetRadio = document.getElementById('lang-' + lang);
+            if (targetRadio) {
+                targetRadio.checked = true;
+            }
+        });
     </script>
 </body>
 </html>
