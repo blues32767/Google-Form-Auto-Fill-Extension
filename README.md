@@ -1,6 +1,7 @@
 # Google Form Auto-Fill (Google 表單自動填)
 
 [👉 點此前往 Chrome 線上應用程式商店安裝（免費使用）](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+[☕ 支持開發者持續維護開發 (Buy me a coffee)](https://buymeacoffee.com/blues32767)
 
 ---
 
@@ -25,11 +26,82 @@
 3. 點擊瀏覽器右上角的擴充功能圖示，把你想預先準備好的資料填入並存檔。
 4. 下次再次打開同一個表單時，資料就會**自動填寫完畢**！
 
-*(註：本版本已為線上正式版，無須下載原始碼至本機端進行開發者設定，直接透過上方連結安裝即可使用。)*
+---
+
+## 💡 詳細設定範本與精選範例 (Configuration Examples)
+
+擴充功能會使用「**關鍵字**」來尋找題目，只要表單題目字眼**包含**您設定的關鍵字，系統就會自動將對應的「**填寫內容**」填入或勾選。
+
+### 1️⃣ 電子郵件 (Email)
+- **設定「關鍵字」**：`mail`
+- **設定「填寫內容」**：`user@gmail.com`
+- 🎯 **實際效果**：不論表單上的題目是「Email」、「電子郵件(Email)」、「您的 e-mail」，只要題目中包含 `mail`（不分大小寫），就會自動幫您填入信箱！
+
+### 2️⃣ 複選題的多個答案 (多重勾選 Checkboxes)
+- **設定「關鍵字」**：`語言`
+- **設定「填寫內容」**：`中文,英文,日文` (請用英文半形逗號 `,` 隔開多個選項字眼)
+- 🎯 **實際效果**：當遇到題目如「您會使用什麼語言？」並提供多個核取方塊時，系統會自動在選項中尋找，並幫你**同時勾選**「中文」、「英文」及「日文」的三個選項！
+
+### 3️⃣ 單選題或下拉式選單 (Radio / Dropdown)
+- **設定「關鍵字」**：`性別`
+- **設定「填寫內容」**：`男`
+- 🎯 **實際效果**：當遇到單選題目為「您的性別是？」或是下拉選單「請選擇性別」，只要該選項裡有標示「男」，系統就會自動點擊或選中該選項。
+
+### 4️⃣ 一般短答輸入 (文字 Text / Name)
+- **設定「關鍵字」**：`姓名`
+- **設定「填寫內容」**：`王小明`
+- 🎯 **實際效果**：題目如「報名者姓名」、「您的真實姓名為」，會自動在文字框填入「王小明」。
+
+### 5️⃣ 電話號碼 (Phone number)
+- **設定「關鍵字」**：`電話`
+- **設定「填寫內容」**：`0912345678`
+- 🎯 **實際效果**：遇到「聯絡電話」、「手機號碼（或電話）」等欄位，都會自動帶入號碼。
 
 ---
 
 ## 🌍 多國語言介紹 (Multilingual Description)
+
+### 🇺🇸 English
+**Google Form Auto-Fill**
+[👉 Install for free from Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+
+A magical tool that fills out forms for you with just one click! No technical skills required. Set up your content in advance, and when you open a Google Form, the system will instantly auto-fill all the fields for you so you're always one step ahead!
+**Highly recommended for:**
+🎤 **Snagging tickets, limited editions, or fast registrations:** Auto-fill and submit everything super fast!
+🎭 **Artists/Actors:** Audition and casting applications.
+💼 **Sales/Business:** Quick data entry for customer details or visit reports.
+💻 **Freelancers:** Collaboration proposals and applications.
+📝 **Students:** Registering for popular classes and event forms.
+
+#### 💡 Configuration Examples
+The extension uses "**Keywords**" to find questions. If a form question **contains** your keyword, the system will automatically fill in or select your "**Fill-in content**".
+
+**1️⃣ Email**
+- **Set "Keyword"**: `mail`
+- **Set "Fill-in content"**: `user@gmail.com`
+- 🎯 **Effect**: Whether the question is "Email", "Your e-mail", etc., as long as it contains `mail` (case-insensitive), it will auto-fill your email!
+
+**2️⃣ Checkboxes (Multiple Answers)**
+- **Set "Keyword"**: `Language`
+- **Set "Fill-in content"**: `English,Spanish,French` (Use a half-width comma `,` to separate options)
+- 🎯 **Effect**: For a question like "What languages do you speak?" with multiple checkboxes, the system will automatically check "English", "Spanish", and "French" at the same time!
+
+**3️⃣ Radio / Dropdown**
+- **Set "Keyword"**: `Gender`
+- **Set "Fill-in content"**: `Male`
+- 🎯 **Effect**: For a single-choice question "What is your gender?" or a dropdown "Select your gender", if the option contains "Male", it will be automatically clicked or selected.
+
+**4️⃣ Short Text / Name**
+- **Set "Keyword"**: `Name`
+- **Set "Fill-in content"**: `John Doe`
+- 🎯 **Effect**: For questions like "Applicant Name", it will auto-fill "John Doe" into the text box.
+
+**5️⃣ Phone number**
+- **Set "Keyword"**: `Phone`
+- **Set "Fill-in content"**: `1234567890`
+- 🎯 **Effect**: Automatically fills in the number for fields like "Contact phone" or "Mobile number".
+
+---
 
 ### 🇯🇵 日本語 (Japanese)
 **Google フォーム自動入力 (Google Form Auto-Fill)**
@@ -43,6 +115,36 @@
 💻 **フリーランサー：** 案件への応募や提案。
 📝 **学生：** 人気の授業登録やイベント申し込み。
 
+#### 💡 詳細設定テンプレートと活用例 (Configuration Examples)
+拡張機能は「**キーワード**」を使用して質問を探します。フォームの質問にキーワードが**含まれていれば**、システムが対応する「**入力内容**」を自動的に入力またはチェックします。
+
+**1️⃣ メールアドレス (Email)**
+- **「キーワード」の設定**: `mail`
+- **「入力内容」の設定**: `user@gmail.com`
+- 🎯 **実際の効果**: 質問が「Email」、「電子メール」などであっても、`mail` が含まれていれば（大文字・小文字問わず）、自動的にメールアドレスを入力します！
+
+**2️⃣ チェックボックス (複数選択 Checkboxes)**
+- **「キーワード」の設定**: `言語`
+- **「入力内容」の設定**: `日本語,英語,中国語` (複数の選択肢は半角カンマ `,` で区切ってください)
+- 🎯 **実際の効果**: 「話せる言語は？」といった質問で複数のチェックボックスがある場合、システムが「日本語」「英語」「中国語」を**同時にチェック**します！
+
+**3️⃣ ラジオボタン / プルダウン (Radio / Dropdown)**
+- **「キーワード」の設定**: `性別`
+- **「入力内容」の設定**: `男性`
+- 🎯 **実際の効果**: 質問が「あなたの性別は？」やプルダウン「性別を選択」の場合、選択肢に「男性」があれば自動的に選択されます。
+
+**4️⃣ テキスト入力 / 名前 (Text / Name)**
+- **「キーワード」の設定**: `名前`
+- **「入力内容」の設定**: `山田太郎`
+- 🎯 **実際の効果**: 「申込者の名前」や「氏名」のような質問に対し、自動的に「山田太郎」と入力します。
+
+**5️⃣ 電話番号 (Phone number)**
+- **「キーワード」の設定**: `電話`
+- **「入力内容」の設定**: `09012345678`
+- 🎯 **実際の効果**: 「連絡先電話番号」や「携帯番号」などの入力欄に自動的に番号を入力します。
+
+---
+
 ### 🇰🇷 한국어 (Korean)
 **Google 설문지 자동 채우기 (Google Form Auto-Fill)**
 [👉 Chrome 웹 스토어에서 무료 설치](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
@@ -54,6 +156,36 @@
 💼 **영업 사원：** 고객 데이터 및 방문 일지 빠른 작성.
 💻 **프리랜서：** 협업 제안 및 신청.
 📝 **학생：** 인기 강의 수강신청 및 이벤트 참여.
+
+#### 💡 상세 설정 템플릿 및 활용 예시 (Configuration Examples)
+확장 프로그램은 "**키워드**"를 사용하여 질문을 찾습니다. 설문지 질문에 설정한 키워드가 **포함되어** 있으면 시스템이 해당하는 "**입력 내용**"을 자동으로 입력하거나 선택합니다.
+
+**1️⃣ 이메일 (Email)**
+- **"키워드" 설정**: `mail`
+- **"입력 내용" 설정**: `user@gmail.com`
+- 🎯 **실제 효과**: 질문이 "Email", "이메일 주소" 등이라도 `mail`이 포함되어 있으면(대소문자 구분 없음) 자동으로 이메일이 입력됩니다!
+
+**2️⃣ 체크박스 (다중 선택 Checkboxes)**
+- **"키워드" 설정**: `언어`
+- **"입력 내용" 설정**: `한국어,영어,일본어` (여러 옵션은 반각 쉼표 `,` 로 구분하세요)
+- 🎯 **실제 효과**: "사용할 수 있는 언어는?"과 같은 질문에 체크박스가 여러 개 있을 때, 시스템이 자동으로 "한국어", "영어", "일본어"를 **동시에 체크**합니다!
+
+**3️⃣ 라디오 버튼 / 드롭다운 (Radio / Dropdown)**
+- **"키워드" 설정**: `성별`
+- **"입력 내용" 설정**: `남성`
+- 🎯 **실제 효과**: 단일 선택 질문 "성별이 어떻게 되십니까?" 또는 드롭다운 "성별 선택"에서 "남성" 옵션이 있으면 자동으로 클릭 또는 선택됩니다.
+
+**4️⃣ 짧은 답변 / 이름 (Text / Name)**
+- **"키워드" 설정**: `이름`
+- **"입력 내용" 설정**: `홍길동`
+- 🎯 **실제 효과**: "신청자 이름", "본명"과 같은 질문 텍스트 상자에 자동으로 "홍길동"을 입력합니다.
+
+**5️⃣ 전화번호 (Phone number)**
+- **"키워드" 설정**: `전화`
+- **"입력 내용" 설정**: `01012345678`
+- 🎯 **실제 효과**: "연락처", "휴대전화 번호" 등의 필드에 자동으로 번호를 입력합니다.
+
+---
 
 ### 🇹🇭 ภาษาไทย (Thai)
 **กรอก Google Form อัตโนมัติ (Google Form Auto-Fill)**
@@ -67,6 +199,36 @@
 💻 **ฟรีแลนซ์：** ยื่นข้อเสนอความร่วมมือต่างๆ.
 📝 **นักเรียน/นักศึกษา：** ลงทะเบียนเรียนวิชาฮิต หรือฟอร์มกิจกรรม.
 
+#### 💡 ตัวอย่างการตั้งค่าแบบละเอียด (Configuration Examples)
+ส่วนขยายนี้ใช้ "**คำค้นหา (Keyword)**" เพื่อค้นหาคำถาม หากคำถามในฟอร์ม**มี**คำค้นหาที่คุณตั้งไว้ ระบบจะกรอกหรือเลือก "**เนื้อหาที่ต้องการกรอก**" ให้โดยอัตโนมัติ
+
+**1️⃣ อีเมล (Email)**
+- **ตั้งค่า "คำค้นหา"**: `mail`
+- **ตั้งค่า "เนื้อหาที่ต้องการกรอก"**: `user@gmail.com`
+- 🎯 **ผลลัพธ์**: ไม่ว่าคำถามจะเป็น "Email" หรือ "อีเมลของคุณ" ตราบใดที่มีคำว่า `mail` (ไม่สนใจตัวพิมพ์เล็กพิมพ์ใหญ่) ระบบจะกรอกอีเมลให้คุณทันที!
+
+**2️⃣ ช่องทำเครื่องหมาย (เลือกได้หลายข้อ Checkboxes)**
+- **ตั้งค่า "คำค้นหา"**: `ภาษา`
+- **ตั้งค่า "เนื้อหาที่ต้องการกรอก"**: `ไทย,อังกฤษ,จีน` (ใช้เครื่องหมายจุลภาคแบบครึ่งตัวอักษร `,` เพื่อคั่นตัวเลือก)
+- 🎯 **ผลลัพธ์**: เมื่อเจอคำถามเช่น "คุณใช้ภาษาอะไรได้บ้าง?" และมีช่องให้เลือกหลายช่อง ระบบจะ**ติ๊กเลือก** "ไทย", "อังกฤษ" และ "จีน" ให้พร้อมกันทันที!
+
+**3️⃣ ปุ่มตัวเลือก / เมนูแบบเลื่อนลง (Radio / Dropdown)**
+- **ตั้งค่า "คำค้นหา"**: `เพศ`
+- **ตั้งค่า "เนื้อหาที่ต้องการกรอก"**: `ชาย`
+- 🎯 **ผลลัพธ์**: หากมีคำถามให้เลือกเพียงข้อเดียวเช่น "เพศของคุณคือ?" หรือเมนู "โปรดเลือกเพศ" ตราบใดที่ตัวเลือกนั้นมีคำว่า "ชาย" ระบบจะคลิกเลือกให้โดยอัตโนมัติ
+
+**4️⃣ ข้อความสั้น / ชื่อ (Text / Name)**
+- **ตั้งค่า "คำค้นหา"**: `ชื่อ`
+- **ตั้งค่า "เนื้อหาที่ต้องการกรอก"**: `สมชาย`
+- 🎯 **ผลลัพธ์**: สำหรับคำถามเช่น "ชื่อผู้สมัคร" หรือ "ชื่อจริงของคุณ" ระบบจะกรอกคำว่า "สมชาย" ลงในช่องข้อความโดยอัตโนมัติ
+
+**5️⃣ หมายเลขโทรศัพท์ (Phone number)**
+- **ตั้งค่า "คำค้นหา"**: `โทรศัพท์`
+- **ตั้งค่า "เนื้อหาที่ต้องการกรอก"**: `0812345678`
+- 🎯 **ผลลัพธ์**: ระบบจะกรอกเบอร์โทรให้อัตโนมัติเมื่อเจอช่องเช่น "เบอร์โทรศัพท์ติดต่อ" หรือ "มือถือ"
+
+---
+
 ### 🇪🇸 Español (Spanish)
 **Autocompletado de Formularios de Google (Google Form Auto-Fill)**
 [👉 Instalar gratis desde Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
@@ -79,6 +241,36 @@
 💻 **Autónomos y Freelancers：** Propuestas de colaboración.
 📝 **Estudiantes：** Inscripción a cursos muy demandados o eventos.
 
+#### 💡 Ejemplos de Configuración Detallada (Configuration Examples)
+La extensión usa "**Palabras clave (Keywords)**" para buscar preguntas. Si el texto de la pregunta **contiene** tu palabra clave, el sistema ingresará o seleccionará automáticamente el "**Contenido a rellenar**".
+
+**1️⃣ Correo electrónico (Email)**
+- **Establecer "Palabra clave"**: `mail`
+- **Establecer "Contenido a rellenar"**: `user@gmail.com`
+- 🎯 **Efecto**: Ya sea que la pregunta diga "Email", "Correo electrónico", etc., siempre que contenga `mail` (sin importar si son mayúsculas o minúsculas), ¡se autocompletará tu correo!
+
+**2️⃣ Casillas de verificación (Respuestas múltiples / Checkboxes)**
+- **Establecer "Palabra clave"**: `Idioma`
+- **Establecer "Contenido a rellenar"**: `Español,Inglés,Francés` (Usa una coma `,` para separar las diferentes opciones)
+- 🎯 **Efecto**: Para una pregunta como "¿Qué idiomas hablas?" con múltiples casillas de verificación, el sistema marcará **automáticamente y al mismo tiempo** "Español", "Inglés" y "Francés".
+
+**3️⃣ Botones de opción / Lista desplegable (Radio / Dropdown)**
+- **Establecer "Palabra clave"**: `Género`
+- **Establecer "Contenido a rellenar"**: `Masculino`
+- 🎯 **Efecto**: Al encontrar una pregunta de opción única como "¿Cuál es tu género?" o "Selecciona tu género", si la opción contiene "Masculino", el sistema hará clic o elegirá esa opción automáticamente.
+
+**4️⃣ Respuesta corta / Nombre (Text / Name)**
+- **Establecer "Palabra clave"**: `Nombre`
+- **Establecer "Contenido a rellenar"**: `Juan Pérez`
+- 🎯 **Efecto**: En preguntas como "Nombre del solicitante" o "Tu nombre real", se rellenará automáticamente "Juan Pérez" en la caja de texto.
+
+**5️⃣ Número de teléfono (Phone number)**
+- **Establecer "Palabra clave"**: `Teléfono`
+- **Establecer "Contenido a rellenar"**: `123456789`
+- 🎯 **Efecto**: Rellenará automáticamente los campos como "Teléfono de contacto" o "Número de móvil".
+
+---
+
 ### 🇵🇹 Português (Portuguese)
 **Preenchimento Automático do Google Forms (Google Form Auto-Fill)**
 [👉 Instale gratuitamente na Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
@@ -90,3 +282,31 @@ Uma ferramenta mágica para preencher formulários para você em apenas um cliqu
 💼 **Vendedores/Comerciais：** Lançamento rápido de dados de clientes ou relatórios de visitas.
 💻 **Freelancers：** Propostas de colaboração e inscrições.
 📝 **Estudantes：** Inscrições em disciplinas concorridas e formulários de eventos.
+
+#### 💡 Exemplos de Configuração (Configuration Examples)
+A extensão utiliza "**Palavras-chave (Keywords)**" para buscar perguntas. Se a pergunta **contiver** a senha/palavra-chave que você configurou, o sistema detectará automaticamente e escolherá/digitará o "**Conteúdo de preenchimento**".
+
+**1️⃣ E-mail (Email)**
+- **Configurar "Palavra-chave"**: `mail`
+- **Configurar "Conteúdo"**: `user@gmail.com`
+- 🎯 **Efeito**: Não importa se a pergunta é "Email" ou "Seu e-mail", desde que contenha `mail` (não diferencia maiúsculas de minúsculas), ele preencherá seu e-mail automaticamente!
+
+**2️⃣ Caixas de Seleção (Múltiplas Escolhas / Checkboxes)**
+- **Configurar "Palavra-chave"**: `Idioma`
+- **Configurar "Conteúdo"**: `Português,Inglês,Espanhol` (Use uma vírgula `,` para separar múltiplas opções)
+- 🎯 **Efeito**: Quando encontrar uma pergunta como "Quais idiomas você fala?" e houver caixas de seleção, o sistema **marcará simultaneamente** as opções "Português", "Inglês" e "Espanhol"!
+
+**3️⃣ Botão de Opção / Menu Suspenso (Radio / Dropdown)**
+- **Configurar "Palavra-chave"**: `Gênero`
+- **Configurar "Conteúdo"**: `Masculino`
+- 🎯 **Efeito**: Quando encontrar a pergunta "Qual é o seu gênero?" ou o menu "Selecione seu gênero", se a opção possuir "Masculino", o sistema clicará ou selecionará essa opção automaticamente.
+
+**4️⃣ Texto Curto / Nome (Text / Name)**
+- **Configurar "Palavra-chave"**: `Nome`
+- **Configurar "Conteúdo"**: `João da Silva`
+- 🎯 **Efeito**: Em questões como "Nome do candidato" ou "Seu nome real", preencherá "João da Silva" automaticamente na caixa de texto.
+
+**5️⃣ Número de Telefone (Phone number)**
+- **Configurar "Palavra-chave"**: `Telefone`
+- **Configurar "Conteúdo"**: `912345678`
+- 🎯 **Efeito**: Campos como "Telefone para contato" ou "Celular" receberão automaticamente o número.
