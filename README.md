@@ -7,13 +7,13 @@
 >
 > | Language | Link |
 > | :--- | :--- |
-> | 🇹🇼 **繁體中文** | [介紹網頁](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
-> | 🇺🇸 **English** | [Introduction Page](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
-> | 🇯🇵 **日本語** | [紹介ページ](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
-> | 🇰🇷 **한국어** | [소개 페이지](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
-> | 🇹🇭 **ภาษาไทย** | [หน้าแนะนำ](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
-> | 🇪🇸 **Español** | [Página de presentación](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
-> | 🇵🇹 **Português** | [Página de introdução](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/) |
+> | 🇹🇼 **繁體中文** | [介紹網頁](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/?lang=zh) |
+> | 🇺🇸 **English** | [Introduction Page](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/?lang=en) |
+> | 🇯🇵 **日本語** | [紹介ページ](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/?lang=ja) |
+> | 🇰🇷 **한국어** | [소개 페이지](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/?lang=ko) |
+> | 🇹🇭 **ภาษาไทย** | [หน้าแนะนำ](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/?lang=th) |
+> | 🇪🇸 **Español** | [Página de presentación](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/?lang=es) |
+> | 🇵🇹 **Português** | [Página de introdução](https://blues32767.github.io/Google-Form-Auto-Fill-Extension/?lang=pt) |
 
 ---
 ---
