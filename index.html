@@ -481,7 +481,7 @@
 
     <div class="container">
 
-        
+
         <!-- ==================== ZH ==================== -->
         <div class="lang-section zh">
             <div class="header">
@@ -516,13 +516,26 @@
                     <li>點擊「加到 Chrome」將它安裝到您的瀏覽器。</li>
                     <li>開啟你要填寫的 Google 表單。</li>
                     <li>點擊瀏覽器右上角的擴充功能圖示，把你想預先準備好的資料（關鍵字與答案）填入並存檔。</li>
-                    <li>下次再次打開同一個表單時，資料就會<strong>自動填寫完畢</strong>！</li>
+                    <li>未來打開任何Google表單時，工具就會<strong>抓取題目關鍵字</strong>，並自動填寫<strong>答案</strong>回覆。</li>
                 </ol>
             </div>
 
             <div class="section">
                 <h2>💡 詳細設定範本與精選範例</h2>
-                <p style="margin-bottom: 15px;">擴充功能會使用「<strong>關鍵字</strong>」來尋找題目，只要表單題目字眼<strong>包含</strong>您設定的關鍵字，系統就會自動將對應的「<strong>填寫內容</strong>」填入或勾選。</p>
+                <div
+                    style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #4285f4; margin-bottom: 20px;">
+                    <strong style="display: block; margin-bottom: 8px; color: #1a73e8;">【範例範本 (關鍵字, 要填寫的內容)】</strong>
+                    <pre
+                        style="margin: 0; font-family: 'Roboto Mono', monospace; color: #3c4043; line-height: 1.5; font-size: 14px;">姓名,王小明
+性別,男
+mail,user@gmail.com
+電話,0912345678
+手機,0912345678
+語言,中文,英文,日文</pre>
+                </div>
+                <p style="margin-bottom: 15px;">
+                    擴充功能會使用「<strong>關鍵字</strong>」來尋找題目，只要表單題目字眼<strong>包含</strong>您設定的關鍵字，系統就會自動將對應的「<strong>填寫內容</strong>」填入或勾選。
+                </p>
                 <div class="qa-section">
                     <div class="qa-item">
                         <div class="question">1️⃣ 電子郵件 (Email)</div>
@@ -530,7 +543,8 @@
                             <ul>
                                 <li><strong>Key</strong>: <code>mail</code></li>
                                 <li><strong>Value</strong>: <code>user@gmail.com</code></li>
-                                <li>🎯 <strong>Effect</strong>: 不論表單上的題目是「Email」或「電子郵件」，只要包含 mail（不分大小寫），就會自動幫您填入信箱。</li>
+                                <li>🎯 <strong>Effect</strong>: 不論表單上的題目是「Email」或「電子郵件」，只要包含 mail（不分大小寫），就會自動幫您填入信箱。
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -540,7 +554,8 @@
                             <ul>
                                 <li><strong>Key</strong>: <code>語言</code></li>
                                 <li><strong>Value</strong>: <code>中文,英文,日文</code></li>
-                                <li>🎯 <strong>Effect</strong>: 當遇到多選題核取方塊時，會自動幫你<strong>同時勾選</strong>「中文」、「英文」及「日文」。</li>
+                                <li>🎯 <strong>Effect</strong>: 當遇到多選題核取方塊時，會自動幫你<strong>同時勾選</strong>「中文」、「英文」及「日文」。
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -587,7 +602,8 @@
                                 <li>擴充功能是否已在瀏覽器開啟</li>
                                 <li>設定面板中的關鍵字是否已正確儲存</li>
                                 <li>關鍵字是否對應表單上的題目文字</li>
-                            </ul></div>
+                            </ul>
+                        </div>
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: 想更改自動填入的內容怎麼辦？</div>
@@ -595,7 +611,8 @@
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: 還需要下載 QA.txt 或執行 .bat 檔案嗎？</div>
-                        <div class="answer">A: 絕對不用！此版本已進化為「線上正式版」，所有的關鍵字設定都會直接儲存在您的 Chrome 瀏覽器中，安全又快速，不需要再處理任何程式碼檔案。</div>
+                        <div class="answer">A: 絕對不用！此版本已進化為「線上正式版」，所有的關鍵字設定都會直接儲存在您的 Chrome 瀏覽器中，安全又快速，不需要再處理任何程式碼檔案。
+                        </div>
                     </div>
                 </div>
             </div>
@@ -615,11 +632,14 @@
             <div class="section">
                 <h2>🌟 Why do you need this?</h2>
                 <div class="note">
-                    <strong>A magical tool that fills out forms for you!</strong><br>No technical skills required. Set your content in advance, and when you open a Google Form, everything will automatically fill instantly so you're always one step ahead.
+                    <strong>A magical tool that fills out forms for you!</strong><br>No technical skills required. Set
+                    your content in advance, and when you open a Google Form, everything will automatically fill
+                    instantly so you're always one step ahead.
                 </div>
                 <p style="margin-bottom: 15px; font-weight: 500;">Highly recommended for:</p>
                 <ul class="feature-list">
-                    <li><strong>Assistive tool for users with disabilities:</strong> Reduces typing effort and easily bridges the digital divide!</li>
+                    <li><strong>Assistive tool for users with disabilities:</strong> Reduces typing effort and easily
+                        bridges the digital divide!</li>
                     <li><strong>Snagging tickets & limited items:</strong> Auto-fill everything super fast!</li>
                     <li><strong>Artists/Actors:</strong> Audition and casting applications.</li>
                     <li><strong>Sales/Business:</strong> Quick data entry for customer details.</li>
@@ -634,14 +654,29 @@
                     <li>Click the <strong>Chrome Web Store</strong> link above.</li>
                     <li>Click 'Add to Chrome' to install it.</li>
                     <li>Open any Google Form you want to fill.</li>
-                    <li>Click the extension icon in the upper right corner to input your keywords and answers, then save.</li>
-                    <li>Next time you open the form, the data will be <strong>automatically filled</strong>!</li>
+                    <li>Click the extension icon in the upper right corner to input your keywords and answers, then
+                        save.</li>
+                    <li>In the future, when you open any Google Form, the tool will <strong>grab the question
+                            keywords</strong> and automatically fill in your <strong>answers</strong>.</li>
                 </ol>
             </div>
 
             <div class="section">
                 <h2>💡 Configuration Examples</h2>
-                <p style="margin-bottom: 15px;">The extension uses '<strong>Keywords</strong>'. If a form question <strong>contains</strong> your keyword, it automatically interacts with the corresponding field!</p>
+                <div
+                    style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #4285f4; margin-bottom: 20px;">
+                    <strong style="display: block; margin-bottom: 8px; color: #1a73e8;">【Example Template (Keyword,
+                        Fill-in Content)】</strong>
+                    <pre
+                        style="margin: 0; font-family: 'Roboto Mono', monospace; color: #3c4043; line-height: 1.5; font-size: 14px;">Name,John Doe
+Gender,Male
+mail,user@gmail.com
+Phone,1234567890
+Mobile,1234567890
+Language,English,Spanish,French</pre>
+                </div>
+                <p style="margin-bottom: 15px;">The extension uses '<strong>Keywords</strong>'. If a form question
+                    <strong>contains</strong> your keyword, it automatically interacts with the corresponding field!</p>
                 <div class="qa-section">
                     <div class="qa-item">
                         <div class="question">1️⃣ Email</div>
@@ -649,7 +684,8 @@
                             <ul>
                                 <li><strong>Key</strong>: <code>mail</code></li>
                                 <li><strong>Value</strong>: <code>user@example.com</code></li>
-                                <li>🎯 <strong>Effect</strong>: Matches 'Email', 'Your e-mail', filling it instantly!</li>
+                                <li>🎯 <strong>Effect</strong>: Matches 'Email', 'Your e-mail', filling it instantly!
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -659,7 +695,8 @@
                             <ul>
                                 <li><strong>Key</strong>: <code>Language</code></li>
                                 <li><strong>Value</strong>: <code>English,Spanish,French</code></li>
-                                <li>🎯 <strong>Effect</strong>: Checks all three options matching these words simultaneously.</li>
+                                <li>🎯 <strong>Effect</strong>: Checks all three options matching these words
+                                    simultaneously.</li>
                             </ul>
                         </div>
                     </div>
@@ -669,7 +706,8 @@
                             <ul>
                                 <li><strong>Key</strong>: <code>Gender</code></li>
                                 <li><strong>Value</strong>: <code>Male</code></li>
-                                <li>🎯 <strong>Effect</strong>: Automatically selects the corresponding option in single-choice questions.</li>
+                                <li>🎯 <strong>Effect</strong>: Automatically selects the corresponding option in
+                                    single-choice questions.</li>
                             </ul>
                         </div>
                     </div>
@@ -701,20 +739,24 @@
                 <div class="qa-section">
                     <div class="qa-item">
                         <div class="question">Q: How do I know if it's working?</div>
-                        <div class="answer">A: Open a Google Form and fields should auto-fill based on your saved data. If not, check:
+                        <div class="answer">A: Open a Google Form and fields should auto-fill based on your saved data.
+                            If not, check:
                             <ul>
                                 <li>Is the extension enabled?</li>
                                 <li>Are keywords correctly saved in the settings?</li>
                                 <li>Do keywords match the text of the form's questions?</li>
-                            </ul></div>
+                            </ul>
+                        </div>
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: What if I need to correct an auto-filled answer?</div>
-                        <div class="answer">A: You can directly edit any field in the form. The auto-filled content is not locked, verify your answers before submitting.</div>
+                        <div class="answer">A: You can directly edit any field in the form. The auto-filled content is
+                            not locked, verify your answers before submitting.</div>
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: Do I need to download QA.txt code?</div>
-                        <div class="answer">A: No! This is the official version which runs completely in the browser. Configure from the popup directly!</div>
+                        <div class="answer">A: No! This is the official version which runs completely in the browser.
+                            Configure from the popup directly!</div>
                     </div>
                 </div>
             </div>
@@ -754,13 +796,27 @@
                     <li>「Chrome に追加」をクリックしてインストールします。</li>
                     <li>入力したい Google フォームを開きます。</li>
                     <li>右上の拡張機能アイコンをクリックし、キーワードと入力内容を保存します。</li>
-                    <li>同じフォームを開くと <strong>自動的に入力</strong> されます！</li>
+                    <li>今後あらゆる Google フォームを開く際、ツールが<strong>質問のキーワードを取得</strong>し、自動的に<strong>回答</strong>を入力します。</li>
                 </ol>
             </div>
 
             <div class="section">
                 <h2>💡 詳細設定と入力例</h2>
-                <p style="margin-bottom: 15px;">拡張機能は「<strong>キーワード</strong>」を探します。質問にキーワードが<strong>含まれていれば</strong>、自動で「<strong>入力内容</strong>」が適用されます。</p>
+                <div
+                    style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #4285f4; margin-bottom: 20px;">
+                    <strong style="display: block; margin-bottom: 8px; color: #1a73e8;">【入力例テンプレート（キーワード,
+                        入力内容）】</strong>
+                    <pre
+                        style="margin: 0; font-family: 'Roboto Mono', monospace; color: #3c4043; line-height: 1.5; font-size: 14px;">名前,山田太郎
+性別,男性
+mail,user@gmail.com
+電話,09012345678
+携帯,09012345678
+言語,日本語,英語,中国語</pre>
+                </div>
+                <p style="margin-bottom: 15px;">
+                    拡張機能は「<strong>キーワード</strong>」を探します。質問にキーワードが<strong>含まれていれば</strong>、自動で「<strong>入力内容</strong>」が適用されます。
+                </p>
                 <div class="qa-section">
                     <div class="qa-item">
                         <div class="question">1️⃣ メールアドレス (Email)</div>
@@ -825,7 +881,8 @@
                                 <li>拡張機能がオンになっているか</li>
                                 <li>キーワードが保存されているか</li>
                                 <li>質問とキーワードが一致するか</li>
-                            </ul></div>
+                            </ul>
+                        </div>
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: 自動入力された内容を修正できますか？</div>
@@ -873,13 +930,25 @@
                     <li>'Chrome에 추가'를 클릭하여 설치합니다.</li>
                     <li>원하는 Google 설문지를 엽니다.</li>
                     <li>우측 상단 확장 프로그램 아이콘을 클릭하여 키워드와 내용을 저장합니다.</li>
-                    <li>설문지를 열면 마법처럼 <strong>자동 완성</strong>됩니다!</li>
+                    <li>앞으로 어떤 Google 설문지를 열든 도구가 <strong>질문 키워드를 추출</strong>하여 자동으로 <strong>답변</strong>을 채워줍니다.</li>
                 </ol>
             </div>
 
             <div class="section">
                 <h2>💡 세부 설정 및 예시</h2>
-                <p style="margin-bottom: 15px;">확장 프로그램은 '<strong>키워드</strong>'를 찾습니다. 질문에 키워드가 <strong>포함되어 있으면</strong> 해당 입력 내용을 자동으로 적용합니다.</p>
+                <div
+                    style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #4285f4; margin-bottom: 20px;">
+                    <strong style="display: block; margin-bottom: 8px; color: #1a73e8;">【예시 템플릿 (키워드, 입력 내용)】</strong>
+                    <pre
+                        style="margin: 0; font-family: 'Roboto Mono', monospace; color: #3c4043; line-height: 1.5; font-size: 14px;">이름,홍길동
+성별,남성
+mail,user@gmail.com
+전화,01012345678
+휴대폰,01012345678
+언어,한국어,영어,일본어</pre>
+                </div>
+                <p style="margin-bottom: 15px;">확장 프로그램은 '<strong>키워드</strong>'를 찾습니다. 질문에 키워드가 <strong>포함되어
+                        있으면</strong> 해당 입력 내용을 자동으로 적용합니다.</p>
                 <div class="qa-section">
                     <div class="qa-item">
                         <div class="question">1️⃣ 이메일 (Email)</div>
@@ -944,7 +1013,8 @@
                                 <li>확장 프로그램이 켜져 있나요?</li>
                                 <li>설정에 키워드가 저장되어 있나요?</li>
                                 <li>질문에 해당 키워드가 있나요?</li>
-                            </ul></div>
+                            </ul>
+                        </div>
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: 자동 입력된 내용을 수정할 수 있나요?</div>
@@ -972,11 +1042,13 @@
             <div class="section">
                 <h2>🌟 เหมาะอย่างยิ่งสำหรับใคร?</h2>
                 <div class="note">
-                    <strong>เครื่องมือเวทย์มนตร์ที่จะกรอกฟอร์มแทนคุณ!</strong><br>ตั้งค่าข้อมูลไว้ล่วงหน้า เมื่อเปิดฟอร์มระบบจะทำยอดเยี่ยมและเร็วสุดยอด
+                    <strong>เครื่องมือเวทย์มนตร์ที่จะกรอกฟอร์มแทนคุณ!</strong><br>ตั้งค่าข้อมูลไว้ล่วงหน้า
+                    เมื่อเปิดฟอร์มระบบจะทำยอดเยี่ยมและเร็วสุดยอด
                 </div>
                 <p style="margin-bottom: 15px; font-weight: 500;">แนะนำสำหรับ:</p>
                 <ul class="feature-list">
-                    <li><strong>เครื่องมือช่วยเหลือสำหรับผู้พิการ：</strong> ลดความพยายามในการพิมพ์และช่วยลดช่องว่างทางดิจิทัล!</li>
+                    <li><strong>เครื่องมือช่วยเหลือสำหรับผู้พิการ：</strong>
+                        ลดความพยายามในการพิมพ์และช่วยลดช่องว่างทางดิจิทัล!</li>
                     <li><strong>แย่งคิวบัตรคอนเสิร์ต สินค้าลิมิเต็ด:</strong> กรอกข้อมูลอย่างรวดเร็วและส่งได้ทันที!</li>
                     <li><strong>ศิลปิน/นักแสดง:</strong> สมัครออดิชั่นหรืองานแสดง.</li>
                     <li><strong>พนักงานขาย:</strong> กรอกข้อมูลลูกค้าอย่างรวดเร็ว.</li>
@@ -992,13 +1064,28 @@
                     <li>คลิก 'Add to Chrome' เพื่อติดตั้งส่วนขยาย</li>
                     <li>เปิด Google Form ที่ต้องการ</li>
                     <li>คลิกไอคอนส่วนขยายที่มุมขวาบน ตั้งค่าคำค้นหา (Keyword) และบันทึก</li>
-                    <li>ข้อมูลจะถูก <strong>กรอกอัตโนมัติ</strong> ในครั้งถัดไป!</li>
+                    <li>ต่อจากนี้เมื่อคุณเปิด Google Form ใดๆ
+                        เครื่องมือจะ<strong>ดึงคำค้นหาจากคำถาม</strong>และกรอก<strong>คำตอบ</strong>ให้โดยอัตโนมัติทันที
+                    </li>
                 </ol>
             </div>
 
             <div class="section">
                 <h2>💡 ตัวอย่างการตั้งค่า</h2>
-                <p style="margin-bottom: 15px;">ส่วนขยายนี้ใช้ '<strong>คำค้นหา (Keywords)</strong>' หากคำถามมีคำที่คุณตั้งไว้ ข้อมูลจะถูกกรอกทันที!</p>
+                <div
+                    style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #4285f4; margin-bottom: 20px;">
+                    <strong style="display: block; margin-bottom: 8px; color: #1a73e8;">【ตัวอย่างแม่แบบ (คำค้นหา,
+                        เนื้อหาที่ต้องการกรอก)】</strong>
+                    <pre
+                        style="margin: 0; font-family: 'Roboto Mono', monospace; color: #3c4043; line-height: 1.5; font-size: 14px;">ชื่อ,สมชาย
+เพศ,ชาย
+mail,user@gmail.com
+โทรศัพท์,0812345678
+มือถือ,0812345678
+ภาษา,ไทย,อังกฤษ,จีน</pre>
+                </div>
+                <p style="margin-bottom: 15px;">ส่วนขยายนี้ใช้ '<strong>คำค้นหา (Keywords)</strong>'
+                    หากคำถามมีคำที่คุณตั้งไว้ ข้อมูลจะถูกกรอกทันที!</p>
                 <div class="qa-section">
                     <div class="qa-item">
                         <div class="question">1️⃣ อีเมล (Email)</div>
@@ -1063,7 +1150,8 @@
                                 <li>เปิดใช้งานส่วนขยายหรือยัง?</li>
                                 <li>บันทึกคำค้นหาหรือยัง?</li>
                                 <li>คำถามตรงกับคำค้นหาไหม?</li>
-                            </ul></div>
+                            </ul>
+                        </div>
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: ถ้าข้อมูลอัตโนมัติผิด แก้ไขได้ไหม?</div>
@@ -1091,12 +1179,15 @@
             <div class="section">
                 <h2>🌟 ¿Por qué lo necesitas?</h2>
                 <div class="note">
-                    <strong>¡Una herramienta mágica para autocompletar formularios!</strong><br>Configura el contenido y todo se completará de inmediato al abrir un formulario.
+                    <strong>¡Una herramienta mágica para autocompletar formularios!</strong><br>Configura el contenido y
+                    todo se completará de inmediato al abrir un formulario.
                 </div>
                 <p style="margin-bottom: 15px; font-weight: 500;">Muy recomendado para:</p>
                 <ul class="feature-list">
-                    <li><strong>Herramienta de asistencia para usuarios con discapacidad:</strong> ¡Reduce el esfuerzo de escribir y cierra la brecha digital!</li>
-                    <li><strong>Conseguir entradas o registrarse rápido:</strong> ¡Completa todo en un segundo y sé el primero!</li>
+                    <li><strong>Herramienta de asistencia para usuarios con discapacidad:</strong> ¡Reduce el esfuerzo
+                        de escribir y cierra la brecha digital!</li>
+                    <li><strong>Conseguir entradas o registrarse rápido:</strong> ¡Completa todo en un segundo y sé el
+                        primero!</li>
                     <li><strong>Artistas:</strong> Solicitudes de audiciones o casting.</li>
                     <li><strong>Comerciales:</strong> Entrada rápida de datos de clientes.</li>
                     <li><strong>Autónomos:</strong> Propuestas y solicitudes.</li>
@@ -1111,13 +1202,28 @@
                     <li>Haz clic en 'Añadir a Chrome'.</li>
                     <li>Abre cualquier Google Form.</li>
                     <li>Haz clic en la extensión, guarda tus palabras clave y contenido.</li>
-                    <li>¡Tus datos se <strong>autocompletarán</strong> cada vez!</li>
+                    <li>En el futuro, cuando abras cualquier Formulario de Google, la herramienta <strong>capturará las
+                            palabras clave de las preguntas</strong> y completará las <strong>respuestas</strong> de
+                        forma automática.</li>
                 </ol>
             </div>
 
             <div class="section">
                 <h2>💡 Ejemplos de Configuración</h2>
-                <p style="margin-bottom: 15px;">Utiliza '<strong>Palabras clave</strong>'. Si la pregunta <strong>contiene</strong> esa palabra, ¡se aplicará de inmediato!</p>
+                <div
+                    style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #4285f4; margin-bottom: 20px;">
+                    <strong style="display: block; margin-bottom: 8px; color: #1a73e8;">【Plantilla de ejemplo (Palabra
+                        clave, Contenido a rellenar)】</strong>
+                    <pre
+                        style="margin: 0; font-family: 'Roboto Mono', monospace; color: #3c4043; line-height: 1.5; font-size: 14px;">Nombre,Juan Pérez
+Género,Masculino
+mail,user@gmail.com
+Teléfono,123456789
+Móvil,123456789
+Idioma,Español,Inglés,Francés</pre>
+                </div>
+                <p style="margin-bottom: 15px;">Utiliza '<strong>Palabras clave</strong>'. Si la pregunta
+                    <strong>contiene</strong> esa palabra, ¡se aplicará de inmediato!</p>
                 <div class="qa-section">
                     <div class="qa-item">
                         <div class="question">1️⃣ Correo (Email)</div>
@@ -1135,7 +1241,8 @@
                             <ul>
                                 <li><strong>Key</strong>: <code>Idioma</code></li>
                                 <li><strong>Value</strong>: <code>Inglés,Español</code></li>
-                                <li>🎯 <strong>Effect</strong>: Marca múltiples opciones requeridas al mismo tiempo.</li>
+                                <li>🎯 <strong>Effect</strong>: Marca múltiples opciones requeridas al mismo tiempo.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -1182,11 +1289,13 @@
                                 <li>¿Está encendida la extensión?</li>
                                 <li>¿Guardaste palabras clave?</li>
                                 <li>¿Coincide la pregunta con tu palabra clave?</li>
-                            </ul></div>
+                            </ul>
+                        </div>
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: ¿Puedo corregir un campo?</div>
-                        <div class="answer">A: Puedes editar sobre el formulario normalmente. Simplemente compruébalo antes de enviar.</div>
+                        <div class="answer">A: Puedes editar sobre el formulario normalmente. Simplemente compruébalo
+                            antes de enviar.</div>
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: ¿Necesito instalar algún archivo externo?</div>
@@ -1210,12 +1319,15 @@
             <div class="section">
                 <h2>🌟 Por que você precisa disso?</h2>
                 <div class="note">
-                    <strong>Uma ferramenta mágica para formulários!</strong><br>Defina seu conteúdo com antecedência e, ao abrir um Google Forms, tudo será preenchido perfeitamente.
+                    <strong>Uma ferramenta mágica para formulários!</strong><br>Defina seu conteúdo com antecedência e,
+                    ao abrir um Google Forms, tudo será preenchido perfeitamente.
                 </div>
                 <p style="margin-bottom: 15px; font-weight: 500;">Altamente recomendado para:</p>
                 <ul class="feature-list">
-                    <li><strong>Ferramenta de assistência para pessoas com deficiência:</strong> Reduz o esforço de digitação e supera a exclusão digital!</li>
-                    <li><strong>Disputar ingressos ou inscrições concorridas:</strong> Preencha tudo super rápido de uma vez e seja o primeiro!</li>
+                    <li><strong>Ferramenta de assistência para pessoas com deficiência:</strong> Reduz o esforço de
+                        digitação e supera a exclusão digital!</li>
+                    <li><strong>Disputar ingressos ou inscrições concorridas:</strong> Preencha tudo super rápido de uma
+                        vez e seja o primeiro!</li>
                     <li><strong>Artistas:</strong> Inscrições para testes ou casting.</li>
                     <li><strong>Vendedores:</strong> Lançamento rápido de dados.</li>
                     <li><strong>Freelancers:</strong> Propostas de clientes.</li>
@@ -1230,13 +1342,27 @@
                     <li>Clique em 'Usar no Chrome'.</li>
                     <li>Abra um formulário escolhido.</li>
                     <li>Configure suas palavras-chave na extensão e salve.</li>
-                    <li>Tudo será <strong>Preenchido automaticamente</strong> a partir de agora!</li>
+                    <li>No futuro, ao abrir qualquer Google Form, o sistema <strong>capturará as palavras-chave das
+                            perguntas</strong> e preencherá as <strong>respostas</strong> automaticamente.</li>
                 </ol>
             </div>
 
             <div class="section">
                 <h2>💡 Exemplos de Configuração</h2>
-                <p style="margin-bottom: 15px;">Usa '<strong>Palavras-chave</strong>'. Se a pergunta <strong>conter</strong> a palavra definina, aplica os dados!</p>
+                <div
+                    style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #4285f4; margin-bottom: 20px;">
+                    <strong style="display: block; margin-bottom: 8px; color: #1a73e8;">【Modelo de exemplo
+                        (Palavra-chave, Conteúdo)】</strong>
+                    <pre
+                        style="margin: 0; font-family: 'Roboto Mono', monospace; color: #3c4043; line-height: 1.5; font-size: 14px;">Nome,João da Silva
+Gênero,Masculino
+mail,user@gmail.com
+Telefone,912345678
+Celular,912345678
+Idioma,Português,Inglês,Espanhol</pre>
+                </div>
+                <p style="margin-bottom: 15px;">Usa '<strong>Palavras-chave</strong>'. Se a pergunta
+                    <strong>conter</strong> a palavra definina, aplica os dados!</p>
                 <div class="qa-section">
                     <div class="qa-item">
                         <div class="question">1️⃣ E-mail</div>
@@ -1301,7 +1427,8 @@
                                 <li>A extensão está ativada?</li>
                                 <li>As palavras-chave foram salvas?</li>
                                 <li>A pergunta contém a palavra-chave correta?</li>
-                            </ul></div>
+                            </ul>
+                        </div>
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: Posso corrigir erros após preencher?</div>
