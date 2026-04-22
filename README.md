@@ -29,6 +29,19 @@
 
 ---
 
+## 🔄 更新日誌 | Changelog
+
+**v2026.04.22**
+- [ZH] 解決了日期、時間填寫問題，支援 Google 表單中日期、時間的填寫框。
+- [EN] Resolved date and time filling issues; now supports Date and Time input fields in Google Forms.
+- [JA] 日付と時間の入力問題を解決し、Googleフォームでの日付と時間フィールドの自動入力に対応しました。
+- [KO] 날짜 및 시간 입력 문제를 해결했으며, Google 설문지의 날짜 및 시간 입력란을 지원합니다.
+- [TH] แก้ไขปัญหาการกรอกวันที่และเวลา โดยรองรับช่องกรอกวันที่และเวลาใน Google ฟอร์มแล้ว
+- [ES] Se han resuelto los problemas de ingreso de fecha y hora, ahora se admiten los campos de fecha y hora.
+- [PT] Foram resolvidos os problemas de preenchimento de data e hora; suporta agora campos de data e hora.
+
+---
+
 ## 🌟 為什麼你需要這個擴充功能？
 
 **這是一個能讓你「一鍵自動填好表單」的神奇工具！**
@@ -71,6 +84,8 @@ mail,user@gmail.com
 電話,0912345678
 手機,0912345678
 語言,中文,英文,日文
+生日,20000101
+預約,202604221530
 ```
 
 擴充功能會使用「**關鍵字**」來尋找題目，只要表單題目字眼**包含**您設定的關鍵字，系統就會自動將對應的「**填寫內容**」填入或勾選。
@@ -105,6 +120,24 @@ mail,user@gmail.com
 - **設定「關鍵字」**：`電話`
 - **設定「填寫內容」**：`0912345678`
 - 🎯 **實際效果**：遇到「聯絡電話」、「手機號碼（或電話）」等欄位，都會自動帶入號碼。
+
+### 📖 日期與時間設定範本 (Configuration Examples)
+支援Google表單中日期、時間的填寫框
+
+**1. 單純「日期」欄位**
+* 支援格式：`YYYYMMDD` (8碼數字)
+* 設定範例：`生日, 19900501`
+* 實際效果：遇到「生日」「你的生日」，自動填入 `1990年05月01日`
+
+**2. 單純「時間」欄位**
+* 支援格式：`HHMM` (4碼數字，24小時制)
+* 設定範例：`時間, 2030`
+* 實際效果：遇到「時間」「登記時間」，自動填入 `08:30` 並自動切換至 `下午 (PM)`
+
+**3. 「日期 + 時間」複合欄位**
+* 支援格式：`YYYYMMDDHHMM` (12碼連續數字) 或使用空白分隔 `YYYYMMDD HHMM`
+* 設定範例：【預約時間, 202604221830】 (或 `20260422 1830`)
+* 實際效果：遇到「預約」「預約日期」「預約時間」，日期自動填入 `2026年04月22日`，時間自動填入 `06:30 下午`
 
 ---
 
@@ -146,6 +179,8 @@ mail,user@gmail.com
 Phone,1234567890
 Mobile,1234567890
 Language,English,Spanish,French
+Birthday,20000101
+Appointment,202604221530
 ```
 
 **1️⃣ Email**
@@ -172,6 +207,24 @@ Language,English,Spanish,French
 - **Set "Keyword"**: `Phone`
 - **Set "Fill-in content"**: `1234567890`
 - 🎯 **Effect**: Automatically fills in the number for fields like "Contact phone" or "Mobile number".
+
+### 📖 Date and Time Configuration Examples
+Supports Date and Time input fields in Google Forms.
+
+**1. Simple "Date" Field**
+* Supported format: `YYYYMMDD` (8-digit number)
+* Setup example: `Birthday, 19900501`
+* Effect: When encountering "Birthday", it automatically fills in `1990-05-01`.
+
+**2. Simple "Time" Field**
+* Supported format: `HHMM` (4-digit number, 24-hour format)
+* Setup example: `Time, 2030`
+* Effect: When encountering "Time", it automatically fills in `08:30` and switches to `PM`.
+
+**3. "Date + Time" Combined Field**
+* Supported format: `YYYYMMDDHHMM` (12 consecutive digits) or separated by a space `YYYYMMDD HHMM`
+* Setup example: `Appointment, 202604221830` (or `20260422 1830`)
+* Effect: When encountering "Appointment", the date automatically fills as `2026-04-22` and the time as `06:30 PM`.
 
 ---
 
@@ -207,6 +260,8 @@ mail,user@gmail.com
 電話,09012345678
 携帯,09012345678
 言語,日本語,英語,中国語
+誕生日,20000101
+予約時間,202604221530
 ```
 
 **1️⃣ メールアドレス (Email)**
@@ -233,6 +288,24 @@ mail,user@gmail.com
 - **「キーワード」の設定**: `電話`
 - **「入力内容」の設定**: `09012345678`
 - 🎯 **実際の効果**: 「連絡先電話番号」や「携帯番号」などの入力欄に自動的に番号を入力します。
+
+### 📖 日付と時間の設定例 (Configuration Examples)
+Googleフォームの日付と時間の入力フィールドをサポートします。
+
+**1. シンプルな「日付」フィールド**
+* 対応フォーマット：`YYYYMMDD`（8桁の数字）
+* 設定例：`誕生日, 19900501`
+* 実際の効果：「誕生日」等を検出すると、自動的に `1990年05月01日` と入力されます。
+
+**2. シンプルな「時間」フィールド**
+* 対応フォーマット：`HHMM`（4桁の数字、24時間制）
+* 設定例：`時間, 2030`
+* 実際の効果：「時間」等を検出すると、自動的に `08:30` が入力され、自動で `午後 (PM)` に切り替わります。
+
+**3. 「日付 + 時間」の複合フィールド**
+* 対応フォーマット：`YYYYMMDDHHMM`（12桁の連続した数字）または空白区切り `YYYYMMDD HHMM`
+* 設定例：`予約時間, 202604221830` (または `20260422 1830`)
+* 実際の効果：「予約時間」等を検出すると、日付は自動的に `2026年04月22日`、時間は `06:30 午後` と入力されます。
 
 ---
 
@@ -268,6 +341,8 @@ mail,user@gmail.com
 전화,01012345678
 휴대폰,01012345678
 언어,한국어,영어,일본어
+생일,20000101
+예약 시간,202604221530
 ```
 
 **1️⃣ 이메일 (Email)**
@@ -294,6 +369,24 @@ mail,user@gmail.com
 - **"키워드" 설정**: `전화`
 - **"입력 내용" 설정**: `01012345678`
 - 🎯 **실제 효과**: "연락처", "휴대전화 번호" 등의 필드에 자동으로 번호를 입력합니다.
+
+### 📖 날짜 및 시간 설정 예시 (Configuration Examples)
+Google 설문지의 날짜 및 시간 입력란을 지원합니다.
+
+**1. 단순 "날짜" 필드**
+* 지원 형식: `YYYYMMDD` (8자리 숫자)
+* 설정 예시: `생일, 19900501`
+* 실제 효과: "생일" 항목을 발견하면 자동으로 `1990-05-01`을(를) 입력합니다.
+
+**2. 단순 "시간" 필드**
+* 지원 형식: `HHMM` (4자리 숫자, 24시간제)
+* 설정 예시: `시간, 2030`
+* 실제 효과: "시간" 항목을 발견하면 자동으로 `08:30`을(를) 입력하고 `오후 (PM)`로 전환합니다.
+
+**3. "날짜 + 시간" 복합 필드**
+* 지원 형식: `YYYYMMDDHHMM` (12자리 연속 숫자) 또는 공백으로 구분 `YYYYMMDD HHMM`
+* 설정 예시: `예약 시간, 202604221830` (또는 `20260422 1830`)
+* 실제 효과: "예약 시간" 항목을 발견하면 날짜는 `2026-04-22`, 시간은 `06:30 오후`로 자동 입력됩니다.
 
 ---
 
@@ -329,6 +422,8 @@ mail,user@gmail.com
 โทรศัพท์,0812345678
 มือถือ,0812345678
 ภาษา,ไทย,อังกฤษ,จีน
+วันเกิด,20000101
+เวลาจอง,202604221530
 ```
 
 **1️⃣ อีเมล (Email)**
@@ -355,6 +450,24 @@ mail,user@gmail.com
 - **ตั้งค่า "คำค้นหา"**: `โทรศัพท์`
 - **ตั้งค่า "เนื้อหาที่ต้องการกรอก"**: `0812345678`
 - 🎯 **ผลลัพธ์**: ระบบจะกรอกเบอร์โทรให้อัตโนมัติเมื่อเจอช่องเช่น "เบอร์โทรศัพท์ติดต่อ" หรือ "มือถือ"
+
+### 📖 ตัวอย่างการตั้งค่าวันที่และเวลา (Configuration Examples)
+รองรับช่องกรอกวันที่และเวลาใน Google ฟอร์ม
+
+**1. ช่อง "วันที่" ปกติ**
+* รูปแบบที่รองรับ: `YYYYMMDD` (ตัวเลข 8 หลัก)
+* ตัวอย่างการตั้งค่า: `วันเกิด, 19900501`
+* ผลลัพธ์: เมื่อพบคำว่า "วันเกิด" จะกรอก `1990-05-01` ให้อัตโนมัติ
+
+**2. ช่อง "เวลา" ปกติ**
+* รูปแบบที่รองรับ: `HHMM` (ตัวเลข 4 หลัก รูปแบบ 24 ชั่วโมง)
+* ตัวอย่างการตั้งค่า: `เวลา, 2030`
+* ผลลัพธ์: เมื่อพบคำว่า "เวลา" จะกรอก `08:30` และปรับเป็น `PM` ให้อัตโนมัติ
+
+**3. ช่อง "วันที่ + เวลา" ร่วมกัน**
+* รูปแบบที่รองรับ: `YYYYMMDDHHMM` (ตัวเลขติดกัน 12 หลัก) หรือเว้นวรรค `YYYYMMDD HHMM`
+* ตัวอย่างการตั้งค่า: `เวลาจอง, 202604221830` (หรือ `20260422 1830`)
+* ผลลัพธ์: เมื่อพบคำว่า "เวลาจอง" วันที่จะถูกกรอกเป็น `2026-04-22` และเวลาเป็น `06:30 PM` อัตโนมัติ
 
 ---
 
@@ -390,6 +503,8 @@ mail,user@gmail.com
 Teléfono,123456789
 Móvil,123456789
 Idioma,Español,Inglés,Francés
+Cumpleaños,20000101
+Hora de cita,202604221530
 ```
 
 **1️⃣ Correo electrónico (Email)**
@@ -416,6 +531,24 @@ Idioma,Español,Inglés,Francés
 - **Establecer "Palabra clave"**: `Teléfono`
 - **Establecer "Contenido a rellenar"**: `123456789`
 - 🎯 **Efecto**: Rellenará automáticamente los campos como "Teléfono de contacto" o "Número de móvil".
+
+### 📖 Ejemplos de configuración de Fecha y Hora (Configuration Examples)
+Soporta los campos de fecha y hora en los Formularios de Google.
+
+**1. Campo simple de "Fecha"**
+* Formato admitido: `YYYYMMDD` (8 dígitos)
+* Ejemplo de ajuste: `Cumpleaños, 19900501`
+* Efecto real: Al encontrar "Cumpleaños", rellena automáticamente con `1990-05-01`.
+
+**2. Campo simple de "Hora"**
+* Formato admitido: `HHMM` (4 dígitos, formato de 24 horas)
+* Ejemplo de ajuste: `Hora, 2030`
+* Efecto real: Al encontrar "Hora", rellena automáticamente con `08:30` y cambia a `PM`.
+
+**3. Campo combinado de "Fecha + Hora"**
+* Formato admitido: `YYYYMMDDHHMM` (12 dígitos continuos) o separados por espacio `YYYYMMDD HHMM`
+* Ejemplo de ajuste: `Hora de cita, 202604221830` (o `20260422 1830`)
+* Efecto real: Al encontrar "Hora de cita", la fecha se autocompleta como `2026-04-22` y la hora como `06:30 PM`.
 
 ---
 
@@ -451,6 +584,8 @@ mail,user@gmail.com
 Telefone,912345678
 Celular,912345678
 Idioma,Português,Inglês,Espanhol
+Aniversário,20000101
+Hora da reserva,202604221530
 ```
 
 **1️⃣ E-mail (Email)**
@@ -477,3 +612,21 @@ Idioma,Português,Inglês,Espanhol
 - **Configurar "Palavra-chave"**: `Telefone`
 - **Configurar "Conteúdo"**: `912345678`
 - 🎯 **Efeito**: Campos como "Telefone para contato" ou "Celular" receberão automaticamente o número.
+
+### 📖 Exemplos de configuração de Data e Hora (Configuration Examples)
+Suporta os campos de data e hora no Google Forms.
+
+**1. Campo simples de "Data"**
+* Formato suportado: `YYYYMMDD` (8 dígitos)
+* Exemplo de ajuste: `Aniversário, 19900501`
+* Efeito real: Ao encontrar "Aniversário", preenche automaticamente com `1990-05-01`.
+
+**2. Campo simples de "Hora"**
+* Formato suportado: `HHMM` (4 dígitos, formato de 24 horas)
+* Exemplo de ajuste: `Hora, 2030`
+* Efeito real: Ao encontrar "Hora", preenche automaticamente com `08:30` e muda para `PM`.
+
+**3. Campo combinado de "Data + Hora"**
+* Formato suportado: `YYYYMMDDHHMM` (12 dígitos contínuos) ou separados por espaço `YYYYMMDD HHMM`
+* Exemplo de ajuste: `Hora da reserva, 202604221830` (ou `20260422 1830`)
+* Efeito real: Ao encontrar "Hora da reserva", a data é preenchida como `2026-04-22` e a hora como `06:30 PM` automaticamente.
