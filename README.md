@@ -123,7 +123,7 @@ mail,user@gmail.com
 
 **3. 「日期 + 時間」複合欄位**
 * 支援格式：`YYYYMMDDHHMM` (12碼連續數字) 或使用空白分隔 `YYYYMMDD HHMM`
-* 設定範例：【預約時間, 202604221830】 (或 `20260422 1830`)
+* 設定範例：【預約, 202604221830】 (或 `20260422 1830`)
 * 實際效果：遇到「預約」「預約日期」「預約時間」，日期自動填入 `2026年04月22日`，時間自動填入 `06:30 下午`
 
 ### 🔄 更新日誌 (Changelog)
@@ -219,7 +219,7 @@ Supports Date and Time input fields in Google Forms.
 **3. "Date + Time" Combined Field**
 * Supported format: `YYYYMMDDHHMM` (12 consecutive digits) or separated by a space `YYYYMMDD HHMM`
 * Setup example: `Appointment, 202604221830` (or `20260422 1830`)
-* Effect: When encountering "Appointment", the date automatically fills as `2026-04-22` and the time as `06:30 PM`.
+* Effect: When encountering "Appointment", "Appointment Date", or "Appointment Time", the date automatically fills as `2026-04-22` and the time as `06:30 PM`.
 
 ### 🔄 Changelog
 
@@ -264,7 +264,7 @@ mail,user@gmail.com
 携帯,09012345678
 言語,日本語,英語,中国語
 誕生日,20000101
-予約時間,202604221530
+予約,202604221530
 ```
 
 **1️⃣ メールアドレス (Email)**
@@ -307,8 +307,8 @@ Googleフォームの日付と時間の入力フィールドをサポートし�
 
 **3. 「日付 + 時間」の複合フィールド**
 * 対応フォーマット：`YYYYMMDDHHMM`（12桁の連続した数字）または空白区切り `YYYYMMDD HHMM`
-* 設定例：`予約時間, 202604221830` (または `20260422 1830`)
-* 実際の効果：「予約時間」等を検出すると、日付は自動的に `2026年04月22日`、時間は `06:30 午後` と入力されます。
+* 設定例：`予約, 202604221830` (または `20260422 1830`)
+* 実際の効果：「予約」「予約日」「予約時間」等を検出すると、日付は自動的に `2026年04月22日`、時間は `06:30 午後` と入力されます。
 
 ### 🔄 更新履歴 (Changelog)
 
@@ -353,7 +353,7 @@ mail,user@gmail.com
 휴대폰,01012345678
 언어,한국어,영어,일본어
 생일,20000101
-예약 시간,202604221530
+예약,202604221530
 ```
 
 **1️⃣ 이메일 (Email)**
@@ -396,8 +396,8 @@ Google 설문지의 날짜 및 시간 입력란을 지원합니다.
 
 **3. "날짜 + 시간" 복합 필드**
 * 지원 형식: `YYYYMMDDHHMM` (12자리 연속 숫자) 또는 공백으로 구분 `YYYYMMDD HHMM`
-* 설정 예시: `예약 시간, 202604221830` (또는 `20260422 1830`)
-* 실제 효과: "예약 시간" 항목을 발견하면 날짜는 `2026-04-22`, 시간은 `06:30 오후`로 자동 입력됩니다.
+* 설정 예시: `예약, 202604221830` (또는 `20260422 1830`)
+* 실제 효과: "예약", "예약 날짜", "예약 시간" 항목을 발견하면 날짜는 `2026-04-22`, 시간은 `06:30 오후`로 자동 입력됩니다.
 
 ### 🔄 업데이트 로그 (Changelog)
 
@@ -442,7 +442,7 @@ mail,user@gmail.com
 มือถือ,0812345678
 ภาษา,ไทย,อังกฤษ,จีน
 วันเกิด,20000101
-เวลาจอง,202604221530
+จอง,202604221530
 ```
 
 **1️⃣ อีเมล (Email)**
@@ -485,8 +485,8 @@ mail,user@gmail.com
 
 **3. ช่อง "วันที่ + เวลา" ร่วมกัน**
 * รูปแบบที่รองรับ: `YYYYMMDDHHMM` (ตัวเลขติดกัน 12 หลัก) หรือเว้นวรรค `YYYYMMDD HHMM`
-* ตัวอย่างการตั้งค่า: `เวลาจอง, 202604221830` (หรือ `20260422 1830`)
-* ผลลัพธ์: เมื่อพบคำว่า "เวลาจอง" วันที่จะถูกกรอกเป็น `2026-04-22` และเวลาเป็น `06:30 PM` อัตโนมัติ
+* ตัวอย่างการตั้งค่า: `จอง, 202604221830` (หรือ `20260422 1830`)
+* ผลลัพธ์: เมื่อพบคำว่า "จอง", "วันที่จอง" หรือ "เวลาจอง" วันที่จะถูกกรอกเป็น `2026-04-22` และเวลาเป็น `06:30 PM` อัตโนมัติ
 
 ### 🔄 บันทึกการอัปเดต (Changelog)
 
@@ -531,7 +531,7 @@ Teléfono,123456789
 Móvil,123456789
 Idioma,Español,Inglés,Francés
 Cumpleaños,20000101
-Hora de cita,202604221530
+Cita,202604221530
 ```
 
 **1️⃣ Correo electrónico (Email)**
@@ -574,8 +574,8 @@ Soporta los campos de fecha y hora en los Formularios de Google.
 
 **3. Campo combinado de "Fecha + Hora"**
 * Formato admitido: `YYYYMMDDHHMM` (12 dígitos continuos) o separados por espacio `YYYYMMDD HHMM`
-* Ejemplo de ajuste: `Hora de cita, 202604221830` (o `20260422 1830`)
-* Efecto real: Al encontrar "Hora de cita", la fecha se autocompleta como `2026-04-22` y la hora como `06:30 PM`.
+* Ejemplo de ajuste: `Cita, 202604221830` (o `20260422 1830`)
+* Efecto real: Al encontrar "Cita", "Fecha de cita" o "Hora de cita", la fecha se autocompleta como `2026-04-22` y la hora como `06:30 PM`.
 
 ### 🔄 Registro de cambios (Changelog)
 
@@ -620,7 +620,7 @@ Telefone,912345678
 Celular,912345678
 Idioma,Português,Inglês,Espanhol
 Aniversário,20000101
-Hora da reserva,202604221530
+Reserva,202604221530
 ```
 
 **1️⃣ E-mail (Email)**
@@ -663,8 +663,8 @@ Suporta os campos de data e hora no Google Forms.
 
 **3. Campo combinado de "Data + Hora"**
 * Formato suportado: `YYYYMMDDHHMM` (12 dígitos contínuos) ou separados por espaço `YYYYMMDD HHMM`
-* Exemplo de ajuste: `Hora da reserva, 202604221830` (ou `20260422 1830`)
-* Efeito real: Ao encontrar "Hora da reserva", a data é preenchida como `2026-04-22` e a hora como `06:30 PM` automaticamente.
+* Exemplo de ajuste: `Reserva, 202604221830` (ou `20260422 1830`)
+* Efeito real: Ao encontrar "Reserva", "Data da reserva" ou "Hora da reserva", a data é preenchida como `2026-04-22` e a hora como `06:30 PM` automaticamente.
 
 ### 🔄 Registro de alterações (Changelog)
 
