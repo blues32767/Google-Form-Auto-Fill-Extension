@@ -531,7 +531,9 @@
 mail,user@gmail.com
 電話,0912345678
 手機,0912345678
-語言,中文,英文,日文</pre>
+語言,中文,英文,日文
+生日,20000101
+預約,202604221530</pre>
                 </div>
                 <p style="margin-bottom: 15px;">
                     擴充功能會使用「<strong>關鍵字</strong>」來尋找題目，只要表單題目字眼<strong>包含</strong>您設定的關鍵字，系統就會自動將對應的「<strong>填寫內容</strong>」填入或勾選。
@@ -585,7 +587,60 @@ mail,user@gmail.com
                             <ul>
                                 <li><strong>Key</strong>: <code>電話</code></li>
                                 <li><strong>Value</strong>: <code>0912345678</code></li>
-                                <li>🎯 <strong>Effect</strong>: 遇到「聯絡電話」、「手機號碼(電話)」等欄位，都會自動帶入號碼。</li>
+                                <li>🎯 <strong>Effect</strong>: 遇到「聯絡電話」、「手機號碼」等欄位，都會自動帶入號碼。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">6️⃣ 日期 (Date)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>生日</code></li>
+                                <li><strong>Value</strong>: <code>19900501</code> (支援 YYYYMMDD 格式)</li>
+                                <li>🎯 <strong>Effect</strong>: 遇到「生日」「你的生日」，自動填入 1990年05月01日。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">7️⃣ 時間 (Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>時間</code></li>
+                                <li><strong>Value</strong>: <code>2030</code> (支援 HHMM 24小時制)</li>
+                                <li>🎯 <strong>Effect</strong>: 遇到「時間」「登記時間」，自動填入 08:30 並自動切換至 下午 (PM)。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">8️⃣ 日期與時間 (Date + Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>預約</code></li>
+                                <li><strong>Value</strong>: <code>202604221830</code> (或 <code>20260422 1830</code>)
+                                </li>
+                                <li>🎯 <strong>Effect</strong>: 遇到「預約」「預約日期」「預約時間」，日期自動填入 2026年04月22日，時間自動填入 06:30 下午。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔄 更新日誌 (Changelog)</h2>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">v2026.04.23</div>
+                        <div class="answer">
+                            <ul>
+                                <li>支援選項模糊與大小寫比對：提升輸入容錯率，允許以短字串（如 "taiwan"）自動向下相容並匹配 "TAIWAN" 或 "Taiwanese" 等選項。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">v2026.04.22</div>
+                        <div class="answer">
+                            <ul>
+                                <li>解決了日期、時間填寫問題，支援 Google 表單中日期、時間的填寫框。</li>
                             </ul>
                         </div>
                     </div>
@@ -673,10 +728,13 @@ Gender,Male
 mail,user@gmail.com
 Phone,1234567890
 Mobile,1234567890
-Language,English,Spanish,French</pre>
+Language,English,Spanish,French
+Birthday,20000101
+Appointment,202604221530</pre>
                 </div>
                 <p style="margin-bottom: 15px;">The extension uses '<strong>Keywords</strong>'. If a form question
-                    <strong>contains</strong> your keyword, it automatically interacts with the corresponding field!</p>
+                    <strong>contains</strong> your keyword, it automatically interacts with the corresponding field!
+                </p>
                 <div class="qa-section">
                     <div class="qa-item">
                         <div class="question">1️⃣ Email</div>
@@ -728,6 +786,65 @@ Language,English,Spanish,French</pre>
                                 <li><strong>Key</strong>: <code>Phone</code></li>
                                 <li><strong>Value</strong>: <code>0912345678</code></li>
                                 <li>🎯 <strong>Effect</strong>: Fills out phone or mobile contact fields.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">6️⃣ Date</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>Birthday</code></li>
+                                <li><strong>Value</strong>: <code>19900501</code> (YYYYMMDD format)</li>
+                                <li>🎯 <strong>Effect</strong>: When encountering "Birthday", it automatically fills in
+                                    1990-05-01.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">7️⃣ Time</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>Time</code></li>
+                                <li><strong>Value</strong>: <code>2030</code> (HHMM 24-hour format)</li>
+                                <li>🎯 <strong>Effect</strong>: When encountering "Time", it automatically fills in
+                                    08:30 and switches to PM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">8️⃣ Date + Time</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>Appointment</code></li>
+                                <li><strong>Value</strong>: <code>202604221830</code> (or <code>20260422 1830</code>)
+                                </li>
+                                <li>🎯 <strong>Effect</strong>: When encountering "Appointment", "Appointment Date", or "Appointment Time", the date automatically
+                                    fills as 2026-04-22 and the time as 06:30 PM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔄 Changelog</h2>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">v2026.04.23</div>
+                        <div class="answer">
+                            <ul>
+                                <li>Support for fuzzy matching and case-insensitive option comparison: Enhances input
+                                    fault tolerance, allowing short strings (e.g., "taiwan") to automatically match
+                                    options like "TAIWAN" or "Taiwanese".</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">v2026.04.22</div>
+                        <div class="answer">
+                            <ul>
+                                <li>Resolved date and time filling issues; now supports Date and Time input fields in
+                                    Google Forms.</li>
                             </ul>
                         </div>
                     </div>
@@ -812,7 +929,9 @@ Language,English,Spanish,French</pre>
 mail,user@gmail.com
 電話,09012345678
 携帯,09012345678
-言語,日本語,英語,中国語</pre>
+言語,日本語,英語,中国語
+誕生日,20000101
+予約,202604221530</pre>
                 </div>
                 <p style="margin-bottom: 15px;">
                     拡張機能は「<strong>キーワード</strong>」を探します。質問にキーワードが<strong>含まれていれば</strong>、自動で「<strong>入力内容</strong>」が適用されます。
@@ -865,6 +984,61 @@ mail,user@gmail.com
                                 <li><strong>Key</strong>: <code>電話</code></li>
                                 <li><strong>Value</strong>: <code>09012345678</code></li>
                                 <li>🎯 <strong>Effect</strong>: 連絡先欄に自動入力されます。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">6️⃣ 日付 (Date)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>誕生日</code></li>
+                                <li><strong>Value</strong>: <code>19900501</code> (YYYYMMDD フォーマット)</li>
+                                <li>🎯 <strong>Effect</strong>: 「誕生日」等を検出すると、自動的に 1990年05月01日 と入力されます。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">7️⃣ 時間 (Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>時間</code></li>
+                                <li><strong>Value</strong>: <code>2030</code> (HHMM 24時間制)</li>
+                                <li>🎯 <strong>Effect</strong>: 「時間」等を検出すると、自動的に 08:30 が入力され、自動で 午後 (PM) に切り替わります。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">8️⃣ 日付 + 時間 (Date + Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>予約</code></li>
+                                <li><strong>Value</strong>: <code>202604221830</code> (または <code>20260422 1830</code>)
+                                </li>
+                                <li>🎯 <strong>Effect</strong>: 「予約」「予約日」「予約時間」等を検出すると、日付は自動的に 2026年04月22日、時間は 06:30 午後 と入力されます。
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔄 更新履歴 (Changelog)</h2>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">v2026.04.23</div>
+                        <div class="answer">
+                            <ul>
+                                <li>選択肢のあいまい検索と大文字・小文字を区別しない比較に対応：入力の許容度を向上させ、「taiwan」のような短い文字列でも「TAIWAN」や「Taiwanese」などの選択肢と自動的に一致するようになります。
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">v2026.04.22</div>
+                        <div class="answer">
+                            <ul>
+                                <li>日付と時間の入力問題を解決し、Googleフォームでの日付と時間フィールドの自動入力に対応しました。</li>
                             </ul>
                         </div>
                     </div>
@@ -945,7 +1119,9 @@ mail,user@gmail.com
 mail,user@gmail.com
 전화,01012345678
 휴대폰,01012345678
-언어,한국어,영어,일본어</pre>
+언어,한국어,영어,일본어
+생일,20000101
+예약,202604221530</pre>
                 </div>
                 <p style="margin-bottom: 15px;">확장 프로그램은 '<strong>키워드</strong>'를 찾습니다. 질문에 키워드가 <strong>포함되어
                         있으면</strong> 해당 입력 내용을 자동으로 적용합니다.</p>
@@ -997,6 +1173,61 @@ mail,user@gmail.com
                                 <li><strong>Key</strong>: <code>전화</code></li>
                                 <li><strong>Value</strong>: <code>01012345678</code></li>
                                 <li>🎯 <strong>Effect</strong>: 연락처나 휴대폰 번호를 자동으로 가져옵니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">6️⃣ 날짜 (Date)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>생일</code></li>
+                                <li><strong>Value</strong>: <code>19900501</code> (YYYYMMDD 형식)</li>
+                                <li>🎯 <strong>Effect</strong>: "생일" 항목을 발견하면 자동으로 1990-05-01을(를) 입력합니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">7️⃣ 시간 (Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>시간</code></li>
+                                <li><strong>Value</strong>: <code>2030</code> (HHMM 24시간제)</li>
+                                <li>🎯 <strong>Effect</strong>: "시간" 항목을 발견하면 자동으로 08:30을(를) 입력하고 오후 (PM)로 전환합니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">8️⃣ 날짜 + 시간 (Date + Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>예약</code></li>
+                                <li><strong>Value</strong>: <code>202604221830</code> (또는 <code>20260422 1830</code>)
+                                </li>
+                                <li>🎯 <strong>Effect</strong>: "예약", "예약 날짜", "예약 시간" 항목을 발견하면 날짜는 2026-04-22, 시간은 06:30 오후로 자동 입력됩니다.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔄 업데이트 로그 (Changelog)</h2>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">v2026.04.23</div>
+                        <div class="answer">
+                            <ul>
+                                <li>옵션 퍼지 매칭 및 대소문자 구분 없는 비교 지원: 입력 허용 오차를 향상시켜, 짧은 문자열(예: "taiwan")로 "TAIWAN" 또는
+                                    "Taiwanese"와 같은 옵션에 자동으로 일치시킬 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">v2026.04.22</div>
+                        <div class="answer">
+                            <ul>
+                                <li>날짜 및 시간 입력 문제를 해결했으며, Google 설문지의 날짜 및 시간 입력란을 지원합니다.</li>
                             </ul>
                         </div>
                     </div>
@@ -1082,7 +1313,9 @@ mail,user@gmail.com
 mail,user@gmail.com
 โทรศัพท์,0812345678
 มือถือ,0812345678
-ภาษา,ไทย,อังกฤษ,จีน</pre>
+ภาษา,ไทย,อังกฤษ,จีน
+วันเกิด,20000101
+จอง,202604221530</pre>
                 </div>
                 <p style="margin-bottom: 15px;">ส่วนขยายนี้ใช้ '<strong>คำค้นหา (Keywords)</strong>'
                     หากคำถามมีคำที่คุณตั้งไว้ ข้อมูลจะถูกกรอกทันที!</p>
@@ -1134,6 +1367,65 @@ mail,user@gmail.com
                                 <li><strong>Key</strong>: <code>โทร</code></li>
                                 <li><strong>Value</strong>: <code>0812345678</code></li>
                                 <li>🎯 <strong>Effect</strong>: ใส่เบอร์โทรในช่องติดต่อ</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">6️⃣ วันที่ (Date)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>วันเกิด</code></li>
+                                <li><strong>Value</strong>: <code>19900501</code> (รูปแบบ YYYYMMDD)</li>
+                                <li>🎯 <strong>Effect</strong>: เมื่อพบคำว่า "วันเกิด" จะกรอก 1990-05-01 ให้อัตโนมัติ
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">7️⃣ เวลา (Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>เวลา</code></li>
+                                <li><strong>Value</strong>: <code>2030</code> (รูปแบบ HHMM 24 ชั่วโมง)</li>
+                                <li>🎯 <strong>Effect</strong>: เมื่อพบคำว่า "เวลา" จะกรอก 08:30 และปรับเป็น PM
+                                    ให้อัตโนมัติ</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">8️⃣ วันที่ + เวลา (Date + Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>จอง</code></li>
+                                <li><strong>Value</strong>: <code>202604221830</code> (หรือ <code>20260422 1830</code>)
+                                </li>
+                                <li>🎯 <strong>Effect</strong>: เมื่อพบคำว่า "จอง", "วันที่จอง" หรือ "เวลาจอง" วันที่จะถูกกรอกเป็น 2026-04-22
+                                    และเวลาเป็น 06:30 PM อัตโนมัติ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔄 บันทึกการอัปเดต (Changelog)</h2>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">v2026.04.23</div>
+                        <div class="answer">
+                            <ul>
+                                <li>รองรับการจับคู่ตัวเลือกแบบคลุมเครือและไม่แยกตัวพิมพ์เล็กพิมพ์ใหญ่:
+                                    เพิ่มความยืดหยุ่นในการป้อนข้อมูล ช่วยให้ข้อความสั้นๆ (เช่น "taiwan")
+                                    สามารถจับคู่กับตัวเลือกเช่น "TAIWAN" หรือ "Taiwanese" ได้โดยอัตโนมัติ</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">v2026.04.22</div>
+                        <div class="answer">
+                            <ul>
+                                <li>แก้ไขปัญหาการกรอกวันที่และเวลา โดยรองรับช่องกรอกวันที่และเวลาใน Google ฟอร์มแล้ว
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -1220,10 +1512,13 @@ Género,Masculino
 mail,user@gmail.com
 Teléfono,123456789
 Móvil,123456789
-Idioma,Español,Inglés,Francés</pre>
+Idioma,Español,Inglés,Francés
+Cumpleaños,20000101
+Cita,202604221530</pre>
                 </div>
                 <p style="margin-bottom: 15px;">Utiliza '<strong>Palabras clave</strong>'. Si la pregunta
-                    <strong>contiene</strong> esa palabra, ¡se aplicará de inmediato!</p>
+                    <strong>contiene</strong> esa palabra, ¡se aplicará de inmediato!
+                </p>
                 <div class="qa-section">
                     <div class="qa-item">
                         <div class="question">1️⃣ Correo (Email)</div>
@@ -1273,6 +1568,66 @@ Idioma,Español,Inglés,Francés</pre>
                                 <li><strong>Key</strong>: <code>Teléfono</code></li>
                                 <li><strong>Value</strong>: <code>123456789</code></li>
                                 <li>🎯 <strong>Effect</strong>: Rellena la información de contacto móvil.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">6️⃣ Fecha (Date)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>Cumpleaños</code></li>
+                                <li><strong>Value</strong>: <code>19900501</code> (Formato YYYYMMDD)</li>
+                                <li>🎯 <strong>Effect</strong>: Al encontrar "Cumpleaños", rellena automáticamente con
+                                    1990-05-01.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">7️⃣ Hora (Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>Hora</code></li>
+                                <li><strong>Value</strong>: <code>2030</code> (Formato HHMM 24 horas)</li>
+                                <li>🎯 <strong>Effect</strong>: Al encontrar "Hora", rellena automáticamente con 08:30 y
+                                    cambia a PM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">8️⃣ Fecha y Hora (Date + Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>Cita</code></li>
+                                <li><strong>Value</strong>: <code>202604221830</code> (o <code>20260422 1830</code>)
+                                </li>
+                                <li>🎯 <strong>Effect</strong>: Al encontrar "Cita", "Fecha de cita" o "Hora de cita", la fecha se autocompleta
+                                    como 2026-04-22 y la hora como 06:30 PM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔄 Registro de cambios (Changelog)</h2>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">v2026.04.23</div>
+                        <div class="answer">
+                            <ul>
+                                <li>Soporte para coincidencia aproximada de opciones y comparación sin distinguir
+                                    mayúsculas/minúsculas: Mejora la tolerancia a errores de entrada, permitiendo que
+                                    cadenas cortas (ej., "taiwan") coincidan automáticamente con opciones como "TAIWAN"
+                                    o "Taiwanese".</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">v2026.04.22</div>
+                        <div class="answer">
+                            <ul>
+                                <li>Se han resuelto los problemas de ingreso de fecha y hora, ahora se admiten los
+                                    campos de fecha y hora.</li>
                             </ul>
                         </div>
                     </div>
@@ -1359,10 +1714,13 @@ Gênero,Masculino
 mail,user@gmail.com
 Telefone,912345678
 Celular,912345678
-Idioma,Português,Inglês,Espanhol</pre>
+Idioma,Português,Inglês,Espanhol
+Aniversário,20000101
+Reserva,202604221530</pre>
                 </div>
                 <p style="margin-bottom: 15px;">Usa '<strong>Palavras-chave</strong>'. Se a pergunta
-                    <strong>conter</strong> a palavra definina, aplica os dados!</p>
+                    <strong>conter</strong> a palavra definina, aplica os dados!
+                </p>
                 <div class="qa-section">
                     <div class="qa-item">
                         <div class="question">1️⃣ E-mail</div>
@@ -1411,6 +1769,66 @@ Idioma,Português,Inglês,Espanhol</pre>
                                 <li><strong>Key</strong>: <code>Telefone</code></li>
                                 <li><strong>Value</strong>: <code>991234567</code></li>
                                 <li>🎯 <strong>Effect</strong>: Para campos de contato celular e fixo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">6️⃣ Data (Date)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>Aniversário</code></li>
+                                <li><strong>Value</strong>: <code>19900501</code> (Formato YYYYMMDD)</li>
+                                <li>🎯 <strong>Effect</strong>: Ao encontrar "Aniversário", preenche automaticamente com
+                                    1990-05-01.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">7️⃣ Hora (Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>Hora</code></li>
+                                <li><strong>Value</strong>: <code>2030</code> (Formato HHMM 24 horas)</li>
+                                <li>🎯 <strong>Effect</strong>: Ao encontrar "Hora", preenche automaticamente com 08:30
+                                    e muda para PM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">8️⃣ Data e Hora (Date + Time)</div>
+                        <div class="answer">
+                            <ul>
+                                <li><strong>Key</strong>: <code>Reserva</code></li>
+                                <li><strong>Value</strong>: <code>202604221830</code> (ou <code>20260422 1830</code>)
+                                </li>
+                                <li>🎯 <strong>Effect</strong>: Ao encontrar "Reserva", "Data da reserva" ou "Hora da reserva", a data é preenchida como
+                                    2026-04-22 e a hora como 06:30 PM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔄 Registro de alterações (Changelog)</h2>
+                <div class="qa-section">
+                    <div class="qa-item">
+                        <div class="question">v2026.04.23</div>
+                        <div class="answer">
+                            <ul>
+                                <li>Suporte para correspondência aproximada de opções e comparação sem distinção entre
+                                    maiúsculas e minúsculas: Melhora a tolerância a falhas na entrada, permitindo que
+                                    strings curtas (ex., "taiwan") correspondam automaticamente a opções como "TAIWAN"
+                                    ou "Taiwanese".</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question">v2026.04.22</div>
+                        <div class="answer">
+                            <ul>
+                                <li>Foram resolvidos os problemas de preenchimento de data e hora; suporta agora campos
+                                    de data e hora.</li>
                             </ul>
                         </div>
                     </div>
