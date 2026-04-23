@@ -29,19 +29,6 @@
 
 ---
 
-## 🔄 更新日誌 | Changelog
-
-**v2026.04.22**
-- [ZH] 解決了日期、時間填寫問題，支援 Google 表單中日期、時間的填寫框。
-- [EN] Resolved date and time filling issues; now supports Date and Time input fields in Google Forms.
-- [JA] 日付と時間の入力問題を解決し、Googleフォームでの日付と時間フィールドの自動入力に対応しました。
-- [KO] 날짜 및 시간 입력 문제를 해결했으며, Google 설문지의 날짜 및 시간 입력란을 지원합니다.
-- [TH] แก้ไขปัญหาการกรอกวันที่และเวลา โดยรองรับช่องกรอกวันที่และเวลาใน Google ฟอร์มแล้ว
-- [ES] Se han resuelto los problemas de ingreso de fecha y hora, ahora se admiten los campos de fecha y hora.
-- [PT] Foram resolvidos os problemas de preenchimento de data e hora; suporta agora campos de data e hora.
-
----
-
 ## 🌟 為什麼你需要這個擴充功能？
 
 **這是一個能讓你「一鍵自動填好表單」的神奇工具！**
@@ -136,8 +123,16 @@ mail,user@gmail.com
 
 **3. 「日期 + 時間」複合欄位**
 * 支援格式：`YYYYMMDDHHMM` (12碼連續數字) 或使用空白分隔 `YYYYMMDD HHMM`
-* 設定範例：【預約, 202604221830】 (或 `20260422 1830`)
+* 設定範例：【預約時間, 202604221830】 (或 `20260422 1830`)
 * 實際效果：遇到「預約」「預約日期」「預約時間」，日期自動填入 `2026年04月22日`，時間自動填入 `06:30 下午`
+
+### 🔄 更新日誌 (Changelog)
+
+**v2026.04.23**
+- 支援選項模糊與大小寫比對：提升輸入容錯率，允許以短字串（如 "taiwan"）自動向下相容並匹配 "TAIWAN" 或 "Taiwanese" 等選項。
+
+**v2026.04.22**
+- 解決了日期、時間填寫問題，支援 Google 表單中日期、時間的填寫框。
 
 ---
 
@@ -226,6 +221,14 @@ Supports Date and Time input fields in Google Forms.
 * Setup example: `Appointment, 202604221830` (or `20260422 1830`)
 * Effect: When encountering "Appointment", the date automatically fills as `2026-04-22` and the time as `06:30 PM`.
 
+### 🔄 Changelog
+
+**v2026.04.23**
+- Support for fuzzy matching and case-insensitive option comparison: Enhances input fault tolerance, allowing short strings (e.g., "taiwan") to automatically match options like "TAIWAN" or "Taiwanese".
+
+**v2026.04.22**
+- Resolved date and time filling issues; now supports Date and Time input fields in Google Forms.
+
 ---
 
 <a id="ja"></a>
@@ -306,6 +309,14 @@ Googleフォームの日付と時間の入力フィールドをサポートし�
 * 対応フォーマット：`YYYYMMDDHHMM`（12桁の連続した数字）または空白区切り `YYYYMMDD HHMM`
 * 設定例：`予約時間, 202604221830` (または `20260422 1830`)
 * 実際の効果：「予約時間」等を検出すると、日付は自動的に `2026年04月22日`、時間は `06:30 午後` と入力されます。
+
+### 🔄 更新履歴 (Changelog)
+
+**v2026.04.23**
+- 選択肢のあいまい検索と大文字・小文字を区別しない比較に対応：入力の許容度を向上させ、「taiwan」のような短い文字列でも「TAIWAN」や「Taiwanese」などの選択肢と自動的に一致するようになります。
+
+**v2026.04.22**
+- 日付と時間の入力問題を解決し、Googleフォームでの日付と時間フィールドの自動入力に対応しました。
 
 ---
 
@@ -388,6 +399,14 @@ Google 설문지의 날짜 및 시간 입력란을 지원합니다.
 * 설정 예시: `예약 시간, 202604221830` (또는 `20260422 1830`)
 * 실제 효과: "예약 시간" 항목을 발견하면 날짜는 `2026-04-22`, 시간은 `06:30 오후`로 자동 입력됩니다.
 
+### 🔄 업데이트 로그 (Changelog)
+
+**v2026.04.23**
+- 옵션 퍼지 매칭 및 대소문자 구분 없는 비교 지원: 입력 허용 오차를 향상시켜, 짧은 문자열(예: "taiwan")로 "TAIWAN" 또는 "Taiwanese"와 같은 옵션에 자동으로 일치시킬 수 있습니다.
+
+**v2026.04.22**
+- 날짜 및 시간 입력 문제를 해결했으며, Google 설문지의 날짜 및 시간 입력란을 지원합니다.
+
 ---
 
 <a id="th"></a>
@@ -468,6 +487,14 @@ mail,user@gmail.com
 * รูปแบบที่รองรับ: `YYYYMMDDHHMM` (ตัวเลขติดกัน 12 หลัก) หรือเว้นวรรค `YYYYMMDD HHMM`
 * ตัวอย่างการตั้งค่า: `เวลาจอง, 202604221830` (หรือ `20260422 1830`)
 * ผลลัพธ์: เมื่อพบคำว่า "เวลาจอง" วันที่จะถูกกรอกเป็น `2026-04-22` และเวลาเป็น `06:30 PM` อัตโนมัติ
+
+### 🔄 บันทึกการอัปเดต (Changelog)
+
+**v2026.04.23**
+- รองรับการจับคู่ตัวเลือกแบบคลุมเครือและไม่แยกตัวพิมพ์เล็กพิมพ์ใหญ่: เพิ่มความยืดหยุ่นในการป้อนข้อมูล ช่วยให้ข้อความสั้นๆ (เช่น "taiwan") สามารถจับคู่กับตัวเลือกเช่น "TAIWAN" หรือ "Taiwanese" ได้โดยอัตโนมัติ
+
+**v2026.04.22**
+- แก้ไขปัญหาการกรอกวันที่และเวลา โดยรองรับช่องกรอกวันที่และเวลาใน Google ฟอร์มแล้ว
 
 ---
 
@@ -550,6 +577,14 @@ Soporta los campos de fecha y hora en los Formularios de Google.
 * Ejemplo de ajuste: `Hora de cita, 202604221830` (o `20260422 1830`)
 * Efecto real: Al encontrar "Hora de cita", la fecha se autocompleta como `2026-04-22` y la hora como `06:30 PM`.
 
+### 🔄 Registro de cambios (Changelog)
+
+**v2026.04.23**
+- Soporte para coincidencia aproximada de opciones y comparación sin distinguir mayúsculas/minúsculas: Mejora la tolerancia a errores de entrada, permitiendo que cadenas cortas (ej., "taiwan") coincidan automáticamente con opciones como "TAIWAN" o "Taiwanese".
+
+**v2026.04.22**
+- Se han resuelto los problemas de ingreso de fecha y hora, ahora se admiten los campos de fecha y hora.
+
 ---
 
 <a id="pt"></a>
@@ -630,3 +665,11 @@ Suporta os campos de data e hora no Google Forms.
 * Formato suportado: `YYYYMMDDHHMM` (12 dígitos contínuos) ou separados por espaço `YYYYMMDD HHMM`
 * Exemplo de ajuste: `Hora da reserva, 202604221830` (ou `20260422 1830`)
 * Efeito real: Ao encontrar "Hora da reserva", a data é preenchida como `2026-04-22` e a hora como `06:30 PM` automaticamente.
+
+### 🔄 Registro de alterações (Changelog)
+
+**v2026.04.23**
+- Suporte para correspondência aproximada de opções e comparação sem distinção entre maiúsculas e minúsculas: Melhora a tolerância a falhas na entrada, permitindo que strings curtas (ex., "taiwan") correspondam automaticamente a opções como "TAIWAN" ou "Taiwanese".
+
+**v2026.04.22**
+- Foram resolvidos os problemas de preenchimento de data e hora; suporta agora campos de data e hora.
