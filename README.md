@@ -20,7 +20,7 @@
 
 <div align="center">
 
-### 🔥 [👉 點此前往 Chrome 線上應用程式商店安裝（完全免費）]([https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb](https://chromewebstore.google.com/detail/djdilinkjhjpkjjgndgnandeihbpkmbp?utm_source=item-share-cb))
+### 🔥 [👉 點此前往 Chrome 線上應用程式商店安裝（完全免費）](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
 
 **💖 支持開發者持續維護開發：**<br>
 <a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
