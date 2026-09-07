@@ -107,7 +107,7 @@
 
         .header {
             text-align: center;
-            padding: 40px 0;
+            padding: 40px 20px;
             background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
             border-radius: 24px;
             margin-bottom: 30px;
@@ -139,27 +139,43 @@
             text-fill-color: transparent;
         }
 
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
         .download-btn {
             display: inline-block;
             background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
             color: white;
-            padding: 14px 28px;
+            padding: 14px 24px;
             border-radius: 28px;
             text-decoration: none;
-            margin: 20px 0;
             transition: all 0.3s;
             box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
             font-weight: 500;
-            font-size: 16px;
+            font-size: 15px;
             position: relative;
             overflow: hidden;
             border: none;
+        }
+
+        .download-btn.edge-btn {
+            background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
+            box-shadow: 0 4px 12px rgba(0, 120, 212, 0.3);
         }
 
         .download-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(26, 115, 232, 0.4);
             color: white;
+        }
+
+        .download-btn.edge-btn:hover {
+            box-shadow: 0 6px 16px rgba(0, 120, 212, 0.4);
         }
 
         .download-btn:active {
@@ -398,24 +414,6 @@
             }
         }
 
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-5px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        .download-btn {
-            animation: float 3s ease-in-out infinite;
-        }
-
         ::-webkit-scrollbar {
             width: 10px;
             height: 10px;
@@ -449,7 +447,8 @@
             }
 
             .download-btn {
-                width: 90%;
+                width: 100%;
+                text-align: center;
             }
 
             .header h1 {
@@ -481,16 +480,21 @@
 
     <div class="container">
 
-
         <!-- ==================== ZH ==================== -->
         <div class="lang-section zh">
             <div class="header">
                 <h1>🚀 Google表單自動填寫擴充套件</h1>
                 <p>輕鬆一鍵填寫表單，節省時間，提升效率！</p>
-                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
-                    target="_blank" class="download-btn">
-                    <span>🔥 點此前往 Chrome 商城安裝（完全免費）</span>
-                </a>
+                <div class="btn-group">
+                    <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                        target="_blank" class="download-btn">
+                        <span>🔥 Chrome 商城安裝（免費）</span>
+                    </a>
+                    <a href="https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl"
+                        target="_blank" class="download-btn edge-btn">
+                        <span>🌊 Microsoft Edge 外掛商店（支援 Android / 電腦）</span>
+                    </a>
+                </div>
             </div>
 
             <div class="section">
@@ -512,8 +516,8 @@
             <div class="section">
                 <h2>📖 如何使用 (安裝步驟)</h2>
                 <ol class="steps">
-                    <li>點擊上方的 <strong>Chrome 商城連結</strong>，進入擴充功能安裝頁面。</li>
-                    <li>點擊「加到 Chrome」將它安裝到您的瀏覽器。</li>
+                    <li>點擊上方的 <strong>Chrome 商城</strong> 或 <strong>Microsoft Edge 外掛商店</strong> 連結，進入擴充功能安裝頁面。</li>
+                    <li>點擊「加到 Chrome」或「取得」將它安裝到您的瀏覽器。</li>
                     <li>開啟你要填寫的 Google 表單。</li>
                     <li>點擊瀏覽器右上角的擴充功能圖示，把你想預先準備好的資料（關鍵字與答案）填入並存檔。</li>
                     <li>未來打開任何Google表單時，工具就會<strong>抓取題目關鍵字</strong>，並自動填寫<strong>答案</strong>回覆。</li>
@@ -629,6 +633,16 @@ mail,user@gmail.com
                 <h2>🔄 更新日誌 (Changelog)</h2>
                 <div class="qa-section">
                     <div class="qa-item">
+                        <div class="question">v2026.09.07</div>
+                        <div class="answer">
+                            <ul>
+                                <li>新增 Microsoft Edge 擴充套件版本支援，全面覆蓋電腦版與 Android 手機版 Edge 瀏覽器。</li>
+                                <li>優化手機與電腦介面：設定視窗手機支援「底部抽屜」、電腦支援「中央彈窗」。</li>
+                                <li>新增輸入全形逗號【，】自動溫馨提醒，避免規則格式設定錯誤。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
                         <div class="question">v2026.04.23</div>
                         <div class="answer">
                             <ul>
@@ -666,8 +680,7 @@ mail,user@gmail.com
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: 還需要下載 QA.txt 或執行 .bat 檔案嗎？</div>
-                        <div class="answer">A: 絕對不用！此版本已進化為「線上正式版」，所有的關鍵字設定都會直接儲存在您的 Chrome 瀏覽器中，安全又快速，不需要再處理任何程式碼檔案。
-                        </div>
+                        <div class="answer">A: 絕對不用！此版本已進化為「線上正式版」，所有的關鍵字設定都會直接儲存在您的瀏覽器中，安全又快速。</div>
                     </div>
                 </div>
             </div>
@@ -678,10 +691,16 @@ mail,user@gmail.com
             <div class="header">
                 <h1>🚀 Google Form Auto-Fill Extension</h1>
                 <p>Fill forms effortlessly with just one click, save time, and be one step ahead!</p>
-                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
-                    target="_blank" class="download-btn">
-                    <span>🔥 Install for free from Chrome Web Store</span>
-                </a>
+                <div class="btn-group">
+                    <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                        target="_blank" class="download-btn">
+                        <span>🔥 Install from Chrome Web Store</span>
+                    </a>
+                    <a href="https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl"
+                        target="_blank" class="download-btn edge-btn">
+                        <span>🌊 Install from Microsoft Edge Add-ons (Android & PC)</span>
+                    </a>
+                </div>
             </div>
 
             <div class="section">
@@ -706,8 +725,8 @@ mail,user@gmail.com
             <div class="section">
                 <h2>📖 How to use (Installation)</h2>
                 <ol class="steps">
-                    <li>Click the <strong>Chrome Web Store</strong> link above.</li>
-                    <li>Click 'Add to Chrome' to install it.</li>
+                    <li>Click the <strong>Chrome Web Store</strong> or <strong>Microsoft Edge Add-ons</strong> link above.</li>
+                    <li>Click 'Add to Chrome' or 'Get' to install it.</li>
                     <li>Open any Google Form you want to fill.</li>
                     <li>Click the extension icon in the upper right corner to input your keywords and answers, then
                         save.</li>
@@ -830,6 +849,16 @@ Appointment,202604221530</pre>
                 <h2>🔄 Changelog</h2>
                 <div class="qa-section">
                     <div class="qa-item">
+                        <div class="question">v2026.09.07</div>
+                        <div class="answer">
+                            <ul>
+                                <li>Added Microsoft Edge extension version, fully supporting Edge browser on PC and Android mobile.</li>
+                                <li>UI/UX improvements: Floating settings panel now opens as a "Bottom Sheet" on mobile and a "Center Modal" on PC.</li>
+                                <li>Added automatic full-width comma [，] detection and warning to prevent rule syntax errors.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
                         <div class="question">v2026.04.23</div>
                         <div class="answer">
                             <ul>
@@ -884,10 +913,16 @@ Appointment,202604221530</pre>
             <div class="header">
                 <h1>🚀 Google フォーム自動入力</h1>
                 <p>魔法のようにフォームを自動入力、時間を節約し効率アップ！</p>
-                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
-                    target="_blank" class="download-btn">
-                    <span>🔥 Chrome ウェブストアから無料でインストール</span>
-                </a>
+                <div class="btn-group">
+                    <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                        target="_blank" class="download-btn">
+                        <span>🔥 Chrome ウェブストアから無料インストール</span>
+                    </a>
+                    <a href="https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl"
+                        target="_blank" class="download-btn edge-btn">
+                        <span>🌊 Microsoft Edge アドオン（Android / PC対応）</span>
+                    </a>
+                </div>
             </div>
 
             <div class="section">
@@ -909,8 +944,8 @@ Appointment,202604221530</pre>
             <div class="section">
                 <h2>📖 使い方 (インストール手順)</h2>
                 <ol class="steps">
-                    <li>上記の <strong>Chrome ウェブストア</strong> リンクをクリックします。</li>
-                    <li>「Chrome に追加」をクリックしてインストールします。</li>
+                    <li>上記の <strong>Chrome ウェブストア</strong> または <strong>Microsoft Edge アドオン</strong> リンクをクリックします。</li>
+                    <li>「Chrome に追加」または「入手」をクリックしてインストールします。</li>
                     <li>入力したい Google フォームを開きます。</li>
                     <li>右上の拡張機能アイコンをクリックし、キーワードと入力内容を保存します。</li>
                     <li>今後あらゆる Google フォームを開く際、ツールが<strong>質問のキーワードを取得</strong>し、自動的に<strong>回答</strong>を入力します。</li>
@@ -1026,6 +1061,16 @@ mail,user@gmail.com
                 <h2>🔄 更新履歴 (Changelog)</h2>
                 <div class="qa-section">
                     <div class="qa-item">
+                        <div class="question">v2026.09.07</div>
+                        <div class="answer">
+                            <ul>
+                                <li>Microsoft Edge アドオン版を追加。PCおよびAndroid版Edgeブラウザに完全対応。</li>
+                                <li>UI/UXを大幅改修：設定パネルがスマホでは「ボトムシート」、PCでは「中央モーダル」で表示。</li>
+                                <li>全角カンマ【，】自動検出・警告機能を追加し、フォーマットミスを防止。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
                         <div class="question">v2026.04.23</div>
                         <div class="answer">
                             <ul>
@@ -1064,7 +1109,7 @@ mail,user@gmail.com
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: QA.txt のようなファイルのダウンロードが必要ですか？</div>
-                        <div class="answer">A: いいえ！Chrome の拡張機能からすべて設定可能です。ファイルのダウンロードは不要です！</div>
+                        <div class="answer">A: いいえ！ブラウザ拡張機能からすべて設定可能です。ファイルのダウンロードは不要です！</div>
                     </div>
                 </div>
             </div>
@@ -1075,10 +1120,16 @@ mail,user@gmail.com
             <div class="header">
                 <h1>🚀 Google 설문지 자동 채우기</h1>
                 <p>클릭 한 번으로 폼을 채우고, 시간을 절약하세요!</p>
-                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
-                    target="_blank" class="download-btn">
-                    <span>🔥 Chrome 웹 스토어에서 무료 설치</span>
-                </a>
+                <div class="btn-group">
+                    <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                        target="_blank" class="download-btn">
+                        <span>🔥 Chrome 웹 스토어에서 무료 설치</span>
+                    </a>
+                    <a href="https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl"
+                        target="_blank" class="download-btn edge-btn">
+                        <span>🌊 Microsoft Edge 어드온 (Android / PC 지원)</span>
+                    </a>
+                </div>
             </div>
 
             <div class="section">
@@ -1100,8 +1151,8 @@ mail,user@gmail.com
             <div class="section">
                 <h2>📖 사용 방법 (설치 방법)</h2>
                 <ol class="steps">
-                    <li>상단의 <strong>Chrome 웹 스토어</strong> 링크를 클릭하세요.</li>
-                    <li>'Chrome에 추가'를 클릭하여 설치합니다.</li>
+                    <li>상단의 <strong>Chrome 웹 스토어</strong> 또는 <strong>Microsoft Edge 어드온</strong> 링크를 클릭하세요.</li>
+                    <li>'Chrome에 추가' 또는 '다운로드'를 클릭하여 설치합니다.</li>
                     <li>원하는 Google 설문지를 엽니다.</li>
                     <li>우측 상단 확장 프로그램 아이콘을 클릭하여 키워드와 내용을 저장합니다.</li>
                     <li>앞으로 어떤 Google 설문지를 열든 도구가 <strong>질문 키워드를 추출</strong>하여 자동으로 <strong>답변</strong>을 채워줍니다.</li>
@@ -1215,6 +1266,16 @@ mail,user@gmail.com
                 <h2>🔄 업데이트 로그 (Changelog)</h2>
                 <div class="qa-section">
                     <div class="qa-item">
+                        <div class="question">v2026.09.07</div>
+                        <div class="answer">
+                            <ul>
+                                <li>Microsoft Edge 확장 프로그램 버전 추가. PC 및 Android 모바일 Edge 브라우저 완전 지원.</li>
+                                <li>UI/UX 대폭 업그레이드: 모바일은 '바텀 시트', PC는 '중앙 팝업'으로 설정 창이 열립니다.</li>
+                                <li>전각 쉼표[，] 입력 감지 및 경고 기능 추가로 규칙 오류 방지.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
                         <div class="question">v2026.04.23</div>
                         <div class="answer">
                             <ul>
@@ -1253,7 +1314,7 @@ mail,user@gmail.com
                     </div>
                     <div class="qa-item">
                         <div class="question">Q: QA.txt 같은 걸 다운받아야 하나요?</div>
-                        <div class="answer">A: 아니요! 오직 브라우저에서 실행되는 공식 버전입니다. 파일 로드 없이 팝업창에서 직접 설정하세요!</div>
+                        <div class="answer">A: 아니요! 브라우저 확장 프로그램에서 직접 설정하세요!</div>
                     </div>
                 </div>
             </div>
@@ -1264,10 +1325,16 @@ mail,user@gmail.com
             <div class="header">
                 <h1>🚀 กรอก Google Form อัตโนมัติ</h1>
                 <p>เปิดปุ๊บ กรอกปั๊บ รวดเร็วทันใจกว่าที่เคย!</p>
-                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
-                    target="_blank" class="download-btn">
-                    <span>🔥 ติดตั้งฟรีจาก Chrome Web Store</span>
-                </a>
+                <div class="btn-group">
+                    <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                        target="_blank" class="download-btn">
+                        <span>🔥 ติดตั้งฟรีจาก Chrome Web Store</span>
+                    </a>
+                    <a href="https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl"
+                        target="_blank" class="download-btn edge-btn">
+                        <span>🌊 ติดตั้งจาก Microsoft Edge Add-ons (รองรับ Android & PC)</span>
+                    </a>
+                </div>
             </div>
 
             <div class="section">
@@ -1291,8 +1358,8 @@ mail,user@gmail.com
             <div class="section">
                 <h2>📖 วิธีใช้งาน (ขั้นตอนการติดตั้ง)</h2>
                 <ol class="steps">
-                    <li>คลิกลิงก์ <strong>Chrome Web Store</strong> ด้านบน</li>
-                    <li>คลิก 'Add to Chrome' เพื่อติดตั้งส่วนขยาย</li>
+                    <li>คลิกลิงก์ <strong>Chrome Web Store</strong> หรือ <strong>Microsoft Edge Add-ons</strong> ด้านบน</li>
+                    <li>คลิก 'Add to Chrome' หรือ 'รับ' เพื่อติดตั้งส่วนขยาย</li>
                     <li>เปิด Google Form ที่ต้องการ</li>
                     <li>คลิกไอคอนส่วนขยายที่มุมขวาบน ตั้งค่าคำค้นหา (Keyword) และบันทึก</li>
                     <li>ต่อจากนี้เมื่อคุณเปิด Google Form ใดๆ
@@ -1411,6 +1478,16 @@ mail,user@gmail.com
                 <h2>🔄 บันทึกการอัปเดต (Changelog)</h2>
                 <div class="qa-section">
                     <div class="qa-item">
+                        <div class="question">v2026.09.07</div>
+                        <div class="answer">
+                            <ul>
+                                <li>เพิ่มเวอร์ชันส่วนขยายสำหรับ Microsoft Edge รองรับอย่างเต็มรูปแบบทั้งบน PC และมือถือ Android</li>
+                                <li>ปรับปรุง UI/UX หน้าต่างตั้งค่าแบบใหม่: บนมือถือแสดงผลเป็น "Bottom Sheet" และบน PC แสดงเป็น "Center Modal"</li>
+                                <li>เพิ่มระบบแจ้งเตือนอัตโนมัติเมื่อพิมพ์เครื่องหมาย [，] เพื่อป้องกันข้อผิดพลาด</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
                         <div class="question">v2026.04.23</div>
                         <div class="answer">
                             <ul>
@@ -1462,10 +1539,16 @@ mail,user@gmail.com
             <div class="header">
                 <h1>🚀 Autocompletado de Formularios de Google</h1>
                 <p>¡Rellena formularios mágicamente con un solo clic!</p>
-                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
-                    target="_blank" class="download-btn">
-                    <span>🔥 Instalar gratis desde Chrome Web Store</span>
-                </a>
+                <div class="btn-group">
+                    <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                        target="_blank" class="download-btn">
+                        <span>🔥 Instalar gratis desde Chrome Web Store</span>
+                    </a>
+                    <a href="https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl"
+                        target="_blank" class="download-btn edge-btn">
+                        <span>🌊 Instalar desde Microsoft Edge Add-ons (Android / PC)</span>
+                    </a>
+                </div>
             </div>
 
             <div class="section">
@@ -1490,8 +1573,8 @@ mail,user@gmail.com
             <div class="section">
                 <h2>📖 Cómo usarlo (Instalación)</h2>
                 <ol class="steps">
-                    <li>Haz clic en el enlace <strong>Chrome Web Store</strong> de arriba.</li>
-                    <li>Haz clic en 'Añadir a Chrome'.</li>
+                    <li>Haz clic en el enlace de <strong>Chrome Web Store</strong> o <strong>Microsoft Edge Add-ons</strong> de arriba.</li>
+                    <li>Haz clic en 'Añadir a Chrome' o 'Obtener'.</li>
                     <li>Abre cualquier Google Form.</li>
                     <li>Haz clic en la extensión, guarda tus palabras clave y contenido.</li>
                     <li>En el futuro, cuando abras cualquier Formulario de Google, la herramienta <strong>capturará las
@@ -1612,6 +1695,16 @@ Cita,202604221530</pre>
                 <h2>🔄 Registro de cambios (Changelog)</h2>
                 <div class="qa-section">
                     <div class="qa-item">
+                        <div class="question">v2026.09.07</div>
+                        <div class="answer">
+                            <ul>
+                                <li>Añadida la versión para Microsoft Edge, totalmente compatible con Edge en PC y Android.</li>
+                                <li>Gran actualización de interfaz: El panel de ajustes ahora se abre como "Bottom Sheet" en móvil y "Modal Central" en PC.</li>
+                                <li>Aviso automático de comas de ancho completo [，] para prevenir errores de sintaxis.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
                         <div class="question">v2026.04.23</div>
                         <div class="answer">
                             <ul>
@@ -1665,10 +1758,16 @@ Cita,202604221530</pre>
             <div class="header">
                 <h1>🚀 Preenchimento Automático do Google Forms</h1>
                 <p>Uma ferramenta mágica para preencher formulários para você em apenas um clique!</p>
-                <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
-                    target="_blank" class="download-btn">
-                    <span>🔥 Instale gratuitamente na Chrome Web Store</span>
-                </a>
+                <div class="btn-group">
+                    <a href="https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb"
+                        target="_blank" class="download-btn">
+                        <span>🔥 Instale na Chrome Web Store</span>
+                    </a>
+                    <a href="https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl"
+                        target="_blank" class="download-btn edge-btn">
+                        <span>🌊 Instalar no Microsoft Edge Add-ons (Android / PC)</span>
+                    </a>
+                </div>
             </div>
 
             <div class="section">
@@ -1693,8 +1792,8 @@ Cita,202604221530</pre>
             <div class="section">
                 <h2>📖 Como Usar (Instalação)</h2>
                 <ol class="steps">
-                    <li>Clique no link da <strong>Chrome Web Store</strong> acima.</li>
-                    <li>Clique em 'Usar no Chrome'.</li>
+                    <li>Clique no link da <strong>Chrome Web Store</strong> ou <strong>Microsoft Edge Add-ons</strong> acima.</li>
+                    <li>Clique em 'Usar no Chrome' ou 'Obter'.</li>
                     <li>Abra um formulário escolhido.</li>
                     <li>Configure suas palavras-chave na extensão e salve.</li>
                     <li>No futuro, ao abrir qualquer Google Form, o sistema <strong>capturará as palavras-chave das
@@ -1813,6 +1912,16 @@ Reserva,202604221530</pre>
                 <h2>🔄 Registro de alterações (Changelog)</h2>
                 <div class="qa-section">
                     <div class="qa-item">
+                        <div class="question">v2026.09.07</div>
+                        <div class="answer">
+                            <ul>
+                                <li>Adicionada a versão da extensão para Microsoft Edge, com suporte completo no PC e celular Android.</li>
+                                <li>Grande atualização de UI/UX: O painel de configurações agora abre como "Bottom Sheet" no celular e "Modal Central" no PC.</li>
+                                <li>Alerta automático de vírgulas de largura inteira [，] para evitar erros de formatação.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="qa-item">
                         <div class="question">v2026.04.23</div>
                         <div class="answer">
                             <ul>
@@ -1859,13 +1968,14 @@ Reserva,202604221530</pre>
                 </div>
             </div>
         </div>
+
         <!-- ==================== UNIVERSAL FOOTER ==================== -->
         <footer>
             <div style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
                 <div style="border-bottom: 1px solid #dee2e6; padding-bottom: 1rem; margin-bottom: 1rem;">
                     <h3>📖 Project Information / 專案資訊</h3>
                     <p style="margin-bottom: 0.5rem;">
-                        <a href="https://github.com/blues32767/Google-Form-Auto-Fill-Extension/">
+                        <a href="https://github.com/blues32767/Google-Form-Auto-Fill-Extension/" target="_blank">
                             GitHub Repository: Google Form Auto-Fill Extension
                         </a>
                     </p>
@@ -1886,14 +1996,13 @@ Reserva,202604221530</pre>
                             atualizações contínuas ☕</span>
                     </p>
                     <a href="https://www.buymeacoffee.com/blues32767" target="_blank">
-                        <!-- Standard BuyMeACoffee Button (User's Exact Template but centered/clean) -->
                         <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee"
                             style="height: 60px !important;width: 217px !important;" height="60">
                     </a>
                 </div>
 
                 <p style="text-align: center; margin-top: 2rem; color: #6c757d; font-size: 0.9rem;">
-                    © 2025 Google Form Auto-Fill Extension. All rights reserved.
+                    © 2026 Google Form Auto-Fill Extension. All rights reserved.
                 </p>
             </div>
         </footer>
@@ -1901,12 +2010,10 @@ Reserva,202604221530</pre>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Check navigator.language if URL param doesn't exist
             const urlParams = new URLSearchParams(window.location.search);
             let lang = urlParams.get('lang');
 
             if (!lang) {
-                // simple auto-detect
                 const userLang = navigator.language || navigator.userLanguage;
                 if (userLang.startsWith('en')) lang = 'en';
                 else if (userLang.startsWith('ja')) lang = 'ja';
@@ -1914,7 +2021,7 @@ Reserva,202604221530</pre>
                 else if (userLang.startsWith('th')) lang = 'th';
                 else if (userLang.startsWith('es')) lang = 'es';
                 else if (userLang.startsWith('pt')) lang = 'pt';
-                else lang = 'zh'; // default
+                else lang = 'zh';
             }
 
             const targetRadio = document.getElementById('lang-' + lang);
