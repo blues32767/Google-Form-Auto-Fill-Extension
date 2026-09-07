@@ -20,7 +20,12 @@
 
 <div align="center">
 
-### 🔥 [👉 點此前往 Chrome 線上應用程式商店安裝（完全免費）](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+### 🔥 選擇您的瀏覽器安裝（完全免費）
+
+- 🌐 **Chrome 瀏覽器：** [👉 點此前往 Chrome 線上應用程式商店安裝](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+- 📱 **Microsoft Edge（支援 PC 與 Android 手機）：** [👉 點此前往 Edge 外掛程式商店安裝](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+
+<br>
 
 **💖 支持開發者持續維護開發：**<br>
 <a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
@@ -147,9 +152,14 @@ mail,user@gmail.com
 
 <div align="center">
 
-### 🔥 [👉 Install for free from Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+### 🔥 Choose Your Browser to Install (100% Free)
 
-**💖 Support the developer's continuous maintenance:**<br>
+- 🌐 **Chrome Browser:** [👉 Click here to install from Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+- 📱 **Microsoft Edge (PC & Android Mobile):** [👉 Click here to install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+
+<br>
+
+**💖 Support the Developer:**<br>
 <a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
 
 </div>
@@ -237,13 +247,17 @@ Supports Date and Time input fields in Google Forms.
 
 <div align="center">
 
-### 🔥 [👉 Chrome ウェブストアから無料でインストール](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+### 🔥 ブラウザを選択してインストール（完全無料）
 
-**💖 開発者の継続的な開発を支援する:**<br>
+- 🌐 **Chrome ブラウザ:** [👉 Chrome ウェブストアからインストール](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+- 📱 **Microsoft Edge (PC & Android スマホ対応):** [👉 Edge アドオンからインストール](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+
+<br>
+
+**💖 開発者をサポート:**<br>
 <a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
 
 </div>
-
 事前に入力内容を設定しておくことで、今後あらゆる Google フォームを開く際、質問を自動的に取得し、すべての項目を自動入力・選択する魔法のようなツールです。パソコンの難しい知識は不要です！
 **こんな方におすすめ：**
 - 🎤 **チケットや限定グッズの申し込み、先着順の予約：** 超高速で自動入力・送信し、誰よりも早く申し込みを完了！
@@ -326,9 +340,14 @@ Googleフォームの日付と時間の入力フィールドをサポートし�
 
 <div align="center">
 
-### 🔥 [👉 Chrome 웹 스토어에서 무료 설치](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+### 🔥 브라우저를 선택하여 설치 (완전 무료)
 
-**💖 개발자의 지속적인 업데이트 후원하기:**<br>
+- 🌐 **Chrome 브라우저:** [👉 Chrome 웹 스토어에서 설치](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+- 📱 **Microsoft Edge (PC 및 Android 모바일 지원):** [👉 Edge 추가 기능에서 설치](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+
+<br>
+
+**💖 개발자 후원하기:**<br>
 <a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
 
 </div>
@@ -415,9 +434,14 @@ Google 설문지의 날짜 및 시간 입력란을 지원합니다.
 
 <div align="center">
 
-### 🔥 [👉 ติดตั้งฟรีจาก Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+### 🔥 เลือกเบราว์เซอร์เพื่อติดตั้ง (ฟรี 100%)
 
-**💖 สนับสนุนนักพัฒนาเพื่อการอัปเดตอย่างต่อเนื่อง:**<br>
+- 🌐 **Chrome Browser:** [👉 คลิกที่นี่เพื่อติดตั้งจาก Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+- 📱 **Microsoft Edge (รองรับทั้ง PC และ Android):** [👉 คลิกที่นี่เพื่อติดตั้งจาก Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+
+<br>
+
+**💖 สนับสนุนผู้พัฒนา:**<br>
 <a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
 
 </div>
@@ -504,9 +528,14 @@ mail,user@gmail.com
 
 <div align="center">
 
-### 🔥 [👉 Instalar gratis desde Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+### 🔥 Elige tu navegador para instalar (100% Gratis)
 
-**💖 Apoya al desarrollador para futuras actualizaciones:**<br>
+- 🌐 **Navegador Chrome:** [👉 Haz clic aquí para instalar desde Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+- 📱 **Microsoft Edge (PC y móvil Android):** [👉 Haz clic aquí para instalar desde Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+
+<br>
+
+**💖 Apoyar al desarrollador:**<br>
 <a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
 
 </div>
@@ -593,9 +622,14 @@ Soporta los campos de fecha y hora en los Formularios de Google.
 
 <div align="center">
 
-### 🔥 [👉 Instale gratuitamente na Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+### 🔥 Escolha seu navegador para instalar (100% Grátis)
 
-**💖 Apoie o desenvolvedor para atualizações contínuas:**<br>
+- 🌐 **Navegador Chrome:** [👉 Clique aqui para instalar na Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
+- 📱 **Microsoft Edge (PC e celular Android):** [👉 Clique aqui para instalar no Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+
+<br>
+
+**💖 Apoie o desenvolvedor:**<br>
 <a href="https://www.buymeacoffee.com/blues32767" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" height="60"></a>
 
 </div>
