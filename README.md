@@ -24,6 +24,7 @@
 
 - 🌐 **Chrome 瀏覽器：** [👉 點此前往 Chrome 線上應用程式商店安裝](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
 - 📱 **Microsoft Edge（支援 PC 與 Android 手機）：** [👉 點此前往 Edge 外掛程式商店安裝](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+- 🦊 **Firefox（支援 PC 電腦 與 Android 手機）：** [👉 點此前往 Firefox 附加元件安裝](https://addons.mozilla.org/zh-TW/firefox/addon/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/)
 
 <br>
 
@@ -156,6 +157,7 @@ mail,user@gmail.com
 
 - 🌐 **Chrome Browser:** [👉 Click here to install from Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
 - 📱 **Microsoft Edge (PC & Android Mobile):** [👉 Click here to install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+- 🦊 **Firefox (PC & Android Mobile):** [👉 Click here to install from Firefox Add-ons](https://addons.mozilla.org/zh-TW/firefox/addon/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/)
 
 <br>
 
@@ -251,6 +253,7 @@ Supports Date and Time input fields in Google Forms.
 
 - 🌐 **Chrome ブラウザ:** [👉 Chrome ウェブストアからインストール](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
 - 📱 **Microsoft Edge (PC & Android スマホ対応):** [👉 Edge アドオンからインストール](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+- 🦊 **Firefox (PC & Android スマホ対応):** [👉 Firefox Add-ons からインストール](https://addons.mozilla.org/zh-TW/firefox/addon/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/)
 
 <br>
 
@@ -344,6 +347,7 @@ Googleフォームの日付と時間の入力フィールドをサポートし�
 
 - 🌐 **Chrome 브라우저:** [👉 Chrome 웹 스토어에서 설치](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
 - 📱 **Microsoft Edge (PC 및 Android 모바일 지원):** [👉 Edge 추가 기능에서 설치](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+- 🦊 **Firefox (PC 및 Android 모바일 지원):** [👉 Firefox 부가 기능에서 설치](https://addons.mozilla.org/zh-TW/firefox/addon/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/)
 
 <br>
 
@@ -438,6 +442,7 @@ Google 설문지의 날짜 및 시간 입력란을 지원합니다.
 
 - 🌐 **Chrome Browser:** [👉 คลิกที่นี่เพื่อติดตั้งจาก Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
 - 📱 **Microsoft Edge (รองรับทั้ง PC และ Android):** [👉 คลิกที่นี่เพื่อติดตั้งจาก Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+- 🦊 **Firefox (รองรับทั้ง PC และ Android):** [👉 คลิกที่นี่เพื่อติดตั้งจาก Firefox Add-ons](https://addons.mozilla.org/zh-TW/firefox/addon/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/)
 
 <br>
 
@@ -532,6 +537,7 @@ mail,user@gmail.com
 
 - 🌐 **Navegador Chrome:** [👉 Haz clic aquí para instalar desde Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
 - 📱 **Microsoft Edge (PC y móvil Android):** [👉 Haz clic aquí para instalar desde Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+- 🦊 **Firefox (PC y móvil Android):** [👉 Haz clic aquí para instalar desde Firefox Add-ons](https://addons.mozilla.org/zh-TW/firefox/addon/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/)
 
 <br>
 
@@ -626,6 +632,7 @@ Soporta los campos de fecha y hora en los Formularios de Google.
 
 - 🌐 **Navegador Chrome:** [👉 Clique aqui para instalar na Chrome Web Store](https://chromewebstore.google.com/detail/fbienifgcnebfgefaeccnmgekfcdedkc?utm_source=item-share-cb)
 - 📱 **Microsoft Edge (PC e celular Android):** [👉 Clique aqui para instalar no Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/gnonidncoepcopmonbciohbajekpbnpl)
+- 🦊 **Firefox (PC e celular Android):** [👉 Clique aqui para instalar no Firefox Add-ons](https://addons.mozilla.org/zh-TW/firefox/addon/google-%E8%A1%A8%E5%96%AE%E8%87%AA%E5%8B%95%E5%A1%AB%E5%AF%AB%E5%8A%A9%E6%89%8B/)
 
 <br>
 
